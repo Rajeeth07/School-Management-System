@@ -1,6 +1,6 @@
-﻿namespace School_Management_System
+﻿namespace School_Management_System.UI.Grade
 {
-    partial class Form1
+    partial class GradeAddForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,10 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Text = "GradeAddForm";
         }
 
         #endregion
     }
 }
-

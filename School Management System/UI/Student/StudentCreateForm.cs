@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace School_Management_System
+namespace School_Management_System.UI.Student
 {
-    public partial class Form1 : Form
+    public partial class StudentCreateForm : Form
     {
-        public Form1()
+        public StudentCreateForm()
         {
             InitializeComponent();
         }
