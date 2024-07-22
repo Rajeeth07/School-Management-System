@@ -16,5 +16,7 @@ namespace School_Management_System.UI.Subject
         {
             InitializeComponent();
         }
+
+       
     }
 }

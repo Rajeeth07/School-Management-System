@@ -46,14 +46,68 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Grade\GradeAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Grade\GradeAddForm.Designer.cs">
+      <DependentUpon>GradeAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Grade\GradeEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Grade\GradeEditForm.Designer.cs">
+      <DependentUpon>GradeEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Grade\GradeMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Grade\GradeMasterForm.Designer.cs">
+      <DependentUpon>GradeMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\StudentCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\StudentCreateForm.Designer.cs">
+      <DependentUpon>StudentCreateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\StudentEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\StudentEditForm.Designer.cs">
+      <DependentUpon>StudentEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\StudentMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\StudentMasterForm.Designer.cs">
+      <DependentUpon>StudentMasterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Subject\SubjectAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Subject\SubjectAddForm.Designer.cs">
+      <DependentUpon>SubjectAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Subject\SubjectEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Subject\SubjectEditForm.Designer.cs">
+      <DependentUpon>SubjectEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Subject\SubjectMasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Subject\SubjectMasterForm.Designer.cs">
+      <DependentUpon>SubjectMasterForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +117,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Grade\GradeMasterForm.resx">
+      <DependentUpon>GradeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DAL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
