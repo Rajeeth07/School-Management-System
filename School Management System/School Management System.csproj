@@ -54,18 +54,6 @@
     <Compile Include="UI\DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Grade\GradeAddForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Grade\GradeAddForm.Designer.cs">
-      <DependentUpon>GradeAddForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Grade\GradeEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Grade\GradeEditForm.Designer.cs">
-      <DependentUpon>GradeEditForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Grade\GradeMasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,18 +78,6 @@
     <Compile Include="UI\Student\StudentMasterForm.Designer.cs">
       <DependentUpon>StudentMasterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Subject\SubjectAddForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Subject\SubjectAddForm.Designer.cs">
-      <DependentUpon>SubjectAddForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Subject\SubjectEditForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Subject\SubjectEditForm.Designer.cs">
-      <DependentUpon>SubjectEditForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Subject\SubjectMasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +98,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Grade\GradeMasterForm.resx">
       <DependentUpon>GradeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\StudentCreateForm.resx">
+      <DependentUpon>StudentCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\StudentEditForm.resx">
+      <DependentUpon>StudentEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\StudentMasterForm.resx">
+      <DependentUpon>StudentMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Subject\SubjectMasterForm.resx">
+      <DependentUpon>SubjectMasterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
