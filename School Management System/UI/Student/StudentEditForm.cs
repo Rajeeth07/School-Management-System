@@ -16,5 +16,8 @@ namespace School_Management_System.UI.Student
         {
             InitializeComponent();
         }
+
+        
+        }
     }
 }
