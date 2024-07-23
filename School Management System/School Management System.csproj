@@ -60,6 +60,12 @@
     <Compile Include="UI\Grade\GradeMasterForm.Designer.cs">
       <DependentUpon>GradeMasterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Login\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Student\StudentCreateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,12 +98,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="UI\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Grade\GradeMasterForm.resx">
       <DependentUpon>GradeMasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Login\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\StudentCreateForm.resx">
       <DependentUpon>StudentCreateForm.cs</DependentUpon>
@@ -126,6 +136,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduated.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduated1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graduated2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

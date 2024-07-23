@@ -8,16 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace School_Management_System.UI.Student
+namespace School_Management_System.UI.Login
 {
-    public partial class StudentEditForm : Form
+    public partial class LoginForm : Form
     {
-        public StudentEditForm()
+        public LoginForm()
         {
             InitializeComponent();
         }
 
-        
-        
+       
     }
 }

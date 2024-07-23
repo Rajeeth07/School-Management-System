@@ -57,14 +57,16 @@
             this.btnStdCreate = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnStdcrtCancel
             // 
             this.btnStdcrtCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStdcrtCancel.Location = new System.Drawing.Point(713, 407);
+            this.btnStdcrtCancel.Location = new System.Drawing.Point(243, 15);
+            this.btnStdcrtCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdcrtCancel.Name = "btnStdcrtCancel";
-            this.btnStdcrtCancel.Size = new System.Drawing.Size(75, 40);
+            this.btnStdcrtCancel.Size = new System.Drawing.Size(55, 30);
             this.btnStdcrtCancel.TabIndex = 0;
             this.btnStdcrtCancel.Text = "Cancel";
             this.btnStdcrtCancel.UseVisualStyleBackColor = true;
@@ -75,8 +77,9 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(800, 29);
+            this.label1.Size = new System.Drawing.Size(319, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Student Edit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,32 +88,36 @@
             // 
             this.cmbStdEdtGrdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStdEdtGrdId.FormattingEnabled = true;
-            this.cmbStdEdtGrdId.Location = new System.Drawing.Point(172, 365);
+            this.cmbStdEdtGrdId.Location = new System.Drawing.Point(115, 234);
+            this.cmbStdEdtGrdId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbStdEdtGrdId.Name = "cmbStdEdtGrdId";
-            this.cmbStdEdtGrdId.Size = new System.Drawing.Size(272, 33);
+            this.cmbStdEdtGrdId.Size = new System.Drawing.Size(183, 24);
             this.cmbStdEdtGrdId.TabIndex = 6;
             // 
             // dtpStdEdtAddDate
             // 
             this.dtpStdEdtAddDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStdEdtAddDate.Location = new System.Drawing.Point(172, 408);
+            this.dtpStdEdtAddDate.Location = new System.Drawing.Point(115, 262);
+            this.dtpStdEdtAddDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpStdEdtAddDate.Name = "dtpStdEdtAddDate";
-            this.dtpStdEdtAddDate.Size = new System.Drawing.Size(272, 30);
+            this.dtpStdEdtAddDate.Size = new System.Drawing.Size(183, 23);
             this.dtpStdEdtAddDate.TabIndex = 5;
             // 
             // dtpStdEdtDoB
             // 
             this.dtpStdEdtDoB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStdEdtDoB.Location = new System.Drawing.Point(172, 236);
+            this.dtpStdEdtDoB.Location = new System.Drawing.Point(115, 150);
+            this.dtpStdEdtDoB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpStdEdtDoB.Name = "dtpStdEdtDoB";
-            this.dtpStdEdtDoB.Size = new System.Drawing.Size(272, 30);
+            this.dtpStdEdtDoB.Size = new System.Drawing.Size(183, 23);
             this.dtpStdEdtDoB.TabIndex = 5;
             // 
             // rdoStdEdtMale
             // 
-            this.rdoStdEdtMale.Location = new System.Drawing.Point(172, 193);
+            this.rdoStdEdtMale.Location = new System.Drawing.Point(115, 122);
+            this.rdoStdEdtMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoStdEdtMale.Name = "rdoStdEdtMale";
-            this.rdoStdEdtMale.Size = new System.Drawing.Size(84, 35);
+            this.rdoStdEdtMale.Size = new System.Drawing.Size(56, 23);
             this.rdoStdEdtMale.TabIndex = 4;
             this.rdoStdEdtMale.TabStop = true;
             this.rdoStdEdtMale.Text = "Male";
@@ -118,9 +125,10 @@
             // 
             // rdoStdEdtFemale
             // 
-            this.rdoStdEdtFemale.Location = new System.Drawing.Point(279, 193);
+            this.rdoStdEdtFemale.Location = new System.Drawing.Point(186, 125);
+            this.rdoStdEdtFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdoStdEdtFemale.Name = "rdoStdEdtFemale";
-            this.rdoStdEdtFemale.Size = new System.Drawing.Size(99, 35);
+            this.rdoStdEdtFemale.Size = new System.Drawing.Size(66, 23);
             this.rdoStdEdtFemale.TabIndex = 4;
             this.rdoStdEdtFemale.TabStop = true;
             this.rdoStdEdtFemale.Text = "Female";
@@ -128,146 +136,164 @@
             // 
             // label12
             // 
-            this.label12.Location = new System.Drawing.Point(7, 451);
+            this.label12.Location = new System.Drawing.Point(5, 290);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(152, 35);
+            this.label12.Size = new System.Drawing.Size(101, 23);
             this.label12.TabIndex = 2;
             this.label12.Text = "Address";
             // 
             // label11
             // 
-            this.label11.Location = new System.Drawing.Point(7, 408);
+            this.label11.Location = new System.Drawing.Point(5, 262);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 35);
+            this.label11.Size = new System.Drawing.Size(101, 23);
             this.label11.TabIndex = 2;
             this.label11.Text = "Addimission Date";
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(7, 236);
+            this.label7.Location = new System.Drawing.Point(5, 150);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(152, 35);
+            this.label7.Size = new System.Drawing.Size(101, 23);
             this.label7.TabIndex = 2;
             this.label7.Text = "DOB";
             // 
             // label10
             // 
-            this.label10.Location = new System.Drawing.Point(7, 279);
+            this.label10.Location = new System.Drawing.Point(5, 178);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 35);
+            this.label10.Size = new System.Drawing.Size(101, 23);
             this.label10.TabIndex = 2;
             this.label10.Text = "NIC Number";
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(7, 365);
+            this.label9.Location = new System.Drawing.Point(5, 234);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(152, 35);
+            this.label9.Size = new System.Drawing.Size(101, 23);
             this.label9.TabIndex = 2;
             this.label9.Text = "Grade ID";
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(7, 107);
+            this.label4.Location = new System.Drawing.Point(5, 67);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 35);
+            this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 2;
             this.label4.Text = "Last Name";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(14, 193);
+            this.label6.Location = new System.Drawing.Point(9, 122);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(152, 35);
+            this.label6.Size = new System.Drawing.Size(101, 23);
             this.label6.TabIndex = 2;
             this.label6.Text = "Gender";
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(7, 322);
+            this.label8.Location = new System.Drawing.Point(5, 206);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(152, 35);
+            this.label8.Size = new System.Drawing.Size(101, 23);
             this.label8.TabIndex = 2;
             this.label8.Text = "Phone No";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(7, 64);
+            this.label3.Location = new System.Drawing.Point(5, 39);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 35);
+            this.label3.Size = new System.Drawing.Size(101, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "First name";
             // 
             // btnStdEdtaddress
             // 
-            this.btnStdEdtaddress.Location = new System.Drawing.Point(172, 445);
+            this.btnStdEdtaddress.Location = new System.Drawing.Point(115, 286);
+            this.btnStdEdtaddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdEdtaddress.Multiline = true;
             this.btnStdEdtaddress.Name = "btnStdEdtaddress";
-            this.btnStdEdtaddress.Size = new System.Drawing.Size(272, 65);
+            this.btnStdEdtaddress.Size = new System.Drawing.Size(183, 44);
             this.btnStdEdtaddress.TabIndex = 3;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(7, 150);
+            this.label5.Location = new System.Drawing.Point(5, 95);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 35);
+            this.label5.Size = new System.Drawing.Size(101, 23);
             this.label5.TabIndex = 2;
             this.label5.Text = "Full Name";
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(7, 21);
+            this.label2.Location = new System.Drawing.Point(5, 11);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 35);
+            this.label2.Size = new System.Drawing.Size(101, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Addmission No";
             // 
             // btnStdEdtNic
             // 
-            this.btnStdEdtNic.Location = new System.Drawing.Point(172, 275);
+            this.btnStdEdtNic.Location = new System.Drawing.Point(115, 176);
+            this.btnStdEdtNic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdEdtNic.Multiline = true;
             this.btnStdEdtNic.Name = "btnStdEdtNic";
-            this.btnStdEdtNic.Size = new System.Drawing.Size(272, 35);
+            this.btnStdEdtNic.Size = new System.Drawing.Size(183, 24);
             this.btnStdEdtNic.TabIndex = 3;
             // 
             // btnStdEdtphoneNo
             // 
-            this.btnStdEdtphoneNo.Location = new System.Drawing.Point(172, 322);
+            this.btnStdEdtphoneNo.Location = new System.Drawing.Point(115, 206);
+            this.btnStdEdtphoneNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdEdtphoneNo.Multiline = true;
             this.btnStdEdtphoneNo.Name = "btnStdEdtphoneNo";
-            this.btnStdEdtphoneNo.Size = new System.Drawing.Size(272, 35);
+            this.btnStdEdtphoneNo.Size = new System.Drawing.Size(183, 24);
             this.btnStdEdtphoneNo.TabIndex = 3;
             // 
             // btnStdEdtLname
             // 
-            this.btnStdEdtLname.Location = new System.Drawing.Point(172, 107);
+            this.btnStdEdtLname.Location = new System.Drawing.Point(115, 67);
+            this.btnStdEdtLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdEdtLname.Multiline = true;
             this.btnStdEdtLname.Name = "btnStdEdtLname";
-            this.btnStdEdtLname.Size = new System.Drawing.Size(272, 35);
+            this.btnStdEdtLname.Size = new System.Drawing.Size(183, 24);
             this.btnStdEdtLname.TabIndex = 3;
             // 
             // btnStdEdtfullName
             // 
-            this.btnStdEdtfullName.Location = new System.Drawing.Point(172, 150);
+            this.btnStdEdtfullName.Location = new System.Drawing.Point(115, 95);
+            this.btnStdEdtfullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdEdtfullName.Multiline = true;
             this.btnStdEdtfullName.Name = "btnStdEdtfullName";
-            this.btnStdEdtfullName.Size = new System.Drawing.Size(272, 35);
+            this.btnStdEdtfullName.Size = new System.Drawing.Size(183, 24);
             this.btnStdEdtfullName.TabIndex = 3;
             // 
             // btnStdEdtfname
             // 
-            this.btnStdEdtfname.Location = new System.Drawing.Point(172, 64);
+            this.btnStdEdtfname.Location = new System.Drawing.Point(115, 39);
+            this.btnStdEdtfname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdEdtfname.Multiline = true;
             this.btnStdEdtfname.Name = "btnStdEdtfname";
-            this.btnStdEdtfname.Size = new System.Drawing.Size(272, 35);
+            this.btnStdEdtfname.Size = new System.Drawing.Size(183, 24);
             this.btnStdEdtfname.TabIndex = 3;
             // 
             // btnStdEdtAddmisNo
             // 
-            this.btnStdEdtAddmisNo.Location = new System.Drawing.Point(172, 21);
+            this.btnStdEdtAddmisNo.Location = new System.Drawing.Point(115, 11);
+            this.btnStdEdtAddmisNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdEdtAddmisNo.Multiline = true;
             this.btnStdEdtAddmisNo.Name = "btnStdEdtAddmisNo";
-            this.btnStdEdtAddmisNo.Size = new System.Drawing.Size(272, 35);
+            this.btnStdEdtAddmisNo.Size = new System.Drawing.Size(183, 24);
             this.btnStdEdtAddmisNo.TabIndex = 3;
             // 
             // groupBox1
@@ -295,45 +321,52 @@
             this.groupBox1.Controls.Add(this.btnStdEdtfullName);
             this.groupBox1.Controls.Add(this.btnStdEdtfname);
             this.groupBox1.Controls.Add(this.btnStdEdtAddmisNo);
-            this.groupBox1.Location = new System.Drawing.Point(5, 32);
+            this.groupBox1.Location = new System.Drawing.Point(3, 21);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(456, 512);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(304, 338);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // btnStdCreate
             // 
             this.btnStdCreate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStdCreate.Location = new System.Drawing.Point(611, 407);
+            this.btnStdCreate.Location = new System.Drawing.Point(184, 15);
+            this.btnStdCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStdCreate.Name = "btnStdCreate";
-            this.btnStdCreate.Size = new System.Drawing.Size(75, 40);
+            this.btnStdCreate.Size = new System.Drawing.Size(55, 30);
             this.btnStdCreate.TabIndex = 0;
             this.btnStdCreate.Text = "Save";
             this.btnStdCreate.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Location = new System.Drawing.Point(5, 559);
+            this.groupBox2.Controls.Add(this.btnStdCreate);
+            this.groupBox2.Controls.Add(this.btnStdcrtCancel);
+            this.groupBox2.Location = new System.Drawing.Point(3, 355);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 48);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(304, 51);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
             // 
             // StudentEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 628);
+            this.ClientSize = new System.Drawing.Size(319, 408);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btnStdcrtCancel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnStdCreate);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "StudentEditForm";
             this.Text = "StudentEditForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
