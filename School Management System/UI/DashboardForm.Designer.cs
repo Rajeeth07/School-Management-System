@@ -62,6 +62,7 @@
             this.btnStdDashGrade.TabIndex = 3;
             this.btnStdDashGrade.Text = "Grade";
             this.btnStdDashGrade.UseVisualStyleBackColor = false;
+            this.btnStdDashGrade.Click += new System.EventHandler(this.btnStdDashGrade_Click);
             // 
             // label1
             // 
@@ -85,6 +86,7 @@
             this.btnStdDashSubject.TabIndex = 2;
             this.btnStdDashSubject.Text = "Subject";
             this.btnStdDashSubject.UseVisualStyleBackColor = false;
+            this.btnStdDashSubject.Click += new System.EventHandler(this.btnStdDashSubject_Click);
             // 
             // btnLogout
             // 
@@ -96,6 +98,7 @@
             this.btnLogout.TabIndex = 4;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnStdDashStudent
             // 
@@ -107,6 +110,7 @@
             this.btnStdDashStudent.TabIndex = 1;
             this.btnStdDashStudent.Text = "Student ";
             this.btnStdDashStudent.UseVisualStyleBackColor = false;
+            this.btnStdDashStudent.Click += new System.EventHandler(this.btnStdDashStudent_Click);
             // 
             // groupBox1
             // 

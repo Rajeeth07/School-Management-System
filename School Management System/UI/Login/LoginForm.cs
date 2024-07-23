@@ -17,6 +17,10 @@ namespace School_Management_System.UI.Login
             InitializeComponent();
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UI.DashboardForm dashboardForm = new UI.DashboardForm();
+            dashboardForm.Show();
+        }
     }
 }

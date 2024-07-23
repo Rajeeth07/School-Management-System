@@ -65,7 +65,7 @@
             this.btnStdCreate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnStdCreate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnStdCreate.Location = new System.Drawing.Point(197, 10);
-            this.btnStdCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdCreate.Name = "btnStdCreate";
             this.btnStdCreate.Size = new System.Drawing.Size(50, 26);
             this.btnStdCreate.TabIndex = 0;
@@ -98,9 +98,9 @@
             this.groupBox1.Controls.Add(this.btnStdcrtfname);
             this.groupBox1.Controls.Add(this.btnStdcrtAddmisNo);
             this.groupBox1.Location = new System.Drawing.Point(3, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(304, 339);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -110,7 +110,7 @@
             this.cmbStdCrtGrdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStdCrtGrdId.FormattingEnabled = true;
             this.cmbStdCrtGrdId.Location = new System.Drawing.Point(115, 235);
-            this.cmbStdCrtGrdId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbStdCrtGrdId.Margin = new System.Windows.Forms.Padding(2);
             this.cmbStdCrtGrdId.Name = "cmbStdCrtGrdId";
             this.cmbStdCrtGrdId.Size = new System.Drawing.Size(183, 24);
             this.cmbStdCrtGrdId.TabIndex = 6;
@@ -119,7 +119,7 @@
             // 
             this.dtpStdCrtAddDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStdCrtAddDate.Location = new System.Drawing.Point(115, 263);
-            this.dtpStdCrtAddDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStdCrtAddDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStdCrtAddDate.Name = "dtpStdCrtAddDate";
             this.dtpStdCrtAddDate.Size = new System.Drawing.Size(183, 23);
             this.dtpStdCrtAddDate.TabIndex = 5;
@@ -128,7 +128,7 @@
             // 
             this.dtpStdcrtDoB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStdcrtDoB.Location = new System.Drawing.Point(115, 153);
-            this.dtpStdcrtDoB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStdcrtDoB.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStdcrtDoB.Name = "dtpStdcrtDoB";
             this.dtpStdcrtDoB.Size = new System.Drawing.Size(183, 23);
             this.dtpStdcrtDoB.TabIndex = 5;
@@ -136,7 +136,7 @@
             // rdoStdCrtMale
             // 
             this.rdoStdCrtMale.Location = new System.Drawing.Point(115, 125);
-            this.rdoStdCrtMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoStdCrtMale.Margin = new System.Windows.Forms.Padding(2);
             this.rdoStdCrtMale.Name = "rdoStdCrtMale";
             this.rdoStdCrtMale.Size = new System.Drawing.Size(56, 23);
             this.rdoStdCrtMale.TabIndex = 4;
@@ -147,7 +147,7 @@
             // rdoStdCrtFemale
             // 
             this.rdoStdCrtFemale.Location = new System.Drawing.Point(186, 125);
-            this.rdoStdCrtFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoStdCrtFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rdoStdCrtFemale.Name = "rdoStdCrtFemale";
             this.rdoStdCrtFemale.Size = new System.Drawing.Size(66, 23);
             this.rdoStdCrtFemale.TabIndex = 4;
@@ -239,7 +239,7 @@
             // btnStdcrtaddress
             // 
             this.btnStdcrtaddress.Location = new System.Drawing.Point(115, 289);
-            this.btnStdcrtaddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtaddress.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtaddress.Multiline = true;
             this.btnStdcrtaddress.Name = "btnStdcrtaddress";
             this.btnStdcrtaddress.Size = new System.Drawing.Size(183, 44);
@@ -266,7 +266,7 @@
             // btnStdcrtNic
             // 
             this.btnStdcrtNic.Location = new System.Drawing.Point(115, 179);
-            this.btnStdcrtNic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtNic.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtNic.Multiline = true;
             this.btnStdcrtNic.Name = "btnStdcrtNic";
             this.btnStdcrtNic.Size = new System.Drawing.Size(183, 24);
@@ -275,7 +275,7 @@
             // btnStdcrtphoneNo
             // 
             this.btnStdcrtphoneNo.Location = new System.Drawing.Point(115, 207);
-            this.btnStdcrtphoneNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtphoneNo.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtphoneNo.Multiline = true;
             this.btnStdcrtphoneNo.Name = "btnStdcrtphoneNo";
             this.btnStdcrtphoneNo.Size = new System.Drawing.Size(183, 24);
@@ -284,7 +284,7 @@
             // btnStdcrtLname
             // 
             this.btnStdcrtLname.Location = new System.Drawing.Point(115, 70);
-            this.btnStdcrtLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtLname.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtLname.Multiline = true;
             this.btnStdcrtLname.Name = "btnStdcrtLname";
             this.btnStdcrtLname.Size = new System.Drawing.Size(183, 24);
@@ -293,7 +293,7 @@
             // btnStdcrtfullName
             // 
             this.btnStdcrtfullName.Location = new System.Drawing.Point(115, 98);
-            this.btnStdcrtfullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtfullName.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtfullName.Multiline = true;
             this.btnStdcrtfullName.Name = "btnStdcrtfullName";
             this.btnStdcrtfullName.Size = new System.Drawing.Size(183, 24);
@@ -302,7 +302,7 @@
             // btnStdcrtfname
             // 
             this.btnStdcrtfname.Location = new System.Drawing.Point(115, 42);
-            this.btnStdcrtfname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtfname.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtfname.Multiline = true;
             this.btnStdcrtfname.Name = "btnStdcrtfname";
             this.btnStdcrtfname.Size = new System.Drawing.Size(183, 24);
@@ -311,7 +311,7 @@
             // btnStdcrtAddmisNo
             // 
             this.btnStdcrtAddmisNo.Location = new System.Drawing.Point(115, 14);
-            this.btnStdcrtAddmisNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtAddmisNo.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtAddmisNo.Multiline = true;
             this.btnStdcrtAddmisNo.Name = "btnStdcrtAddmisNo";
             this.btnStdcrtAddmisNo.Size = new System.Drawing.Size(183, 24);
@@ -334,11 +334,10 @@
             // 
             this.groupBox2.Controls.Add(this.btnStdcrtCancel);
             this.groupBox2.Controls.Add(this.btnStdCreate);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox2.Location = new System.Drawing.Point(0, 354);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(316, 40);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
@@ -348,7 +347,7 @@
             this.btnStdcrtCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnStdcrtCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnStdcrtCancel.Location = new System.Drawing.Point(251, 10);
-            this.btnStdcrtCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtCancel.Name = "btnStdcrtCancel";
             this.btnStdcrtCancel.Size = new System.Drawing.Size(50, 26);
             this.btnStdcrtCancel.TabIndex = 0;
@@ -360,10 +359,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 394);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentCreateForm";
             this.Text = "StudentCreateForm";
             this.groupBox1.ResumeLayout(false);

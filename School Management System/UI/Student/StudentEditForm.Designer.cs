@@ -64,7 +64,7 @@
             // 
             this.btnStdcrtCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnStdcrtCancel.Location = new System.Drawing.Point(243, 15);
-            this.btnStdcrtCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdcrtCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtCancel.Name = "btnStdcrtCancel";
             this.btnStdcrtCancel.Size = new System.Drawing.Size(55, 30);
             this.btnStdcrtCancel.TabIndex = 0;
@@ -89,7 +89,7 @@
             this.cmbStdEdtGrdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStdEdtGrdId.FormattingEnabled = true;
             this.cmbStdEdtGrdId.Location = new System.Drawing.Point(115, 234);
-            this.cmbStdEdtGrdId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbStdEdtGrdId.Margin = new System.Windows.Forms.Padding(2);
             this.cmbStdEdtGrdId.Name = "cmbStdEdtGrdId";
             this.cmbStdEdtGrdId.Size = new System.Drawing.Size(183, 24);
             this.cmbStdEdtGrdId.TabIndex = 6;
@@ -98,7 +98,7 @@
             // 
             this.dtpStdEdtAddDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStdEdtAddDate.Location = new System.Drawing.Point(115, 262);
-            this.dtpStdEdtAddDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStdEdtAddDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStdEdtAddDate.Name = "dtpStdEdtAddDate";
             this.dtpStdEdtAddDate.Size = new System.Drawing.Size(183, 23);
             this.dtpStdEdtAddDate.TabIndex = 5;
@@ -107,7 +107,7 @@
             // 
             this.dtpStdEdtDoB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStdEdtDoB.Location = new System.Drawing.Point(115, 150);
-            this.dtpStdEdtDoB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStdEdtDoB.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStdEdtDoB.Name = "dtpStdEdtDoB";
             this.dtpStdEdtDoB.Size = new System.Drawing.Size(183, 23);
             this.dtpStdEdtDoB.TabIndex = 5;
@@ -115,7 +115,7 @@
             // rdoStdEdtMale
             // 
             this.rdoStdEdtMale.Location = new System.Drawing.Point(115, 122);
-            this.rdoStdEdtMale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoStdEdtMale.Margin = new System.Windows.Forms.Padding(2);
             this.rdoStdEdtMale.Name = "rdoStdEdtMale";
             this.rdoStdEdtMale.Size = new System.Drawing.Size(56, 23);
             this.rdoStdEdtMale.TabIndex = 4;
@@ -126,7 +126,7 @@
             // rdoStdEdtFemale
             // 
             this.rdoStdEdtFemale.Location = new System.Drawing.Point(186, 125);
-            this.rdoStdEdtFemale.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rdoStdEdtFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rdoStdEdtFemale.Name = "rdoStdEdtFemale";
             this.rdoStdEdtFemale.Size = new System.Drawing.Size(66, 23);
             this.rdoStdEdtFemale.TabIndex = 4;
@@ -218,7 +218,7 @@
             // btnStdEdtaddress
             // 
             this.btnStdEdtaddress.Location = new System.Drawing.Point(115, 286);
-            this.btnStdEdtaddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdEdtaddress.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdEdtaddress.Multiline = true;
             this.btnStdEdtaddress.Name = "btnStdEdtaddress";
             this.btnStdEdtaddress.Size = new System.Drawing.Size(183, 44);
@@ -245,7 +245,7 @@
             // btnStdEdtNic
             // 
             this.btnStdEdtNic.Location = new System.Drawing.Point(115, 176);
-            this.btnStdEdtNic.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdEdtNic.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdEdtNic.Multiline = true;
             this.btnStdEdtNic.Name = "btnStdEdtNic";
             this.btnStdEdtNic.Size = new System.Drawing.Size(183, 24);
@@ -254,7 +254,7 @@
             // btnStdEdtphoneNo
             // 
             this.btnStdEdtphoneNo.Location = new System.Drawing.Point(115, 206);
-            this.btnStdEdtphoneNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdEdtphoneNo.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdEdtphoneNo.Multiline = true;
             this.btnStdEdtphoneNo.Name = "btnStdEdtphoneNo";
             this.btnStdEdtphoneNo.Size = new System.Drawing.Size(183, 24);
@@ -263,7 +263,7 @@
             // btnStdEdtLname
             // 
             this.btnStdEdtLname.Location = new System.Drawing.Point(115, 67);
-            this.btnStdEdtLname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdEdtLname.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdEdtLname.Multiline = true;
             this.btnStdEdtLname.Name = "btnStdEdtLname";
             this.btnStdEdtLname.Size = new System.Drawing.Size(183, 24);
@@ -272,7 +272,7 @@
             // btnStdEdtfullName
             // 
             this.btnStdEdtfullName.Location = new System.Drawing.Point(115, 95);
-            this.btnStdEdtfullName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdEdtfullName.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdEdtfullName.Multiline = true;
             this.btnStdEdtfullName.Name = "btnStdEdtfullName";
             this.btnStdEdtfullName.Size = new System.Drawing.Size(183, 24);
@@ -281,7 +281,7 @@
             // btnStdEdtfname
             // 
             this.btnStdEdtfname.Location = new System.Drawing.Point(115, 39);
-            this.btnStdEdtfname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdEdtfname.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdEdtfname.Multiline = true;
             this.btnStdEdtfname.Name = "btnStdEdtfname";
             this.btnStdEdtfname.Size = new System.Drawing.Size(183, 24);
@@ -290,7 +290,7 @@
             // btnStdEdtAddmisNo
             // 
             this.btnStdEdtAddmisNo.Location = new System.Drawing.Point(115, 11);
-            this.btnStdEdtAddmisNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdEdtAddmisNo.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdEdtAddmisNo.Multiline = true;
             this.btnStdEdtAddmisNo.Name = "btnStdEdtAddmisNo";
             this.btnStdEdtAddmisNo.Size = new System.Drawing.Size(183, 24);
@@ -322,9 +322,9 @@
             this.groupBox1.Controls.Add(this.btnStdEdtfname);
             this.groupBox1.Controls.Add(this.btnStdEdtAddmisNo);
             this.groupBox1.Location = new System.Drawing.Point(3, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(304, 338);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -333,7 +333,7 @@
             // 
             this.btnStdCreate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnStdCreate.Location = new System.Drawing.Point(184, 15);
-            this.btnStdCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStdCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdCreate.Name = "btnStdCreate";
             this.btnStdCreate.Size = new System.Drawing.Size(55, 30);
             this.btnStdCreate.TabIndex = 0;
@@ -345,13 +345,12 @@
             this.groupBox2.Controls.Add(this.btnStdCreate);
             this.groupBox2.Controls.Add(this.btnStdcrtCancel);
             this.groupBox2.Location = new System.Drawing.Point(3, 355);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(304, 51);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
             // 
             // StudentEditForm
             // 
@@ -361,7 +360,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentEditForm";
             this.Text = "StudentEditForm";
             this.groupBox1.ResumeLayout(false);
