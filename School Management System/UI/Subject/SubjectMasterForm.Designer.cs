@@ -56,58 +56,68 @@
             // 
             // btnSubRefresh
             // 
+            this.btnSubRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubRefresh.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSubRefresh.Location = new System.Drawing.Point(180, 14);
-            this.btnSubRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubRefresh.Name = "btnSubRefresh";
             this.btnSubRefresh.Size = new System.Drawing.Size(64, 32);
-            this.btnSubRefresh.TabIndex = 9;
+            this.btnSubRefresh.TabIndex = 5;
             this.btnSubRefresh.Text = "Refresh";
             this.btnSubRefresh.UseVisualStyleBackColor = false;
+            this.btnSubRefresh.Click += new System.EventHandler(this.btnSubRefresh_Click);
             // 
             // btnSubAdd
             // 
+            this.btnSubAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSubAdd.Location = new System.Drawing.Point(319, 14);
-            this.btnSubAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubAdd.Name = "btnSubAdd";
             this.btnSubAdd.Size = new System.Drawing.Size(64, 32);
-            this.btnSubAdd.TabIndex = 9;
+            this.btnSubAdd.TabIndex = 7;
             this.btnSubAdd.Text = "Add";
             this.btnSubAdd.UseVisualStyleBackColor = false;
+            this.btnSubAdd.Click += new System.EventHandler(this.btnSubAdd_Click);
             // 
             // btnSubEdit
             // 
+            this.btnSubEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubEdit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSubEdit.Location = new System.Drawing.Point(388, 14);
-            this.btnSubEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubEdit.Name = "btnSubEdit";
             this.btnSubEdit.Size = new System.Drawing.Size(64, 32);
-            this.btnSubEdit.TabIndex = 9;
+            this.btnSubEdit.TabIndex = 8;
             this.btnSubEdit.Text = "Edit";
             this.btnSubEdit.UseVisualStyleBackColor = false;
+            this.btnSubEdit.Click += new System.EventHandler(this.btnSubEdit_Click);
             // 
             // btnSubSave
             // 
+            this.btnSubSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubSave.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSubSave.Location = new System.Drawing.Point(457, 14);
-            this.btnSubSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubSave.Name = "btnSubSave";
             this.btnSubSave.Size = new System.Drawing.Size(64, 32);
             this.btnSubSave.TabIndex = 9;
             this.btnSubSave.Text = "Save";
             this.btnSubSave.UseVisualStyleBackColor = false;
+            this.btnSubSave.Click += new System.EventHandler(this.btnSubSave_Click);
             // 
             // btnSubDelete
             // 
+            this.btnSubDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSubDelete.Location = new System.Drawing.Point(249, 14);
-            this.btnSubDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubDelete.Name = "btnSubDelete";
             this.btnSubDelete.Size = new System.Drawing.Size(64, 32);
-            this.btnSubDelete.TabIndex = 9;
+            this.btnSubDelete.TabIndex = 6;
             this.btnSubDelete.Text = "Delete";
             this.btnSubDelete.UseVisualStyleBackColor = false;
+            this.btnSubDelete.Click += new System.EventHandler(this.btnSubDelete_Click);
             // 
             // groupBox3
             // 
@@ -118,35 +128,40 @@
             this.groupBox3.Controls.Add(this.btnSubCancel);
             this.groupBox3.Controls.Add(this.btnSubDelete);
             this.groupBox3.Controls.Add(this.btnSubExit);
-            this.groupBox3.Location = new System.Drawing.Point(3, 237);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(0, 242);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox3.Size = new System.Drawing.Size(664, 52);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(673, 52);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             // 
             // btnSubCancel
             // 
+            this.btnSubCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSubCancel.Location = new System.Drawing.Point(527, 14);
-            this.btnSubCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubCancel.Name = "btnSubCancel";
             this.btnSubCancel.Size = new System.Drawing.Size(64, 32);
-            this.btnSubCancel.TabIndex = 9;
+            this.btnSubCancel.TabIndex = 10;
             this.btnSubCancel.Text = "Cancel";
             this.btnSubCancel.UseVisualStyleBackColor = false;
+            this.btnSubCancel.Click += new System.EventHandler(this.btnSubCancel_Click);
             // 
             // btnSubExit
             // 
+            this.btnSubExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubExit.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSubExit.Location = new System.Drawing.Point(596, 14);
-            this.btnSubExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSubExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnSubExit.Name = "btnSubExit";
             this.btnSubExit.Size = new System.Drawing.Size(64, 32);
-            this.btnSubExit.TabIndex = 9;
+            this.btnSubExit.TabIndex = 11;
             this.btnSubExit.Text = "Exit";
             this.btnSubExit.UseVisualStyleBackColor = false;
+            this.btnSubExit.Click += new System.EventHandler(this.btnSubExit_Click);
             // 
             // label4
             // 
@@ -195,11 +210,11 @@
             // 
             this.txtSubNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubNumber.Location = new System.Drawing.Point(69, 85);
-            this.txtSubNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubNumber.Multiline = true;
             this.txtSubNumber.Name = "txtSubNumber";
             this.txtSubNumber.Size = new System.Drawing.Size(173, 25);
-            this.txtSubNumber.TabIndex = 10;
+            this.txtSubNumber.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -211,11 +226,12 @@
             this.groupBox2.Controls.Add(this.txtSubindex);
             this.groupBox2.Controls.Add(this.txtSubOrder);
             this.groupBox2.Controls.Add(this.txtSubNumber);
-            this.groupBox2.Location = new System.Drawing.Point(409, 25);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox2.Location = new System.Drawing.Point(414, 23);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox2.Size = new System.Drawing.Size(259, 207);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(259, 219);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             // 
@@ -233,50 +249,54 @@
             // 
             this.txtSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubName.Location = new System.Drawing.Point(69, 28);
-            this.txtSubName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubName.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubName.Multiline = true;
             this.txtSubName.Name = "txtSubName";
             this.txtSubName.Size = new System.Drawing.Size(173, 25);
-            this.txtSubName.TabIndex = 10;
+            this.txtSubName.TabIndex = 1;
             // 
             // txtSubindex
             // 
             this.txtSubindex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubindex.Location = new System.Drawing.Point(69, 57);
-            this.txtSubindex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubindex.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubindex.Multiline = true;
             this.txtSubindex.Name = "txtSubindex";
             this.txtSubindex.Size = new System.Drawing.Size(173, 25);
-            this.txtSubindex.TabIndex = 10;
+            this.txtSubindex.TabIndex = 2;
             // 
             // txtSubOrder
             // 
             this.txtSubOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubOrder.Location = new System.Drawing.Point(69, 114);
-            this.txtSubOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubOrder.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubOrder.Multiline = true;
             this.txtSubOrder.Name = "txtSubOrder";
             this.txtSubOrder.Size = new System.Drawing.Size(173, 25);
-            this.txtSubOrder.TabIndex = 10;
+            this.txtSubOrder.TabIndex = 4;
             // 
             // dgvSub
             // 
+            this.dgvSub.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSub.Location = new System.Drawing.Point(0, 10);
-            this.dgvSub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSub.Location = new System.Drawing.Point(0, 35);
+            this.dgvSub.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSub.Name = "dgvSub";
             this.dgvSub.RowHeadersWidth = 62;
-            this.dgvSub.Size = new System.Drawing.Size(399, 198);
+            this.dgvSub.Size = new System.Drawing.Size(410, 203);
             this.dgvSub.TabIndex = 3;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvSub);
-            this.groupBox1.Location = new System.Drawing.Point(3, 25);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(401, 207);
+            this.groupBox1.Size = new System.Drawing.Size(673, 294);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
@@ -285,13 +305,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 294);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SubjectMasterForm";
             this.Text = "SubjectMasterForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubjectMasterForm_FormClosing);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
