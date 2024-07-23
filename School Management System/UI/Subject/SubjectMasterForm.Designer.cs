@@ -42,12 +42,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtSubNumber = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtSubName = new System.Windows.Forms.TextBox();
             this.txtSubindex = new System.Windows.Forms.TextBox();
+            this.txtSubOrder = new System.Windows.Forms.TextBox();
             this.dgvSub = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtSubOrder = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSub)).BeginInit();
@@ -56,48 +56,58 @@
             // 
             // btnSubRefresh
             // 
-            this.btnSubRefresh.Location = new System.Drawing.Point(270, 25);
+            this.btnSubRefresh.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubRefresh.Location = new System.Drawing.Point(180, 14);
+            this.btnSubRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubRefresh.Name = "btnSubRefresh";
-            this.btnSubRefresh.Size = new System.Drawing.Size(96, 49);
+            this.btnSubRefresh.Size = new System.Drawing.Size(64, 32);
             this.btnSubRefresh.TabIndex = 9;
             this.btnSubRefresh.Text = "Refresh";
-            this.btnSubRefresh.UseVisualStyleBackColor = true;
+            this.btnSubRefresh.UseVisualStyleBackColor = false;
             // 
             // btnSubAdd
             // 
-            this.btnSubAdd.Location = new System.Drawing.Point(478, 25);
+            this.btnSubAdd.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubAdd.Location = new System.Drawing.Point(319, 14);
+            this.btnSubAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubAdd.Name = "btnSubAdd";
-            this.btnSubAdd.Size = new System.Drawing.Size(96, 49);
+            this.btnSubAdd.Size = new System.Drawing.Size(64, 32);
             this.btnSubAdd.TabIndex = 9;
             this.btnSubAdd.Text = "Add";
-            this.btnSubAdd.UseVisualStyleBackColor = true;
+            this.btnSubAdd.UseVisualStyleBackColor = false;
             // 
             // btnSubEdit
             // 
-            this.btnSubEdit.Location = new System.Drawing.Point(582, 25);
+            this.btnSubEdit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubEdit.Location = new System.Drawing.Point(388, 14);
+            this.btnSubEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubEdit.Name = "btnSubEdit";
-            this.btnSubEdit.Size = new System.Drawing.Size(96, 49);
+            this.btnSubEdit.Size = new System.Drawing.Size(64, 32);
             this.btnSubEdit.TabIndex = 9;
             this.btnSubEdit.Text = "Edit";
-            this.btnSubEdit.UseVisualStyleBackColor = true;
+            this.btnSubEdit.UseVisualStyleBackColor = false;
             // 
             // btnSubSave
             // 
-            this.btnSubSave.Location = new System.Drawing.Point(686, 25);
+            this.btnSubSave.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubSave.Location = new System.Drawing.Point(457, 14);
+            this.btnSubSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubSave.Name = "btnSubSave";
-            this.btnSubSave.Size = new System.Drawing.Size(96, 49);
+            this.btnSubSave.Size = new System.Drawing.Size(64, 32);
             this.btnSubSave.TabIndex = 9;
             this.btnSubSave.Text = "Save";
-            this.btnSubSave.UseVisualStyleBackColor = true;
+            this.btnSubSave.UseVisualStyleBackColor = false;
             // 
             // btnSubDelete
             // 
-            this.btnSubDelete.Location = new System.Drawing.Point(374, 25);
+            this.btnSubDelete.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubDelete.Location = new System.Drawing.Point(249, 14);
+            this.btnSubDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubDelete.Name = "btnSubDelete";
-            this.btnSubDelete.Size = new System.Drawing.Size(96, 49);
+            this.btnSubDelete.Size = new System.Drawing.Size(64, 32);
             this.btnSubDelete.TabIndex = 9;
             this.btnSubDelete.Text = "Delete";
-            this.btnSubDelete.UseVisualStyleBackColor = true;
+            this.btnSubDelete.UseVisualStyleBackColor = false;
             // 
             // groupBox3
             // 
@@ -108,35 +118,43 @@
             this.groupBox3.Controls.Add(this.btnSubCancel);
             this.groupBox3.Controls.Add(this.btnSubDelete);
             this.groupBox3.Controls.Add(this.btnSubExit);
-            this.groupBox3.Location = new System.Drawing.Point(5, 364);
+            this.groupBox3.Location = new System.Drawing.Point(3, 237);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(996, 80);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Size = new System.Drawing.Size(664, 52);
             this.groupBox3.TabIndex = 18;
             this.groupBox3.TabStop = false;
             // 
             // btnSubCancel
             // 
-            this.btnSubCancel.Location = new System.Drawing.Point(790, 25);
+            this.btnSubCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubCancel.Location = new System.Drawing.Point(527, 14);
+            this.btnSubCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubCancel.Name = "btnSubCancel";
-            this.btnSubCancel.Size = new System.Drawing.Size(96, 49);
+            this.btnSubCancel.Size = new System.Drawing.Size(64, 32);
             this.btnSubCancel.TabIndex = 9;
             this.btnSubCancel.Text = "Cancel";
-            this.btnSubCancel.UseVisualStyleBackColor = true;
+            this.btnSubCancel.UseVisualStyleBackColor = false;
             // 
             // btnSubExit
             // 
-            this.btnSubExit.Location = new System.Drawing.Point(894, 25);
+            this.btnSubExit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSubExit.Location = new System.Drawing.Point(596, 14);
+            this.btnSubExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubExit.Name = "btnSubExit";
-            this.btnSubExit.Size = new System.Drawing.Size(96, 49);
+            this.btnSubExit.Size = new System.Drawing.Size(64, 32);
             this.btnSubExit.TabIndex = 9;
             this.btnSubExit.Text = "Exit";
-            this.btnSubExit.UseVisualStyleBackColor = true;
+            this.btnSubExit.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(21, 131);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(4, 85);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(71, 36);
+            this.label4.Size = new System.Drawing.Size(57, 23);
             this.label4.TabIndex = 11;
             this.label4.Text = "Number";
             // 
@@ -146,34 +164,41 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1009, 36);
+            this.label2.Size = new System.Drawing.Size(673, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Subject Master";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(21, 46);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(4, 30);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 36);
+            this.label1.Size = new System.Drawing.Size(60, 23);
             this.label1.TabIndex = 11;
             this.label1.Text = "Name";
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(21, 87);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(4, 57);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 36);
+            this.label3.Size = new System.Drawing.Size(60, 23);
             this.label3.TabIndex = 11;
             this.label3.Text = "Index";
             // 
             // txtSubNumber
             // 
-            this.txtSubNumber.Location = new System.Drawing.Point(104, 131);
+            this.txtSubNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubNumber.Location = new System.Drawing.Point(69, 85);
+            this.txtSubNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSubNumber.Multiline = true;
             this.txtSubNumber.Name = "txtSubNumber";
-            this.txtSubNumber.Size = new System.Drawing.Size(258, 36);
+            this.txtSubNumber.Size = new System.Drawing.Size(173, 25);
             this.txtSubNumber.TabIndex = 10;
             // 
             // groupBox2
@@ -186,72 +211,85 @@
             this.groupBox2.Controls.Add(this.txtSubindex);
             this.groupBox2.Controls.Add(this.txtSubOrder);
             this.groupBox2.Controls.Add(this.txtSubNumber);
-            this.groupBox2.Location = new System.Drawing.Point(613, 39);
+            this.groupBox2.Location = new System.Drawing.Point(409, 25);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(388, 319);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(259, 207);
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(4, 114);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(57, 23);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Order";
+            // 
             // txtSubName
             // 
-            this.txtSubName.Location = new System.Drawing.Point(104, 43);
+            this.txtSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubName.Location = new System.Drawing.Point(69, 28);
+            this.txtSubName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSubName.Multiline = true;
             this.txtSubName.Name = "txtSubName";
-            this.txtSubName.Size = new System.Drawing.Size(258, 36);
+            this.txtSubName.Size = new System.Drawing.Size(173, 25);
             this.txtSubName.TabIndex = 10;
             // 
             // txtSubindex
             // 
-            this.txtSubindex.Location = new System.Drawing.Point(104, 87);
+            this.txtSubindex.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubindex.Location = new System.Drawing.Point(69, 57);
+            this.txtSubindex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSubindex.Multiline = true;
             this.txtSubindex.Name = "txtSubindex";
-            this.txtSubindex.Size = new System.Drawing.Size(258, 36);
+            this.txtSubindex.Size = new System.Drawing.Size(173, 25);
             this.txtSubindex.TabIndex = 10;
+            // 
+            // txtSubOrder
+            // 
+            this.txtSubOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSubOrder.Location = new System.Drawing.Point(69, 114);
+            this.txtSubOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSubOrder.Multiline = true;
+            this.txtSubOrder.Name = "txtSubOrder";
+            this.txtSubOrder.Size = new System.Drawing.Size(173, 25);
+            this.txtSubOrder.TabIndex = 10;
             // 
             // dgvSub
             // 
             this.dgvSub.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSub.Location = new System.Drawing.Point(0, 15);
+            this.dgvSub.Location = new System.Drawing.Point(0, 10);
+            this.dgvSub.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvSub.Name = "dgvSub";
             this.dgvSub.RowHeadersWidth = 62;
-            this.dgvSub.Size = new System.Drawing.Size(599, 304);
+            this.dgvSub.Size = new System.Drawing.Size(399, 198);
             this.dgvSub.TabIndex = 3;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvSub);
-            this.groupBox1.Location = new System.Drawing.Point(5, 39);
+            this.groupBox1.Location = new System.Drawing.Point(3, 25);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(602, 319);
+            this.groupBox1.Size = new System.Drawing.Size(401, 207);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
-            // txtSubOrder
-            // 
-            this.txtSubOrder.Location = new System.Drawing.Point(104, 175);
-            this.txtSubOrder.Multiline = true;
-            this.txtSubOrder.Name = "txtSubOrder";
-            this.txtSubOrder.Size = new System.Drawing.Size(258, 36);
-            this.txtSubOrder.TabIndex = 10;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(21, 175);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 36);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Order";
-            // 
             // SubjectMasterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 452);
+            this.ClientSize = new System.Drawing.Size(673, 294);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SubjectMasterForm";
             this.Text = "SubjectMasterForm";
             this.groupBox3.ResumeLayout(false);
