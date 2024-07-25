@@ -40,5 +40,7 @@ namespace School_Management_System.UI
             UI.Grade.GradeMasterForm gradeMasterForm=new UI.Grade.GradeMasterForm();    
             gradeMasterForm.Show();
         }
+
+      
     }
 }

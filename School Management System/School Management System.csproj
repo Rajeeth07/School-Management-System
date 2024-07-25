@@ -146,5 +146,59 @@
   <ItemGroup>
     <None Include="Resources\graduated2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-icon-sl7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\09876.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2345t.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1111s__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-icocons--softiconsm-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_603559966_0VO4rK4OyPO4i89jEDfH1XEbI5fQDaCK-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_603559966_0VO4rK4OyPO4i89jEDfH1XEbI5fQDaCK-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1111111111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12345.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76543.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23456.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5555555555.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-777777777777777.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\76534.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

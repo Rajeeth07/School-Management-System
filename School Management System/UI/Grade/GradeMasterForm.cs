@@ -117,6 +117,26 @@ namespace School_Management_System.UI.Grade
                 return;
             }
             //delete function
+            string connetionString = null;
+            SqlConnection connection;
+            SqlCommand command;
+            string sql = null;
+            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
+            sql = "delete from grades where id='"+this.id+"'";
+            connection = new SqlConnection(connetionString);
+             try
+             {
+                 connection.Open();
+                 command = new SqlCommand(sql, connection);
+                 command.ExecuteNonQuery();
+                 command.Dispose();
+                 connection.Close();
+                 MessageBox.Show("Grade detail deleted successfully");
+             }
+             catch (Exception)
+             {
+                 MessageBox.Show("Can not open connection ! ");
+             }
         }
 
         private void btnGrdExit_Click(object sender, EventArgs e)
