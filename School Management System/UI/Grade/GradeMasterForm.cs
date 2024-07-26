@@ -112,7 +112,7 @@ namespace School_Management_System.UI.Grade
 
         private void btnGrdDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dr=MessageBox.Show("Do you want to delte?","Question",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            DialogResult dr=MessageBox.Show("Do you want to delete Id: "+this.id+"?", "Question",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
             if (dr == DialogResult.Cancel) { 
                 return;
             }
@@ -131,7 +131,7 @@ namespace School_Management_System.UI.Grade
                  command.ExecuteNonQuery();
                  command.Dispose();
                  connection.Close();
-                 MessageBox.Show("Grade detail deleted successfully");
+                 MessageBox.Show("Grade Id "+this.id+" details deleted successfully");
              }
              catch (Exception)
              {

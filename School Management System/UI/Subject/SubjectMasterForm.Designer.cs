@@ -320,6 +320,8 @@
             // 
             // dgvSub
             // 
+            this.dgvSub.AllowUserToAddRows = false;
+            this.dgvSub.AllowUserToDeleteRows = false;
             this.dgvSub.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -328,8 +330,10 @@
             this.dgvSub.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSub.Name = "dgvSub";
             this.dgvSub.RowHeadersWidth = 62;
+            this.dgvSub.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSub.Size = new System.Drawing.Size(448, 178);
             this.dgvSub.TabIndex = 3;
+            this.dgvSub.SelectionChanged += new System.EventHandler(this.dgvSub_SelectionChanged);
             // 
             // groupBox1
             // 
@@ -361,6 +365,7 @@
             this.txtSubSearch.Name = "txtSubSearch";
             this.txtSubSearch.Size = new System.Drawing.Size(183, 23);
             this.txtSubSearch.TabIndex = 4;
+            this.txtSubSearch.TextChanged += new System.EventHandler(this.txtSubSearch_TextChanged);
             // 
             // SubjectMasterForm
             // 
@@ -377,6 +382,7 @@
             this.Name = "SubjectMasterForm";
             this.Text = "SubjectMasterForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SubjectMasterForm_FormClosing);
+            this.Load += new System.EventHandler(this.SubjectMasterForm_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

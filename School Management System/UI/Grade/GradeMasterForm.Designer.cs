@@ -60,7 +60,7 @@
             this.label1.BackColor = System.Drawing.Color.SeaGreen;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(10, 28);
+            this.label1.Location = new System.Drawing.Point(25, 46);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 17);
@@ -70,7 +70,7 @@
             // txtGrdName
             // 
             this.txtGrdName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrdName.Location = new System.Drawing.Point(69, 28);
+            this.txtGrdName.Location = new System.Drawing.Point(84, 46);
             this.txtGrdName.Margin = new System.Windows.Forms.Padding(2);
             this.txtGrdName.Multiline = true;
             this.txtGrdName.Name = "txtGrdName";
@@ -85,7 +85,7 @@
             this.btnGrdExit.ForeColor = System.Drawing.Color.Black;
             this.btnGrdExit.Image = global::School_Management_System.Properties.Resources.Back_removebg_preview;
             this.btnGrdExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrdExit.Location = new System.Drawing.Point(677, 12);
+            this.btnGrdExit.Location = new System.Drawing.Point(625, 12);
             this.btnGrdExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrdExit.Name = "btnGrdExit";
             this.btnGrdExit.Size = new System.Drawing.Size(61, 32);
@@ -105,7 +105,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(503, 257);
+            this.groupBox1.Size = new System.Drawing.Size(414, 257);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -113,14 +113,14 @@
             // 
             this.label5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label5.Image = global::School_Management_System.Properties.Resources.search_icon_sl7;
-            this.label5.Location = new System.Drawing.Point(295, 30);
+            this.label5.Location = new System.Drawing.Point(202, 27);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 23);
+            this.label5.Size = new System.Drawing.Size(28, 26);
             this.label5.TabIndex = 2;
             // 
             // txtGrdSearch
             // 
-            this.txtGrdSearch.Location = new System.Drawing.Point(325, 28);
+            this.txtGrdSearch.Location = new System.Drawing.Point(232, 27);
             this.txtGrdSearch.Multiline = true;
             this.txtGrdSearch.Name = "txtGrdSearch";
             this.txtGrdSearch.Size = new System.Drawing.Size(165, 25);
@@ -158,7 +158,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(745, 52);
+            this.groupBox3.Size = new System.Drawing.Size(693, 52);
             this.groupBox3.TabIndex = 14;
             this.groupBox3.TabStop = false;
             // 
@@ -170,7 +170,7 @@
             this.btnGrdRefresh.ForeColor = System.Drawing.Color.White;
             this.btnGrdRefresh.Image = global::School_Management_System.Properties.Resources._360_F_603559966_0VO4rK4OyPO4i89jEDfH1XEbI5fQDaCK_removebg_preview1;
             this.btnGrdRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrdRefresh.Location = new System.Drawing.Point(237, 12);
+            this.btnGrdRefresh.Location = new System.Drawing.Point(185, 12);
             this.btnGrdRefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrdRefresh.Name = "btnGrdRefresh";
             this.btnGrdRefresh.Size = new System.Drawing.Size(82, 32);
@@ -188,7 +188,7 @@
             this.btnGrdAdd.ForeColor = System.Drawing.Color.White;
             this.btnGrdAdd.Image = global::School_Management_System.Properties.Resources.add_icocons__softiconsm_5;
             this.btnGrdAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrdAdd.Location = new System.Drawing.Point(401, 12);
+            this.btnGrdAdd.Location = new System.Drawing.Point(349, 12);
             this.btnGrdAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrdAdd.Name = "btnGrdAdd";
             this.btnGrdAdd.Size = new System.Drawing.Size(61, 32);
@@ -206,7 +206,7 @@
             this.btnGrdEdit.ForeColor = System.Drawing.Color.White;
             this.btnGrdEdit.Image = global::School_Management_System.Properties.Resources._1111111111;
             this.btnGrdEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrdEdit.Location = new System.Drawing.Point(466, 12);
+            this.btnGrdEdit.Location = new System.Drawing.Point(414, 12);
             this.btnGrdEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrdEdit.Name = "btnGrdEdit";
             this.btnGrdEdit.Size = new System.Drawing.Size(59, 32);
@@ -224,7 +224,7 @@
             this.btnGrdSave.ForeColor = System.Drawing.Color.White;
             this.btnGrdSave.Image = global::School_Management_System.Properties.Resources._12345;
             this.btnGrdSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrdSave.Location = new System.Drawing.Point(529, 12);
+            this.btnGrdSave.Location = new System.Drawing.Point(477, 12);
             this.btnGrdSave.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrdSave.Name = "btnGrdSave";
             this.btnGrdSave.Size = new System.Drawing.Size(67, 32);
@@ -242,7 +242,7 @@
             this.btnGrdCancel.ForeColor = System.Drawing.Color.White;
             this.btnGrdCancel.Image = global::School_Management_System.Properties.Resources._76543;
             this.btnGrdCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrdCancel.Location = new System.Drawing.Point(600, 12);
+            this.btnGrdCancel.Location = new System.Drawing.Point(548, 12);
             this.btnGrdCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrdCancel.Name = "btnGrdCancel";
             this.btnGrdCancel.Size = new System.Drawing.Size(73, 32);
@@ -260,7 +260,7 @@
             this.btnGrdDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnGrdDelete.Image = global::School_Management_System.Properties.Resources._11;
             this.btnGrdDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGrdDelete.Location = new System.Drawing.Point(323, 12);
+            this.btnGrdDelete.Location = new System.Drawing.Point(271, 12);
             this.btnGrdDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnGrdDelete.Name = "btnGrdDelete";
             this.btnGrdDelete.Size = new System.Drawing.Size(74, 32);
@@ -279,11 +279,11 @@
             this.groupBox2.Controls.Add(this.txtGrdGroup);
             this.groupBox2.Controls.Add(this.txtGrdOrder);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(503, 23);
+            this.groupBox2.Location = new System.Drawing.Point(414, 23);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(242, 257);
+            this.groupBox2.Size = new System.Drawing.Size(279, 257);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             // 
@@ -292,7 +292,7 @@
             this.label4.BackColor = System.Drawing.Color.SeaGreen;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(10, 85);
+            this.label4.Location = new System.Drawing.Point(25, 112);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 17);
@@ -304,7 +304,7 @@
             this.label3.BackColor = System.Drawing.Color.SeaGreen;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(10, 57);
+            this.label3.Location = new System.Drawing.Point(25, 79);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 17);
@@ -314,7 +314,7 @@
             // txtGrdGroup
             // 
             this.txtGrdGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrdGroup.Location = new System.Drawing.Point(69, 57);
+            this.txtGrdGroup.Location = new System.Drawing.Point(84, 79);
             this.txtGrdGroup.Margin = new System.Windows.Forms.Padding(2);
             this.txtGrdGroup.Multiline = true;
             this.txtGrdGroup.Name = "txtGrdGroup";
@@ -324,7 +324,7 @@
             // txtGrdOrder
             // 
             this.txtGrdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrdOrder.Location = new System.Drawing.Point(69, 85);
+            this.txtGrdOrder.Location = new System.Drawing.Point(84, 112);
             this.txtGrdOrder.Margin = new System.Windows.Forms.Padding(2);
             this.txtGrdOrder.Multiline = true;
             this.txtGrdOrder.Name = "txtGrdOrder";
@@ -339,7 +339,7 @@
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(745, 23);
+            this.label2.Size = new System.Drawing.Size(693, 23);
             this.label2.TabIndex = 0;
             this.label2.Text = "Grade Master";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -349,7 +349,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(745, 332);
+            this.ClientSize = new System.Drawing.Size(693, 332);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
