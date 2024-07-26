@@ -30,7 +30,7 @@
         {
             this.btnStdExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvStd = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtStuSearch = new System.Windows.Forms.TextBox();
@@ -39,7 +39,7 @@
             this.btnStdDelete = new System.Windows.Forms.Button();
             this.btnStdAdd = new System.Windows.Forms.Button();
             this.btnStdEdit = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStd)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,7 @@
             this.btnStdExit.Text = "Exit";
             this.btnStdExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdExit.UseVisualStyleBackColor = false;
+            this.btnStdExit.Click += new System.EventHandler(this.btnStdExit_Click);
             // 
             // label1
             // 
@@ -72,22 +73,24 @@
             this.label1.Text = "Student Master";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // dgvStd
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 42);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(579, 184);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvStd.AllowUserToAddRows = false;
+            this.dgvStd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStd.Location = new System.Drawing.Point(4, 42);
+            this.dgvStd.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStd.Name = "dgvStd";
+            this.dgvStd.RowHeadersWidth = 62;
+            this.dgvStd.RowTemplate.Height = 28;
+            this.dgvStd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStd.Size = new System.Drawing.Size(579, 184);
+            this.dgvStd.TabIndex = 2;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtStuSearch);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgvStd);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 23);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -207,7 +210,9 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentMasterForm";
             this.Text = "StudentMasterForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentMasterForm_FormClosing);
+            this.Load += new System.EventHandler(this.StudentMasterForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStd)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -219,7 +224,7 @@
 
         private System.Windows.Forms.Button btnStdExit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvStd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnStdRefresh;

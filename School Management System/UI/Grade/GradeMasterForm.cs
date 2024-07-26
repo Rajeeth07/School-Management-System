@@ -108,6 +108,7 @@ namespace School_Management_System.UI.Grade
             txtGrdName.Text = null;
             txtGrdGroup.Text = null;
             txtGrdOrder.Text = null;
+            txtGrdSearch.Text = null;
         }
 
         private void btnGrdDelete_Click(object sender, EventArgs e)
