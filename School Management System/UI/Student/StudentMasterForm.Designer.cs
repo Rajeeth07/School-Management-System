@@ -148,6 +148,7 @@
             this.btnStdRefresh.Text = "Refresh";
             this.btnStdRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdRefresh.UseVisualStyleBackColor = false;
+            this.btnStdRefresh.Click += new System.EventHandler(this.btnStdRefresh_Click);
             // 
             // btnStdDelete
             // 

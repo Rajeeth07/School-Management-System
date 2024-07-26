@@ -34,6 +34,11 @@ namespace School_Management_System.UI.Student
 
         private void StudentMasterForm_Load(object sender, EventArgs e)
         {
+            formLoad();
+        }
+
+        private void formLoad()
+        {
             string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
@@ -47,9 +52,9 @@ namespace School_Management_System.UI.Student
                 connection.Open();
                 command = new SqlCommand(sql, connection);
                 dataReader = command.ExecuteReader();
-                dt=new DataTable();
+                dt = new DataTable();
                 dt.Load(dataReader);
-                dv=dt.DefaultView;
+                dv = dt.DefaultView;
                 dgvStd.DataSource = dv;
                 dataReader.Close();
                 command.Dispose();
@@ -78,6 +83,12 @@ namespace School_Management_System.UI.Student
         {
             dv = new DataView(dt, "addmission_no like '%"+txtStuSearch.Text+"%' or first_name like '%"+txtStuSearch.Text+"%' or last_name like '%"+txtStuSearch.Text+"%' or full_name like '%"+txtStuSearch.Text+"%' or gender like '%"+txtStuSearch.Text+"%' or stu_nic_no like '%"+txtStuSearch.Text+"%' or tp_No like '%"+txtStuSearch.Text+"%' or medium like '%"+txtStuSearch.Text+"%' or resident_address like '%"+txtStuSearch.Text+"%'", "first_name", DataViewRowState.CurrentRows);
             dgvStd.DataSource = dv;
+        }
+
+        private void btnStdRefresh_Click(object sender, EventArgs e)
+        {
+            formLoad();
+            txtStuSearch.Text=null;
         }
     }
 }
