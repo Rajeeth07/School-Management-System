@@ -44,15 +44,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnStdEdtaddress = new System.Windows.Forms.TextBox();
+            this.txtStdEdtaddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnStdEdtNic = new System.Windows.Forms.TextBox();
-            this.btnStdEdtphoneNo = new System.Windows.Forms.TextBox();
-            this.btnStdEdtLname = new System.Windows.Forms.TextBox();
-            this.btnStdEdtfullName = new System.Windows.Forms.TextBox();
-            this.btnStdEdtfname = new System.Windows.Forms.TextBox();
-            this.btnStdEdtAddmisNo = new System.Windows.Forms.TextBox();
+            this.txtStdEdtNic = new System.Windows.Forms.TextBox();
+            this.txtStdEdtphoneNo = new System.Windows.Forms.TextBox();
+            this.txtStdEdtLname = new System.Windows.Forms.TextBox();
+            this.txtStdEdtfullName = new System.Windows.Forms.TextBox();
+            this.txtStdEdtfname = new System.Windows.Forms.TextBox();
+            this.txtStdEdtAddmisNo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnStdCreate = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -238,14 +238,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "First name";
             // 
-            // btnStdEdtaddress
+            // txtStdEdtaddress
             // 
-            this.btnStdEdtaddress.Location = new System.Drawing.Point(115, 286);
-            this.btnStdEdtaddress.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdEdtaddress.Multiline = true;
-            this.btnStdEdtaddress.Name = "btnStdEdtaddress";
-            this.btnStdEdtaddress.Size = new System.Drawing.Size(183, 44);
-            this.btnStdEdtaddress.TabIndex = 3;
+            this.txtStdEdtaddress.Location = new System.Drawing.Point(115, 286);
+            this.txtStdEdtaddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdEdtaddress.Multiline = true;
+            this.txtStdEdtaddress.Name = "txtStdEdtaddress";
+            this.txtStdEdtaddress.Size = new System.Drawing.Size(183, 44);
+            this.txtStdEdtaddress.TabIndex = 3;
             // 
             // label5
             // 
@@ -269,59 +269,59 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Addmission No";
             // 
-            // btnStdEdtNic
+            // txtStdEdtNic
             // 
-            this.btnStdEdtNic.Location = new System.Drawing.Point(115, 176);
-            this.btnStdEdtNic.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdEdtNic.Multiline = true;
-            this.btnStdEdtNic.Name = "btnStdEdtNic";
-            this.btnStdEdtNic.Size = new System.Drawing.Size(183, 24);
-            this.btnStdEdtNic.TabIndex = 3;
+            this.txtStdEdtNic.Location = new System.Drawing.Point(115, 176);
+            this.txtStdEdtNic.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdEdtNic.Multiline = true;
+            this.txtStdEdtNic.Name = "txtStdEdtNic";
+            this.txtStdEdtNic.Size = new System.Drawing.Size(183, 24);
+            this.txtStdEdtNic.TabIndex = 3;
             // 
-            // btnStdEdtphoneNo
+            // txtStdEdtphoneNo
             // 
-            this.btnStdEdtphoneNo.Location = new System.Drawing.Point(115, 206);
-            this.btnStdEdtphoneNo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdEdtphoneNo.Multiline = true;
-            this.btnStdEdtphoneNo.Name = "btnStdEdtphoneNo";
-            this.btnStdEdtphoneNo.Size = new System.Drawing.Size(183, 24);
-            this.btnStdEdtphoneNo.TabIndex = 3;
+            this.txtStdEdtphoneNo.Location = new System.Drawing.Point(115, 206);
+            this.txtStdEdtphoneNo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdEdtphoneNo.Multiline = true;
+            this.txtStdEdtphoneNo.Name = "txtStdEdtphoneNo";
+            this.txtStdEdtphoneNo.Size = new System.Drawing.Size(183, 24);
+            this.txtStdEdtphoneNo.TabIndex = 3;
             // 
-            // btnStdEdtLname
+            // txtStdEdtLname
             // 
-            this.btnStdEdtLname.Location = new System.Drawing.Point(115, 67);
-            this.btnStdEdtLname.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdEdtLname.Multiline = true;
-            this.btnStdEdtLname.Name = "btnStdEdtLname";
-            this.btnStdEdtLname.Size = new System.Drawing.Size(183, 24);
-            this.btnStdEdtLname.TabIndex = 3;
+            this.txtStdEdtLname.Location = new System.Drawing.Point(115, 67);
+            this.txtStdEdtLname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdEdtLname.Multiline = true;
+            this.txtStdEdtLname.Name = "txtStdEdtLname";
+            this.txtStdEdtLname.Size = new System.Drawing.Size(183, 24);
+            this.txtStdEdtLname.TabIndex = 3;
             // 
-            // btnStdEdtfullName
+            // txtStdEdtfullName
             // 
-            this.btnStdEdtfullName.Location = new System.Drawing.Point(115, 95);
-            this.btnStdEdtfullName.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdEdtfullName.Multiline = true;
-            this.btnStdEdtfullName.Name = "btnStdEdtfullName";
-            this.btnStdEdtfullName.Size = new System.Drawing.Size(183, 24);
-            this.btnStdEdtfullName.TabIndex = 3;
+            this.txtStdEdtfullName.Location = new System.Drawing.Point(115, 95);
+            this.txtStdEdtfullName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdEdtfullName.Multiline = true;
+            this.txtStdEdtfullName.Name = "txtStdEdtfullName";
+            this.txtStdEdtfullName.Size = new System.Drawing.Size(183, 24);
+            this.txtStdEdtfullName.TabIndex = 3;
             // 
-            // btnStdEdtfname
+            // txtStdEdtfname
             // 
-            this.btnStdEdtfname.Location = new System.Drawing.Point(115, 39);
-            this.btnStdEdtfname.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdEdtfname.Multiline = true;
-            this.btnStdEdtfname.Name = "btnStdEdtfname";
-            this.btnStdEdtfname.Size = new System.Drawing.Size(183, 24);
-            this.btnStdEdtfname.TabIndex = 3;
+            this.txtStdEdtfname.Location = new System.Drawing.Point(115, 39);
+            this.txtStdEdtfname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdEdtfname.Multiline = true;
+            this.txtStdEdtfname.Name = "txtStdEdtfname";
+            this.txtStdEdtfname.Size = new System.Drawing.Size(183, 24);
+            this.txtStdEdtfname.TabIndex = 3;
             // 
-            // btnStdEdtAddmisNo
+            // txtStdEdtAddmisNo
             // 
-            this.btnStdEdtAddmisNo.Location = new System.Drawing.Point(115, 11);
-            this.btnStdEdtAddmisNo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdEdtAddmisNo.Multiline = true;
-            this.btnStdEdtAddmisNo.Name = "btnStdEdtAddmisNo";
-            this.btnStdEdtAddmisNo.Size = new System.Drawing.Size(183, 24);
-            this.btnStdEdtAddmisNo.TabIndex = 3;
+            this.txtStdEdtAddmisNo.Location = new System.Drawing.Point(115, 11);
+            this.txtStdEdtAddmisNo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdEdtAddmisNo.Multiline = true;
+            this.txtStdEdtAddmisNo.Name = "txtStdEdtAddmisNo";
+            this.txtStdEdtAddmisNo.Size = new System.Drawing.Size(183, 24);
+            this.txtStdEdtAddmisNo.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -340,15 +340,15 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnStdEdtaddress);
+            this.groupBox1.Controls.Add(this.txtStdEdtaddress);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnStdEdtNic);
-            this.groupBox1.Controls.Add(this.btnStdEdtphoneNo);
-            this.groupBox1.Controls.Add(this.btnStdEdtLname);
-            this.groupBox1.Controls.Add(this.btnStdEdtfullName);
-            this.groupBox1.Controls.Add(this.btnStdEdtfname);
-            this.groupBox1.Controls.Add(this.btnStdEdtAddmisNo);
+            this.groupBox1.Controls.Add(this.txtStdEdtNic);
+            this.groupBox1.Controls.Add(this.txtStdEdtphoneNo);
+            this.groupBox1.Controls.Add(this.txtStdEdtLname);
+            this.groupBox1.Controls.Add(this.txtStdEdtfullName);
+            this.groupBox1.Controls.Add(this.txtStdEdtfname);
+            this.groupBox1.Controls.Add(this.txtStdEdtAddmisNo);
             this.groupBox1.Location = new System.Drawing.Point(3, 33);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -397,6 +397,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentEditForm";
             this.Text = "StudentEditForm";
+            this.Load += new System.EventHandler(this.StudentEditForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -422,15 +423,15 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox btnStdEdtaddress;
+        private System.Windows.Forms.TextBox txtStdEdtaddress;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox btnStdEdtNic;
-        private System.Windows.Forms.TextBox btnStdEdtphoneNo;
-        private System.Windows.Forms.TextBox btnStdEdtLname;
-        private System.Windows.Forms.TextBox btnStdEdtfullName;
-        private System.Windows.Forms.TextBox btnStdEdtfname;
-        private System.Windows.Forms.TextBox btnStdEdtAddmisNo;
+        private System.Windows.Forms.TextBox txtStdEdtNic;
+        private System.Windows.Forms.TextBox txtStdEdtphoneNo;
+        private System.Windows.Forms.TextBox txtStdEdtLname;
+        private System.Windows.Forms.TextBox txtStdEdtfullName;
+        private System.Windows.Forms.TextBox txtStdEdtfname;
+        private System.Windows.Forms.TextBox txtStdEdtAddmisNo;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnStdCreate;
         private System.Windows.Forms.GroupBox groupBox2;

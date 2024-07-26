@@ -44,15 +44,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnStdcrtaddress = new System.Windows.Forms.TextBox();
+            this.txtStdcrtaddress = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnStdcrtNic = new System.Windows.Forms.TextBox();
-            this.btnStdcrtphoneNo = new System.Windows.Forms.TextBox();
-            this.btnStdcrtLname = new System.Windows.Forms.TextBox();
-            this.btnStdcrtfullName = new System.Windows.Forms.TextBox();
-            this.btnStdcrtfname = new System.Windows.Forms.TextBox();
-            this.btnStdcrtAddmisNo = new System.Windows.Forms.TextBox();
+            this.txtStdcrtNic = new System.Windows.Forms.TextBox();
+            this.txtStdcrtphoneNo = new System.Windows.Forms.TextBox();
+            this.txtStdcrtLname = new System.Windows.Forms.TextBox();
+            this.txtStdcrtfullName = new System.Windows.Forms.TextBox();
+            this.txtStdcrtfname = new System.Windows.Forms.TextBox();
+            this.txtStdcrtAddmisNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnStdcrtCancel = new System.Windows.Forms.Button();
@@ -92,15 +92,15 @@
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.btnStdcrtaddress);
+            this.groupBox1.Controls.Add(this.txtStdcrtaddress);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.btnStdcrtNic);
-            this.groupBox1.Controls.Add(this.btnStdcrtphoneNo);
-            this.groupBox1.Controls.Add(this.btnStdcrtLname);
-            this.groupBox1.Controls.Add(this.btnStdcrtfullName);
-            this.groupBox1.Controls.Add(this.btnStdcrtfname);
-            this.groupBox1.Controls.Add(this.btnStdcrtAddmisNo);
+            this.groupBox1.Controls.Add(this.txtStdcrtNic);
+            this.groupBox1.Controls.Add(this.txtStdcrtphoneNo);
+            this.groupBox1.Controls.Add(this.txtStdcrtLname);
+            this.groupBox1.Controls.Add(this.txtStdcrtfullName);
+            this.groupBox1.Controls.Add(this.txtStdcrtfname);
+            this.groupBox1.Controls.Add(this.txtStdcrtAddmisNo);
             this.groupBox1.Location = new System.Drawing.Point(3, 34);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
@@ -249,14 +249,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "First name";
             // 
-            // btnStdcrtaddress
+            // txtStdcrtaddress
             // 
-            this.btnStdcrtaddress.Location = new System.Drawing.Point(115, 289);
-            this.btnStdcrtaddress.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdcrtaddress.Multiline = true;
-            this.btnStdcrtaddress.Name = "btnStdcrtaddress";
-            this.btnStdcrtaddress.Size = new System.Drawing.Size(183, 44);
-            this.btnStdcrtaddress.TabIndex = 3;
+            this.txtStdcrtaddress.Location = new System.Drawing.Point(115, 289);
+            this.txtStdcrtaddress.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdcrtaddress.Multiline = true;
+            this.txtStdcrtaddress.Name = "txtStdcrtaddress";
+            this.txtStdcrtaddress.Size = new System.Drawing.Size(183, 44);
+            this.txtStdcrtaddress.TabIndex = 3;
             // 
             // label5
             // 
@@ -278,59 +278,59 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Addmission No";
             // 
-            // btnStdcrtNic
+            // txtStdcrtNic
             // 
-            this.btnStdcrtNic.Location = new System.Drawing.Point(115, 179);
-            this.btnStdcrtNic.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdcrtNic.Multiline = true;
-            this.btnStdcrtNic.Name = "btnStdcrtNic";
-            this.btnStdcrtNic.Size = new System.Drawing.Size(183, 24);
-            this.btnStdcrtNic.TabIndex = 3;
+            this.txtStdcrtNic.Location = new System.Drawing.Point(115, 179);
+            this.txtStdcrtNic.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdcrtNic.Multiline = true;
+            this.txtStdcrtNic.Name = "txtStdcrtNic";
+            this.txtStdcrtNic.Size = new System.Drawing.Size(183, 24);
+            this.txtStdcrtNic.TabIndex = 3;
             // 
-            // btnStdcrtphoneNo
+            // txtStdcrtphoneNo
             // 
-            this.btnStdcrtphoneNo.Location = new System.Drawing.Point(115, 207);
-            this.btnStdcrtphoneNo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdcrtphoneNo.Multiline = true;
-            this.btnStdcrtphoneNo.Name = "btnStdcrtphoneNo";
-            this.btnStdcrtphoneNo.Size = new System.Drawing.Size(183, 24);
-            this.btnStdcrtphoneNo.TabIndex = 3;
+            this.txtStdcrtphoneNo.Location = new System.Drawing.Point(115, 207);
+            this.txtStdcrtphoneNo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdcrtphoneNo.Multiline = true;
+            this.txtStdcrtphoneNo.Name = "txtStdcrtphoneNo";
+            this.txtStdcrtphoneNo.Size = new System.Drawing.Size(183, 24);
+            this.txtStdcrtphoneNo.TabIndex = 3;
             // 
-            // btnStdcrtLname
+            // txtStdcrtLname
             // 
-            this.btnStdcrtLname.Location = new System.Drawing.Point(115, 70);
-            this.btnStdcrtLname.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdcrtLname.Multiline = true;
-            this.btnStdcrtLname.Name = "btnStdcrtLname";
-            this.btnStdcrtLname.Size = new System.Drawing.Size(183, 24);
-            this.btnStdcrtLname.TabIndex = 3;
+            this.txtStdcrtLname.Location = new System.Drawing.Point(115, 70);
+            this.txtStdcrtLname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdcrtLname.Multiline = true;
+            this.txtStdcrtLname.Name = "txtStdcrtLname";
+            this.txtStdcrtLname.Size = new System.Drawing.Size(183, 24);
+            this.txtStdcrtLname.TabIndex = 3;
             // 
-            // btnStdcrtfullName
+            // txtStdcrtfullName
             // 
-            this.btnStdcrtfullName.Location = new System.Drawing.Point(115, 98);
-            this.btnStdcrtfullName.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdcrtfullName.Multiline = true;
-            this.btnStdcrtfullName.Name = "btnStdcrtfullName";
-            this.btnStdcrtfullName.Size = new System.Drawing.Size(183, 24);
-            this.btnStdcrtfullName.TabIndex = 3;
+            this.txtStdcrtfullName.Location = new System.Drawing.Point(115, 98);
+            this.txtStdcrtfullName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdcrtfullName.Multiline = true;
+            this.txtStdcrtfullName.Name = "txtStdcrtfullName";
+            this.txtStdcrtfullName.Size = new System.Drawing.Size(183, 24);
+            this.txtStdcrtfullName.TabIndex = 3;
             // 
-            // btnStdcrtfname
+            // txtStdcrtfname
             // 
-            this.btnStdcrtfname.Location = new System.Drawing.Point(115, 42);
-            this.btnStdcrtfname.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdcrtfname.Multiline = true;
-            this.btnStdcrtfname.Name = "btnStdcrtfname";
-            this.btnStdcrtfname.Size = new System.Drawing.Size(183, 24);
-            this.btnStdcrtfname.TabIndex = 3;
+            this.txtStdcrtfname.Location = new System.Drawing.Point(115, 42);
+            this.txtStdcrtfname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdcrtfname.Multiline = true;
+            this.txtStdcrtfname.Name = "txtStdcrtfname";
+            this.txtStdcrtfname.Size = new System.Drawing.Size(183, 24);
+            this.txtStdcrtfname.TabIndex = 3;
             // 
-            // btnStdcrtAddmisNo
+            // txtStdcrtAddmisNo
             // 
-            this.btnStdcrtAddmisNo.Location = new System.Drawing.Point(115, 14);
-            this.btnStdcrtAddmisNo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnStdcrtAddmisNo.Multiline = true;
-            this.btnStdcrtAddmisNo.Name = "btnStdcrtAddmisNo";
-            this.btnStdcrtAddmisNo.Size = new System.Drawing.Size(183, 24);
-            this.btnStdcrtAddmisNo.TabIndex = 3;
+            this.txtStdcrtAddmisNo.Location = new System.Drawing.Point(115, 14);
+            this.txtStdcrtAddmisNo.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdcrtAddmisNo.Multiline = true;
+            this.txtStdcrtAddmisNo.Name = "txtStdcrtAddmisNo";
+            this.txtStdcrtAddmisNo.Size = new System.Drawing.Size(183, 24);
+            this.txtStdcrtAddmisNo.TabIndex = 3;
             // 
             // label1
             // 
@@ -385,6 +385,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentCreateForm";
             this.Text = "StudentCreateForm";
+            this.Load += new System.EventHandler(this.StudentCreateForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -397,14 +398,14 @@
         private System.Windows.Forms.Button btnStdCreate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox btnStdcrtAddmisNo;
+        private System.Windows.Forms.TextBox txtStdcrtAddmisNo;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnStdcrtCancel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox btnStdcrtLname;
-        private System.Windows.Forms.TextBox btnStdcrtfname;
+        private System.Windows.Forms.TextBox txtStdcrtLname;
+        private System.Windows.Forms.TextBox txtStdcrtfname;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
@@ -412,12 +413,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox btnStdcrtNic;
-        private System.Windows.Forms.TextBox btnStdcrtphoneNo;
-        private System.Windows.Forms.TextBox btnStdcrtfullName;
+        private System.Windows.Forms.TextBox txtStdcrtNic;
+        private System.Windows.Forms.TextBox txtStdcrtphoneNo;
+        private System.Windows.Forms.TextBox txtStdcrtfullName;
         private System.Windows.Forms.RadioButton rdoStdCrtFemale;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox btnStdcrtaddress;
+        private System.Windows.Forms.TextBox txtStdcrtaddress;
         private System.Windows.Forms.RadioButton rdoStdCrtMale;
         private System.Windows.Forms.ComboBox cmbStdCrtGrdId;
         private System.Windows.Forms.DateTimePicker dtpStdcrtDoB;
