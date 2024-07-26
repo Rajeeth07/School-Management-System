@@ -15,7 +15,7 @@ namespace School_Management_System.UI.Grade
     {
         String id;
         Boolean is_addNew = false;
-        DataTable dt;
+        DataTable dt=new DataTable();
         DataView dv;
         public GradeMasterForm()
         {
@@ -173,7 +173,6 @@ namespace School_Management_System.UI.Grade
                 command = new SqlCommand(sql, connection);
                 dataReader = command.ExecuteReader();
                 dt = new DataTable();
-                dv = new DataView();
                 dt.Load(dataReader);
                 dv = dt.DefaultView;
                 dgvGrd.DataSource = dv;
@@ -196,6 +195,22 @@ namespace School_Management_System.UI.Grade
                 txtGrdGroup.Text = dgvGrd.SelectedRows[0].Cells["grade_group"].Value.ToString();
                 txtGrdOrder.Text = dgvGrd.SelectedRows[0].Cells["grade_order"].Value.ToString();
             }
+        }
+
+        private void txtGrdSearch_TextChanged(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                dv = new DataView(dt, "grade_name LIKE '%" + txtGrdSearch.Text + "%' or grade_group LIKE '%" + txtGrdSearch.Text + "%' ", "grade_name asc", DataViewRowState.CurrentRows);
+                dgvGrd.DataSource = dv;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Cannot open");
+                throw;
+            }
+     
         }
     }
 }

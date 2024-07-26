@@ -63,23 +63,28 @@
             // btnStdcrtCancel
             // 
             this.btnStdcrtCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStdcrtCancel.Location = new System.Drawing.Point(243, 15);
+            this.btnStdcrtCancel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnStdcrtCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStdcrtCancel.Image = global::School_Management_System.Properties.Resources._76543;
+            this.btnStdcrtCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStdcrtCancel.Location = new System.Drawing.Point(220, 11);
             this.btnStdcrtCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtCancel.Name = "btnStdcrtCancel";
-            this.btnStdcrtCancel.Size = new System.Drawing.Size(55, 30);
+            this.btnStdcrtCancel.Size = new System.Drawing.Size(78, 28);
             this.btnStdcrtCancel.TabIndex = 0;
             this.btnStdcrtCancel.Text = "Cancel";
-            this.btnStdcrtCancel.UseVisualStyleBackColor = true;
+            this.btnStdcrtCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStdcrtCancel.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(319, 19);
+            this.label1.Size = new System.Drawing.Size(319, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Student Edit";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -136,82 +141,100 @@
             // 
             // label12
             // 
+            this.label12.BackColor = System.Drawing.Color.SeaGreen;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(5, 290);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 23);
+            this.label12.Size = new System.Drawing.Size(97, 19);
             this.label12.TabIndex = 2;
             this.label12.Text = "Address";
             // 
             // label11
             // 
+            this.label11.BackColor = System.Drawing.Color.SeaGreen;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(5, 262);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 23);
+            this.label11.Size = new System.Drawing.Size(97, 19);
             this.label11.TabIndex = 2;
             this.label11.Text = "Addimission Date";
             // 
             // label7
             // 
+            this.label7.BackColor = System.Drawing.Color.SeaGreen;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(5, 150);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 23);
+            this.label7.Size = new System.Drawing.Size(97, 19);
             this.label7.TabIndex = 2;
             this.label7.Text = "DOB";
             // 
             // label10
             // 
+            this.label10.BackColor = System.Drawing.Color.SeaGreen;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(5, 178);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 23);
+            this.label10.Size = new System.Drawing.Size(97, 19);
             this.label10.TabIndex = 2;
             this.label10.Text = "NIC Number";
             // 
             // label9
             // 
+            this.label9.BackColor = System.Drawing.Color.SeaGreen;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(5, 234);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(101, 23);
+            this.label9.Size = new System.Drawing.Size(97, 19);
             this.label9.TabIndex = 2;
             this.label9.Text = "Grade ID";
             // 
             // label4
             // 
+            this.label4.BackColor = System.Drawing.Color.SeaGreen;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(5, 67);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 23);
+            this.label4.Size = new System.Drawing.Size(97, 19);
             this.label4.TabIndex = 2;
             this.label4.Text = "Last Name";
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(9, 122);
+            this.label6.BackColor = System.Drawing.Color.SeaGreen;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(5, 122);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 23);
+            this.label6.Size = new System.Drawing.Size(97, 19);
             this.label6.TabIndex = 2;
             this.label6.Text = "Gender";
             // 
             // label8
             // 
+            this.label8.BackColor = System.Drawing.Color.SeaGreen;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(5, 206);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 23);
+            this.label8.Size = new System.Drawing.Size(97, 19);
             this.label8.TabIndex = 2;
             this.label8.Text = "Phone No";
             // 
             // label3
             // 
+            this.label3.BackColor = System.Drawing.Color.SeaGreen;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(5, 39);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 23);
+            this.label3.Size = new System.Drawing.Size(97, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "First name";
             // 
@@ -226,19 +249,23 @@
             // 
             // label5
             // 
+            this.label5.BackColor = System.Drawing.Color.SeaGreen;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(5, 95);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 23);
+            this.label5.Size = new System.Drawing.Size(97, 19);
             this.label5.TabIndex = 2;
             this.label5.Text = "Full Name";
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.SeaGreen;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(5, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(101, 23);
+            this.label2.Size = new System.Drawing.Size(97, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Addmission No";
             // 
@@ -298,6 +325,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.groupBox1.Controls.Add(this.cmbStdEdtGrdId);
             this.groupBox1.Controls.Add(this.dtpStdEdtAddDate);
             this.groupBox1.Controls.Add(this.dtpStdEdtDoB);
@@ -321,34 +349,39 @@
             this.groupBox1.Controls.Add(this.btnStdEdtfullName);
             this.groupBox1.Controls.Add(this.btnStdEdtfname);
             this.groupBox1.Controls.Add(this.btnStdEdtAddmisNo);
-            this.groupBox1.Location = new System.Drawing.Point(3, 21);
+            this.groupBox1.Location = new System.Drawing.Point(3, 33);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(304, 338);
+            this.groupBox1.Size = new System.Drawing.Size(304, 347);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
             // btnStdCreate
             // 
             this.btnStdCreate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStdCreate.Location = new System.Drawing.Point(184, 15);
+            this.btnStdCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnStdCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStdCreate.Image = global::School_Management_System.Properties.Resources._12345;
+            this.btnStdCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnStdCreate.Location = new System.Drawing.Point(148, 11);
             this.btnStdCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdCreate.Name = "btnStdCreate";
-            this.btnStdCreate.Size = new System.Drawing.Size(55, 30);
+            this.btnStdCreate.Size = new System.Drawing.Size(68, 28);
             this.btnStdCreate.TabIndex = 0;
             this.btnStdCreate.Text = "Save";
-            this.btnStdCreate.UseVisualStyleBackColor = true;
+            this.btnStdCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnStdCreate.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnStdCreate);
             this.groupBox2.Controls.Add(this.btnStdcrtCancel);
-            this.groupBox2.Location = new System.Drawing.Point(3, 355);
+            this.groupBox2.Location = new System.Drawing.Point(3, 379);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(304, 51);
+            this.groupBox2.Size = new System.Drawing.Size(304, 44);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             // 
@@ -356,7 +389,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(319, 408);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ClientSize = new System.Drawing.Size(319, 427);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);

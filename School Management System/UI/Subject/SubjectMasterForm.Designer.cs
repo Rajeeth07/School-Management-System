@@ -49,8 +49,8 @@
             this.txtSubOrder = new System.Windows.Forms.TextBox();
             this.dgvSub = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtSubSearch = new System.Windows.Forms.TextBox();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSub)).BeginInit();
@@ -334,7 +334,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtSubSearch);
             this.groupBox1.Controls.Add(this.dgvSub);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -345,14 +345,6 @@
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(276, 38);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 23);
-            this.textBox1.TabIndex = 4;
-            // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Black;
@@ -361,6 +353,14 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(26, 23);
             this.label6.TabIndex = 5;
+            // 
+            // txtSubSearch
+            // 
+            this.txtSubSearch.Location = new System.Drawing.Point(276, 38);
+            this.txtSubSearch.Multiline = true;
+            this.txtSubSearch.Name = "txtSubSearch";
+            this.txtSubSearch.Size = new System.Drawing.Size(183, 23);
+            this.txtSubSearch.TabIndex = 4;
             // 
             // SubjectMasterForm
             // 
@@ -410,6 +410,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtSubOrder;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSubSearch;
     }
 }
