@@ -73,5 +73,11 @@ namespace School_Management_System.UI.Student
                 e.Cancel = true;
             }
         }
+
+        private void txtStuSearch_TextChanged(object sender, EventArgs e)
+        {
+            dv = new DataView(dt, "addmission_no like '%"+txtStuSearch.Text+"%' or first_name like '%"+txtStuSearch.Text+"%' or last_name like '%"+txtStuSearch.Text+"%' or full_name like '%"+txtStuSearch.Text+"%' or gender like '%"+txtStuSearch.Text+"%' or stu_nic_no like '%"+txtStuSearch.Text+"%' or tp_No like '%"+txtStuSearch.Text+"%' or medium like '%"+txtStuSearch.Text+"%' or resident_address like '%"+txtStuSearch.Text+"%'", "first_name", DataViewRowState.CurrentRows);
+            dgvStd.DataSource = dv;
+        }
     }
 }

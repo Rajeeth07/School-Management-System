@@ -116,6 +116,7 @@
             this.txtStuSearch.Name = "txtStuSearch";
             this.txtStuSearch.Size = new System.Drawing.Size(192, 25);
             this.txtStuSearch.TabIndex = 3;
+            this.txtStuSearch.TextChanged += new System.EventHandler(this.txtStuSearch_TextChanged);
             // 
             // groupBox2
             // 
