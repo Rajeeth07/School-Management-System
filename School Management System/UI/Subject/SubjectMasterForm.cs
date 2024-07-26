@@ -157,6 +157,7 @@ namespace School_Management_System.UI.Subject
             txtSubName.Text=null;
             txtSubindex.Text=null;
             txtSubOrder.Text=null;
+            txtSubSearch.Text=null;
 
         }
 
