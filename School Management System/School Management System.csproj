@@ -66,17 +66,17 @@
     <Compile Include="UI\Login\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Student\StudentCreateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\Student\StudentCreateForm.Designer.cs">
-      <DependentUpon>StudentCreateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\Student\StudentEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\Student\StudentEditForm.Designer.cs">
       <DependentUpon>StudentEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Student\StudentCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Student\StudentCreateForm.Designer.cs">
+      <DependentUpon>StudentCreateForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Student\StudentMasterForm.cs">
       <SubType>Form</SubType>
@@ -109,11 +109,11 @@
     <EmbeddedResource Include="UI\Login\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Student\StudentCreateForm.resx">
-      <DependentUpon>StudentCreateForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\StudentEditForm.resx">
       <DependentUpon>StudentEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Student\StudentCreateForm.resx">
+      <DependentUpon>StudentCreateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Student\StudentMasterForm.resx">
       <DependentUpon>StudentMasterForm.cs</DependentUpon>
