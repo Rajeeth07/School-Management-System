@@ -131,7 +131,7 @@ namespace School_Management_System.UI.Subject
             SqlConnection connection;
             SqlCommand command;
             string sql = null;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;"; sql = "Your SQL Statemnt Here";
+            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
             sql = "delete from subjects where id='"+this.id+"'";
             connection = new SqlConnection(connetionString);
             try

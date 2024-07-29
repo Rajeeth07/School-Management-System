@@ -30,7 +30,7 @@
         {
             this.btnStdCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cmbStdCrtGrdId = new System.Windows.Forms.ComboBox();
+            this.cmbStdCrtMedium = new System.Windows.Forms.ComboBox();
             this.dtpStdCrtAddDate = new System.Windows.Forms.DateTimePicker();
             this.dtpStdcrtDoB = new System.Windows.Forms.DateTimePicker();
             this.rdoStdCrtMale = new System.Windows.Forms.RadioButton();
@@ -39,6 +39,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtStdcrtNic = new System.Windows.Forms.TextBox();
+            this.txtStdCrtGrdId = new System.Windows.Forms.TextBox();
             this.txtStdcrtphoneNo = new System.Windows.Forms.TextBox();
             this.txtStdcrtLname = new System.Windows.Forms.TextBox();
             this.txtStdcrtfullName = new System.Windows.Forms.TextBox();
@@ -64,21 +66,23 @@
             // 
             this.btnStdCreate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnStdCreate.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnStdCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStdCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStdCreate.Image = global::School_Management_System.Properties.Resources._12345;
             this.btnStdCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStdCreate.Location = new System.Drawing.Point(144, 13);
+            this.btnStdCreate.Location = new System.Drawing.Point(152, 12);
             this.btnStdCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdCreate.Name = "btnStdCreate";
-            this.btnStdCreate.Size = new System.Drawing.Size(70, 28);
-            this.btnStdCreate.TabIndex = 0;
+            this.btnStdCreate.Size = new System.Drawing.Size(70, 29);
+            this.btnStdCreate.TabIndex = 14;
             this.btnStdCreate.Text = "Save";
             this.btnStdCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdCreate.UseVisualStyleBackColor = false;
+            this.btnStdCreate.Click += new System.EventHandler(this.btnStdCreate_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.cmbStdCrtGrdId);
+            this.groupBox1.Controls.Add(this.cmbStdCrtMedium);
             this.groupBox1.Controls.Add(this.dtpStdCrtAddDate);
             this.groupBox1.Controls.Add(this.dtpStdcrtDoB);
             this.groupBox1.Controls.Add(this.rdoStdCrtMale);
@@ -87,6 +91,7 @@
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label6);
@@ -96,6 +101,7 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtStdcrtNic);
+            this.groupBox1.Controls.Add(this.txtStdCrtGrdId);
             this.groupBox1.Controls.Add(this.txtStdcrtphoneNo);
             this.groupBox1.Controls.Add(this.txtStdcrtLname);
             this.groupBox1.Controls.Add(this.txtStdcrtfullName);
@@ -105,28 +111,32 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(304, 347);
+            this.groupBox1.Size = new System.Drawing.Size(307, 367);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // cmbStdCrtGrdId
+            // cmbStdCrtMedium
             // 
-            this.cmbStdCrtGrdId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbStdCrtGrdId.FormattingEnabled = true;
-            this.cmbStdCrtGrdId.Location = new System.Drawing.Point(115, 235);
-            this.cmbStdCrtGrdId.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbStdCrtGrdId.Name = "cmbStdCrtGrdId";
-            this.cmbStdCrtGrdId.Size = new System.Drawing.Size(183, 24);
-            this.cmbStdCrtGrdId.TabIndex = 6;
+            this.cmbStdCrtMedium.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStdCrtMedium.FormattingEnabled = true;
+            this.cmbStdCrtMedium.Items.AddRange(new object[] {
+            "Tamil",
+            "Sinhala",
+            "English"});
+            this.cmbStdCrtMedium.Location = new System.Drawing.Point(115, 265);
+            this.cmbStdCrtMedium.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbStdCrtMedium.Name = "cmbStdCrtMedium";
+            this.cmbStdCrtMedium.Size = new System.Drawing.Size(183, 24);
+            this.cmbStdCrtMedium.TabIndex = 11;
             // 
             // dtpStdCrtAddDate
             // 
             this.dtpStdCrtAddDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpStdCrtAddDate.Location = new System.Drawing.Point(115, 263);
+            this.dtpStdCrtAddDate.Location = new System.Drawing.Point(115, 292);
             this.dtpStdCrtAddDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStdCrtAddDate.Name = "dtpStdCrtAddDate";
             this.dtpStdCrtAddDate.Size = new System.Drawing.Size(183, 23);
-            this.dtpStdCrtAddDate.TabIndex = 5;
+            this.dtpStdCrtAddDate.TabIndex = 12;
             // 
             // dtpStdcrtDoB
             // 
@@ -135,7 +145,7 @@
             this.dtpStdcrtDoB.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStdcrtDoB.Name = "dtpStdcrtDoB";
             this.dtpStdcrtDoB.Size = new System.Drawing.Size(183, 23);
-            this.dtpStdcrtDoB.TabIndex = 5;
+            this.dtpStdcrtDoB.TabIndex = 7;
             // 
             // rdoStdCrtMale
             // 
@@ -143,7 +153,7 @@
             this.rdoStdCrtMale.Margin = new System.Windows.Forms.Padding(2);
             this.rdoStdCrtMale.Name = "rdoStdCrtMale";
             this.rdoStdCrtMale.Size = new System.Drawing.Size(56, 23);
-            this.rdoStdCrtMale.TabIndex = 4;
+            this.rdoStdCrtMale.TabIndex = 5;
             this.rdoStdCrtMale.TabStop = true;
             this.rdoStdCrtMale.Text = "Male";
             this.rdoStdCrtMale.UseVisualStyleBackColor = true;
@@ -153,8 +163,8 @@
             this.rdoStdCrtFemale.Location = new System.Drawing.Point(186, 125);
             this.rdoStdCrtFemale.Margin = new System.Windows.Forms.Padding(2);
             this.rdoStdCrtFemale.Name = "rdoStdCrtFemale";
-            this.rdoStdCrtFemale.Size = new System.Drawing.Size(66, 23);
-            this.rdoStdCrtFemale.TabIndex = 4;
+            this.rdoStdCrtFemale.Size = new System.Drawing.Size(76, 23);
+            this.rdoStdCrtFemale.TabIndex = 6;
             this.rdoStdCrtFemale.TabStop = true;
             this.rdoStdCrtFemale.Text = "Female";
             this.rdoStdCrtFemale.UseVisualStyleBackColor = true;
@@ -162,7 +172,7 @@
             // label12
             // 
             this.label12.BackColor = System.Drawing.Color.SeaGreen;
-            this.label12.Location = new System.Drawing.Point(5, 293);
+            this.label12.Location = new System.Drawing.Point(5, 322);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 17);
@@ -172,7 +182,7 @@
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.SeaGreen;
-            this.label11.Location = new System.Drawing.Point(5, 265);
+            this.label11.Location = new System.Drawing.Point(5, 294);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 17);
@@ -192,17 +202,27 @@
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.SeaGreen;
-            this.label10.Location = new System.Drawing.Point(5, 181);
+            this.label10.Location = new System.Drawing.Point(5, 182);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(101, 17);
             this.label10.TabIndex = 2;
             this.label10.Text = "NIC Number";
             // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.SeaGreen;
+            this.label13.Location = new System.Drawing.Point(4, 265);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(101, 17);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Medium";
+            // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.SeaGreen;
-            this.label9.Location = new System.Drawing.Point(5, 237);
+            this.label9.Location = new System.Drawing.Point(5, 243);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(101, 17);
@@ -232,7 +252,7 @@
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.SeaGreen;
-            this.label8.Location = new System.Drawing.Point(5, 209);
+            this.label8.Location = new System.Drawing.Point(5, 210);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(101, 17);
@@ -251,12 +271,12 @@
             // 
             // txtStdcrtaddress
             // 
-            this.txtStdcrtaddress.Location = new System.Drawing.Point(115, 289);
+            this.txtStdcrtaddress.Location = new System.Drawing.Point(115, 318);
             this.txtStdcrtaddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtStdcrtaddress.Multiline = true;
             this.txtStdcrtaddress.Name = "txtStdcrtaddress";
             this.txtStdcrtaddress.Size = new System.Drawing.Size(183, 44);
-            this.txtStdcrtaddress.TabIndex = 3;
+            this.txtStdcrtaddress.TabIndex = 13;
             // 
             // label5
             // 
@@ -280,21 +300,30 @@
             // 
             // txtStdcrtNic
             // 
-            this.txtStdcrtNic.Location = new System.Drawing.Point(115, 179);
+            this.txtStdcrtNic.Location = new System.Drawing.Point(115, 180);
             this.txtStdcrtNic.Margin = new System.Windows.Forms.Padding(2);
             this.txtStdcrtNic.Multiline = true;
             this.txtStdcrtNic.Name = "txtStdcrtNic";
             this.txtStdcrtNic.Size = new System.Drawing.Size(183, 24);
-            this.txtStdcrtNic.TabIndex = 3;
+            this.txtStdcrtNic.TabIndex = 8;
+            // 
+            // txtStdCrtGrdId
+            // 
+            this.txtStdCrtGrdId.Location = new System.Drawing.Point(117, 237);
+            this.txtStdCrtGrdId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStdCrtGrdId.Multiline = true;
+            this.txtStdCrtGrdId.Name = "txtStdCrtGrdId";
+            this.txtStdCrtGrdId.Size = new System.Drawing.Size(183, 24);
+            this.txtStdCrtGrdId.TabIndex = 10;
             // 
             // txtStdcrtphoneNo
             // 
-            this.txtStdcrtphoneNo.Location = new System.Drawing.Point(115, 207);
+            this.txtStdcrtphoneNo.Location = new System.Drawing.Point(115, 208);
             this.txtStdcrtphoneNo.Margin = new System.Windows.Forms.Padding(2);
             this.txtStdcrtphoneNo.Multiline = true;
             this.txtStdcrtphoneNo.Name = "txtStdcrtphoneNo";
             this.txtStdcrtphoneNo.Size = new System.Drawing.Size(183, 24);
-            this.txtStdcrtphoneNo.TabIndex = 3;
+            this.txtStdcrtphoneNo.TabIndex = 9;
             // 
             // txtStdcrtLname
             // 
@@ -312,7 +341,7 @@
             this.txtStdcrtfullName.Multiline = true;
             this.txtStdcrtfullName.Name = "txtStdcrtfullName";
             this.txtStdcrtfullName.Size = new System.Drawing.Size(183, 24);
-            this.txtStdcrtfullName.TabIndex = 3;
+            this.txtStdcrtfullName.TabIndex = 4;
             // 
             // txtStdcrtfname
             // 
@@ -321,7 +350,7 @@
             this.txtStdcrtfname.Multiline = true;
             this.txtStdcrtfname.Name = "txtStdcrtfname";
             this.txtStdcrtfname.Size = new System.Drawing.Size(183, 24);
-            this.txtStdcrtfname.TabIndex = 3;
+            this.txtStdcrtfname.TabIndex = 2;
             // 
             // txtStdcrtAddmisNo
             // 
@@ -330,7 +359,7 @@
             this.txtStdcrtAddmisNo.Multiline = true;
             this.txtStdcrtAddmisNo.Name = "txtStdcrtAddmisNo";
             this.txtStdcrtAddmisNo.Size = new System.Drawing.Size(183, 24);
-            this.txtStdcrtAddmisNo.TabIndex = 3;
+            this.txtStdcrtAddmisNo.TabIndex = 1;
             // 
             // label1
             // 
@@ -349,11 +378,11 @@
             // 
             this.groupBox2.Controls.Add(this.btnStdcrtCancel);
             this.groupBox2.Controls.Add(this.btnStdCreate);
-            this.groupBox2.Location = new System.Drawing.Point(3, 380);
+            this.groupBox2.Location = new System.Drawing.Point(3, 400);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(304, 45);
+            this.groupBox2.Size = new System.Drawing.Size(307, 47);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -361,31 +390,32 @@
             // 
             this.btnStdcrtCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnStdcrtCancel.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnStdcrtCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStdcrtCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnStdcrtCancel.Image = global::School_Management_System.Properties.Resources._76543;
             this.btnStdcrtCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStdcrtCancel.Location = new System.Drawing.Point(218, 13);
+            this.btnStdcrtCancel.Location = new System.Drawing.Point(226, 12);
             this.btnStdcrtCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnStdcrtCancel.Name = "btnStdcrtCancel";
-            this.btnStdcrtCancel.Size = new System.Drawing.Size(71, 28);
-            this.btnStdcrtCancel.TabIndex = 0;
+            this.btnStdcrtCancel.Size = new System.Drawing.Size(71, 29);
+            this.btnStdcrtCancel.TabIndex = 15;
             this.btnStdcrtCancel.Text = "Cancel";
             this.btnStdcrtCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdcrtCancel.UseVisualStyleBackColor = false;
+            this.btnStdcrtCancel.Click += new System.EventHandler(this.btnStdcrtCancel_Click);
             // 
             // StudentCreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(316, 427);
+            this.ClientSize = new System.Drawing.Size(316, 449);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentCreateForm";
             this.Text = "StudentCreateForm";
-            this.Load += new System.EventHandler(this.StudentCreateForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -420,8 +450,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtStdcrtaddress;
         private System.Windows.Forms.RadioButton rdoStdCrtMale;
-        private System.Windows.Forms.ComboBox cmbStdCrtGrdId;
+        private System.Windows.Forms.ComboBox cmbStdCrtMedium;
         private System.Windows.Forms.DateTimePicker dtpStdcrtDoB;
         private System.Windows.Forms.DateTimePicker dtpStdCrtAddDate;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtStdCrtGrdId;
     }
 }

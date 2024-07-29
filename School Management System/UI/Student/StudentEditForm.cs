@@ -14,9 +14,9 @@ namespace School_Management_System.UI.Student
 {
     public partial class StudentEditForm : Form
     {
-        String fname, lname, addNo, fullName, gend, dob, nic, phone, gradeId,medium, addDate, address;
+        String fname, lname, addNo, fullName, gend, dob, nic, phone, gradeId,medium, addDate, address,id;
         String gender;
-        public StudentEditForm(String fname, String lname, String addNo, String fullName, String gend, String dob, String nic, String phone, String gradeId,String medium, String addDate, String address)
+        public StudentEditForm(String fname, String lname, String addNo, String fullName, String gend, String dob, String nic, String phone, String gradeId,String medium, String addDate, String address, String id)
         {
             this.fname = fname;
             this.lname = lname;
@@ -30,6 +30,7 @@ namespace School_Management_System.UI.Student
             this.medium = medium;
             this.addDate = addDate;
             this.address = address;
+            this.id = id;
             InitializeComponent();
         }
 
@@ -50,7 +51,7 @@ namespace School_Management_System.UI.Student
             }
             DateTime dob = DateTime.Parse(dtpStdEdtDoB.Text);
             DateTime adDate = DateTime.Parse(dtpStdEdtAddDate.Text);
-            sql = "UPDATE [students] SET [addmission_no]='"+txtStdEdtAddmisNo.Text+"',[first_name]='"+txtStdEdtfname.Text+"',[last_name]='"+txtStdEdtLname.Text+"',[full_name]='"+txtStdEdtfullName.Text+"',[gender]='"+this.gender+"',[date_of_birth]='"+dob+"',[stu_nic_no]='"+txtStdEdtNic.Text+"',[tp_No]='"+txtStdEdtphoneNo.Text+"',[grade_id]='"+txtStdEdtGrdId.Text+"',[medium]='"+cmbStdEdtMedium.Text+"',[date_of_addmission]='"+adDate+"',[resident_address]='"+txtStdEdtaddress.Text+"'";
+            sql = "UPDATE [students] SET [addmission_no]='"+txtStdEdtAddmisNo.Text+"',[first_name]='"+txtStdEdtfname.Text+"',[last_name]='"+txtStdEdtLname.Text+"',[full_name]='"+txtStdEdtfullName.Text+"',[gender]='"+this.gender+"',[date_of_birth]='"+dob+"',[stu_nic_no]='"+txtStdEdtNic.Text+"',[tp_No]='"+txtStdEdtphoneNo.Text+"',[grade_id]='"+txtStdEdtGrdId.Text+"',[medium]='"+cmbStdEdtMedium.Text+"',[date_of_addmission]='"+adDate+"',[resident_address]='"+txtStdEdtaddress.Text+"' WHERE id='"+this.id+"'";
             connection = new SqlConnection(connetionString);
             try
             {
@@ -59,7 +60,8 @@ namespace School_Management_System.UI.Student
                 command.ExecuteNonQuery();
                 command.Dispose();
                 connection.Close();
-                MessageBox.Show(" ExecuteNonQuery in SqlCommand executed !!");
+                MessageBox.Show("Student : "+this.id+" Updated Successfully");
+                this.Close();
             }
             catch (Exception ex)
             {

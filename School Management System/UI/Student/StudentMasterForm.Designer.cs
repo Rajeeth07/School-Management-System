@@ -165,6 +165,7 @@
             this.btnStdDelete.Text = "Delete";
             this.btnStdDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdDelete.UseVisualStyleBackColor = false;
+            this.btnStdDelete.Click += new System.EventHandler(this.btnStdDelete_Click);
             // 
             // btnStdAdd
             // 

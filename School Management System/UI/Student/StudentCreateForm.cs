@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,42 +14,52 @@ namespace School_Management_System.UI.Student
 {
     public partial class StudentCreateForm : Form
     {
-        String fname, lname, addNo, fullName, gend, dob, nic, phone, gradeId, addDate, address;
-        public StudentCreateForm(String fname, String lname, String addNo, String fullName, String gend, String dob, String nic, String phone, String gradeId, String addDate, String address)
+        String gender;
+
+        public StudentCreateForm()
         {
-            this.fname = fname;
-            this.lname= lname;
-            this.addNo= addNo;
-            this.fullName= fullName;
-            this.gend = gend;
-            this.dob= dob;
-            this.nic = nic;
-            this.phone = phone;
-            this.gradeId = gradeId;
-            this.addDate = addDate;
-            this.address = address;
             InitializeComponent();
         }
-
-        private void StudentCreateForm_Load(object sender, EventArgs e)
+        private void btnStdCreate_Click(object sender, EventArgs e)
         {
-            txtStdcrtAddmisNo.Text=this.addNo;
-            txtStdcrtfname.Text=this.fname;
-            txtStdcrtLname.Text=this.lname;
-            txtStdcrtfullName.Text=this.fullName;
-            txtStdcrtNic.Text=this.nic;
-            txtStdcrtphoneNo.Text=this.phone;
-            txtStdcrtaddress.Text=this.address;
-            cmbStdCrtGrdId.Text=this.gradeId;
-            dtpStdcrtDoB.Text=this.dob;
-            dtpStdCrtAddDate.Text=this.addDate;
-            if (this.gend == "Male")
+            string connetionString = null;
+            SqlConnection connection;
+            SqlCommand command;
+            string sql = null;
+            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
+            if (rdoStdCrtMale.Checked == true)
             {
-                rdoStdCrtMale.Checked = true;
-            }else if(this.gend == "Female")
+                this.gender = "Male";
+            }
+            else if (rdoStdCrtFemale.Checked == true)
             {
-                rdoStdCrtFemale.Checked = true;
+                this.gender = "Female";
+            }
+            DateTime dob = DateTime.Parse(dtpStdcrtDoB.Text);
+            DateTime adDate = DateTime.Parse(dtpStdCrtAddDate.Text);
+            sql = "INSERT INTO[students](addmission_no,[first_name],last_name,[full_name],gender,[date_of_birth],stu_nic_no,[tp_No],grade_id,[medium],date_of_addmission,[resident_address])VALUES('" + txtStdcrtAddmisNo.Text + "','" + txtStdcrtfname.Text + "','" + txtStdcrtLname.Text + "','" + txtStdcrtfullName.Text + "','" + this.gender + "','" + dob + "','" + txtStdcrtNic.Text + "','" + txtStdcrtphoneNo.Text + "','" + txtStdCrtGrdId.Text + "','" + cmbStdCrtMedium.Text + "','" + adDate + "','" + txtStdcrtaddress.Text + "')";
+            connection = new SqlConnection(connetionString);
+            try
+            {
+                connection.Open();
+                command = new SqlCommand(sql, connection);
+                command.ExecuteNonQuery();
+                command.Dispose();
+                connection.Close();
+                MessageBox.Show("Student: " + txtStdCrtGrdId.Text + " added Successfully!");
+                this.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Can not open connection ! ");
             }
         }
+
+        private void btnStdcrtCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
     }
 }
