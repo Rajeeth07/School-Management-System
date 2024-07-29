@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,8 +14,9 @@ namespace School_Management_System.UI.Student
 {
     public partial class StudentEditForm : Form
     {
-        String fname, lname, addNo, fullName, gend, dob, nic, phone, gradeId, addDate, address;
-        public StudentEditForm(String fname, String lname, String addNo, String fullName, String gend, String dob, String nic, String phone, String gradeId, String addDate, String address)
+        String fname, lname, addNo, fullName, gend, dob, nic, phone, gradeId,medium, addDate, address;
+        String gender;
+        public StudentEditForm(String fname, String lname, String addNo, String fullName, String gend, String dob, String nic, String phone, String gradeId,String medium, String addDate, String address)
         {
             this.fname = fname;
             this.lname = lname;
@@ -25,10 +27,51 @@ namespace School_Management_System.UI.Student
             this.nic = nic;
             this.phone = phone;
             this.gradeId = gradeId;
+            this.medium = medium;
             this.addDate = addDate;
             this.address = address;
             InitializeComponent();
         }
+
+        private void btnStdEdit_Click(object sender, EventArgs e)
+        {
+            string connetionString = null;
+            SqlConnection connection;
+            SqlCommand command;
+            string sql = null;
+            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
+            if (rdoStdEdtMale.Checked == true)
+            {
+                this.gender = "Male";
+            }
+            else if (rdoStdEdtFemale.Checked == true)
+            {
+                this.gender = "Female";
+            }
+            DateTime dob = DateTime.Parse(dtpStdEdtDoB.Text);
+            DateTime adDate = DateTime.Parse(dtpStdEdtAddDate.Text);
+            sql = "UPDATE [students] SET [addmission_no]='"+txtStdEdtAddmisNo.Text+"',[first_name]='"+txtStdEdtfname.Text+"',[last_name]='"+txtStdEdtLname.Text+"',[full_name]='"+txtStdEdtfullName.Text+"',[gender]='"+this.gender+"',[date_of_birth]='"+dob+"',[stu_nic_no]='"+txtStdEdtNic.Text+"',[tp_No]='"+txtStdEdtphoneNo.Text+"',[grade_id]='"+txtStdEdtGrdId.Text+"',[medium]='"+cmbStdEdtMedium.Text+"',[date_of_addmission]='"+adDate+"',[resident_address]='"+txtStdEdtaddress.Text+"'";
+            connection = new SqlConnection(connetionString);
+            try
+            {
+                connection.Open();
+                command = new SqlCommand(sql, connection);
+                command.ExecuteNonQuery();
+                command.Dispose();
+                connection.Close();
+                MessageBox.Show(" ExecuteNonQuery in SqlCommand executed !!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Can not open connection ! ");
+            }
+        }
+
+        private void btnStdEdtCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void StudentEditForm_Load(object sender, EventArgs e)
         {
             txtStdEdtAddmisNo.Text = this.addNo;
@@ -38,7 +81,8 @@ namespace School_Management_System.UI.Student
             txtStdEdtNic.Text = this.nic;
             txtStdEdtphoneNo.Text = this.phone;
             txtStdEdtaddress.Text = this.address;
-            cmbStdEdtGrdId.Text = this.gradeId;
+            cmbStdEdtMedium.Text = this.medium;
+            txtStdEdtGrdId.Text=this.gradeId;
             dtpStdEdtDoB.Text = this.dob;
             dtpStdEdtAddDate.Text = this.addDate;
             if (this.gend == "Male")

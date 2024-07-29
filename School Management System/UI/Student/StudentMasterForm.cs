@@ -15,7 +15,7 @@ namespace School_Management_System.UI.Student
     {   
         DataTable dt=new DataTable();
         DataView dv;
-        String fname,lname,addNo,fullName,gend,dob,nic,phone,gradeId,addDate,address;
+        String fname,lname,addNo,fullName,gend,dob,nic,phone,gradeId,medium,addDate,address;
         public StudentMasterForm()
         {
             InitializeComponent();
@@ -34,6 +34,7 @@ namespace School_Management_System.UI.Student
             this.nic = dgvStd.SelectedRows[0].Cells["stu_nic_no"].Value.ToString();
             this.phone = dgvStd.SelectedRows[0].Cells["tp_No"].Value.ToString();
             this.gradeId = dgvStd.SelectedRows[0].Cells["grade_id"].Value.ToString();
+            this.medium = dgvStd.SelectedRows[0].Cells["medium"].Value.ToString();
             this.addDate = dgvStd.SelectedRows[0].Cells["date_of_addmission"].Value.ToString();
             this.address = dgvStd.SelectedRows[0].Cells["resident_address"].Value.ToString();
             UI.Student.StudentCreateForm studentCreateForm = new UI.Student.StudentCreateForm(this.fname,this.lname,this.addNo,this.fullName,this.gend,this.dob,this.nic,this.phone,this.gradeId,this.addDate,this.address);    
@@ -53,9 +54,10 @@ namespace School_Management_System.UI.Student
             this.nic = dgvStd.SelectedRows[0].Cells["stu_nic_no"].Value.ToString();
             this.phone = dgvStd.SelectedRows[0].Cells["tp_No"].Value.ToString();
             this.gradeId = dgvStd.SelectedRows[0].Cells["grade_id"].Value.ToString();
+            this.medium = dgvStd.SelectedRows[0].Cells["medium"].Value.ToString();
             this.addDate = dgvStd.SelectedRows[0].Cells["date_of_addmission"].Value.ToString();
             this.address = dgvStd.SelectedRows[0].Cells["resident_address"].Value.ToString();
-            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.addDate, this.address);  
+            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.medium, this.addDate, this.address);  
             studentEditForm.ShowDialog();
         }
 
