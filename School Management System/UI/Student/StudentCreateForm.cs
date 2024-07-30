@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,11 +23,31 @@ namespace School_Management_System.UI.Student
         }
         private void btnStdCreate_Click(object sender, EventArgs e)
         {
-            string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
+            String adNo, fname, lname, fullName,nic, phone, gradeId, medium, address;
+            
+            adNo =txtStdcrtAddmisNo.Text;
+            fname=txtStdcrtfname.Text;
+            lname =txtStdcrtLname.Text;
+            fullName =txtStdcrtfullName.Text;
+            if (rdoStdCrtMale.Checked == true)
+            {
+                this.gender = "Male";
+            } else if (rdoStdCrtFemale.Checked == true)
+            {
+               this.gender = "Female";
+            }
+            DateTime dob = DateTime.Parse(dtpStdcrtDoB.Text);
+            DateTime adDate = DateTime.Parse(dtpStdCrtAddDate.Text);
+            nic =txtStdcrtNic.Text;
+            phone =txtStdcrtphoneNo.Text;
+            gradeId =txtStdCrtGrdId.Text;
+            medium =cmbStdCrtMedium.Text;
+            address =txtStdcrtaddress.Text;
+            DAL.StudentDal.insert(adNo,fname,lname,  fullName,  this.gender,  dob,  nic,  phone,  gradeId,  medium,  adDate,  address);
+            MessageBox.Show("New Student added successfully");
+            this.Close();
+            
+            /*
             if (rdoStdCrtMale.Checked == true)
             {
                 this.gender = "Male";
@@ -52,7 +73,7 @@ namespace School_Management_System.UI.Student
             catch (Exception)
             {
                 MessageBox.Show("Can not open connection ! ");
-            }
+            }*/
         }
 
         private void btnStdcrtCancel_Click(object sender, EventArgs e)

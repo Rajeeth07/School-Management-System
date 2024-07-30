@@ -50,10 +50,9 @@
             this.btnStdExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStdExit.Image = global::School_Management_System.Properties.Resources.Back_removebg_preview;
             this.btnStdExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStdExit.Location = new System.Drawing.Point(517, 12);
-            this.btnStdExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStdExit.Location = new System.Drawing.Point(770, 19);
             this.btnStdExit.Name = "btnStdExit";
-            this.btnStdExit.Size = new System.Drawing.Size(60, 31);
+            this.btnStdExit.Size = new System.Drawing.Size(90, 48);
             this.btnStdExit.TabIndex = 0;
             this.btnStdExit.Text = "Exit";
             this.btnStdExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -66,9 +65,8 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(593, 23);
+            this.label1.Size = new System.Drawing.Size(884, 35);
             this.label1.TabIndex = 1;
             this.label1.Text = "Student Master";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,13 +75,12 @@
             // 
             this.dgvStd.AllowUserToAddRows = false;
             this.dgvStd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStd.Location = new System.Drawing.Point(4, 42);
-            this.dgvStd.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvStd.Location = new System.Drawing.Point(6, 65);
             this.dgvStd.Name = "dgvStd";
             this.dgvStd.RowHeadersWidth = 62;
             this.dgvStd.RowTemplate.Height = 28;
             this.dgvStd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStd.Size = new System.Drawing.Size(579, 184);
+            this.dgvStd.Size = new System.Drawing.Size(870, 283);
             this.dgvStd.TabIndex = 2;
             // 
             // groupBox1
@@ -92,11 +89,9 @@
             this.groupBox1.Controls.Add(this.txtStuSearch);
             this.groupBox1.Controls.Add(this.dgvStd);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 23);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(0, 35);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(593, 277);
+            this.groupBox1.Size = new System.Drawing.Size(884, 430);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
@@ -104,17 +99,19 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Image = global::School_Management_System.Properties.Resources.search_icon_sl7;
-            this.label2.Location = new System.Drawing.Point(363, 15);
+            this.label2.Location = new System.Drawing.Point(548, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 25);
+            this.label2.Size = new System.Drawing.Size(36, 38);
             this.label2.TabIndex = 4;
             // 
             // txtStuSearch
             // 
-            this.txtStuSearch.Location = new System.Drawing.Point(389, 15);
+            this.txtStuSearch.Location = new System.Drawing.Point(588, 23);
+            this.txtStuSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStuSearch.Multiline = true;
             this.txtStuSearch.Name = "txtStuSearch";
-            this.txtStuSearch.Size = new System.Drawing.Size(192, 25);
+            this.txtStuSearch.Size = new System.Drawing.Size(286, 36);
             this.txtStuSearch.TabIndex = 3;
             this.txtStuSearch.TextChanged += new System.EventHandler(this.txtStuSearch_TextChanged);
             // 
@@ -125,11 +122,9 @@
             this.groupBox2.Controls.Add(this.btnStdAdd);
             this.groupBox2.Controls.Add(this.btnStdEdit);
             this.groupBox2.Controls.Add(this.btnStdExit);
-            this.groupBox2.Location = new System.Drawing.Point(-1, 248);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(5, 382);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(583, 49);
+            this.groupBox2.Size = new System.Drawing.Size(871, 75);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
@@ -140,10 +135,9 @@
             this.btnStdRefresh.ForeColor = System.Drawing.Color.White;
             this.btnStdRefresh.Image = global::School_Management_System.Properties.Resources._360_F_603559966_0VO4rK4OyPO4i89jEDfH1XEbI5fQDaCK_removebg_preview1;
             this.btnStdRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStdRefresh.Location = new System.Drawing.Point(222, 12);
-            this.btnStdRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStdRefresh.Location = new System.Drawing.Point(327, 19);
             this.btnStdRefresh.Name = "btnStdRefresh";
-            this.btnStdRefresh.Size = new System.Drawing.Size(84, 31);
+            this.btnStdRefresh.Size = new System.Drawing.Size(126, 48);
             this.btnStdRefresh.TabIndex = 0;
             this.btnStdRefresh.Text = "Refresh";
             this.btnStdRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -157,10 +151,9 @@
             this.btnStdDelete.ForeColor = System.Drawing.Color.Red;
             this.btnStdDelete.Image = global::School_Management_System.Properties.Resources._11;
             this.btnStdDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStdDelete.Location = new System.Drawing.Point(310, 12);
-            this.btnStdDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStdDelete.Location = new System.Drawing.Point(459, 19);
             this.btnStdDelete.Name = "btnStdDelete";
-            this.btnStdDelete.Size = new System.Drawing.Size(75, 31);
+            this.btnStdDelete.Size = new System.Drawing.Size(112, 48);
             this.btnStdDelete.TabIndex = 0;
             this.btnStdDelete.Text = "Delete";
             this.btnStdDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -174,10 +167,9 @@
             this.btnStdAdd.ForeColor = System.Drawing.Color.White;
             this.btnStdAdd.Image = global::School_Management_System.Properties.Resources.add_icocons__softiconsm_5;
             this.btnStdAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStdAdd.Location = new System.Drawing.Point(389, 12);
-            this.btnStdAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStdAdd.Location = new System.Drawing.Point(578, 19);
             this.btnStdAdd.Name = "btnStdAdd";
-            this.btnStdAdd.Size = new System.Drawing.Size(60, 31);
+            this.btnStdAdd.Size = new System.Drawing.Size(90, 48);
             this.btnStdAdd.TabIndex = 0;
             this.btnStdAdd.Text = "Add";
             this.btnStdAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -191,10 +183,9 @@
             this.btnStdEdit.ForeColor = System.Drawing.Color.White;
             this.btnStdEdit.Image = global::School_Management_System.Properties.Resources.image1111s__1__removebg_preview;
             this.btnStdEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStdEdit.Location = new System.Drawing.Point(453, 12);
-            this.btnStdEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStdEdit.Location = new System.Drawing.Point(674, 19);
             this.btnStdEdit.Name = "btnStdEdit";
-            this.btnStdEdit.Size = new System.Drawing.Size(60, 31);
+            this.btnStdEdit.Size = new System.Drawing.Size(90, 48);
             this.btnStdEdit.TabIndex = 0;
             this.btnStdEdit.Text = "Edit";
             this.btnStdEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -203,14 +194,13 @@
             // 
             // StudentMasterForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(593, 300);
+            this.ClientSize = new System.Drawing.Size(884, 465);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentMasterForm";
             this.Text = "StudentMasterForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StudentMasterForm_FormClosing);

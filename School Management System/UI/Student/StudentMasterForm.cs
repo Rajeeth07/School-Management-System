@@ -53,14 +53,19 @@ namespace School_Management_System.UI.Student
 
         private void btnStdDelete_Click(object sender, EventArgs e)
         {
-            
+            //Delete function
             this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
             DialogResult dr = MessageBox.Show("Do you want to delete Id: " + this.id + "?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.No)
             {
                 return;
             }
-            //Delete function
+            int id=Convert.ToInt32(this.id);
+            DAL.StudentDal.delete(id);
+            MessageBox.Show("Student Id : "+id+" details deleted successfully");
+
+            /*
+            
             string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
@@ -81,7 +86,7 @@ namespace School_Management_System.UI.Student
             catch (Exception)
             {
                 MessageBox.Show("Can not open connection ! ");
-            }
+            }*/
         }
         private void StudentMasterForm_Load(object sender, EventArgs e)
         {
@@ -89,8 +94,11 @@ namespace School_Management_System.UI.Student
         }
 
         private void formLoad()
-        {
-            string connetionString = null;
+        {   
+            DataTable dt = DAL.StudentDal.getAll();
+            dgvStd.DataSource = dt;
+
+            /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
             string sql = null;
@@ -114,7 +122,7 @@ namespace School_Management_System.UI.Student
             catch (Exception ex)
             {
                 MessageBox.Show("Can not open connection ! ");
-            }
+            }*/
         }
 
         private void btnStdExit_Click(object sender, EventArgs e)
@@ -132,7 +140,7 @@ namespace School_Management_System.UI.Student
 
         private void txtStuSearch_TextChanged(object sender, EventArgs e)
         {
-            dv = new DataView(dt, "addmission_no like '%"+txtStuSearch.Text+"%' or first_name like '%"+txtStuSearch.Text+"%' or last_name like '%"+txtStuSearch.Text+"%' or full_name like '%"+txtStuSearch.Text+"%' or gender like '%"+txtStuSearch.Text+"%' or stu_nic_no like '%"+txtStuSearch.Text+"%' or tp_No like '%"+txtStuSearch.Text+"%' or medium like '%"+txtStuSearch.Text+"%' or resident_address like '%"+txtStuSearch.Text+"%'", "first_name", DataViewRowState.CurrentRows);
+            dv = new DataView(dt, "addmission_no like '%" + txtStuSearch.Text+"%' or first_name like '%"+txtStuSearch.Text+"%' or last_name like '%"+txtStuSearch.Text+"%' or full_name like '%"+txtStuSearch.Text+"%' or gender like '%"+txtStuSearch.Text+"%' or stu_nic_no like '%"+txtStuSearch.Text+"%' or tp_No like '%"+txtStuSearch.Text+"%' or medium like '%"+txtStuSearch.Text+"%' or resident_address like '%"+txtStuSearch.Text+"%'", "first_name", DataViewRowState.CurrentRows);
             dgvStd.DataSource = dv;
         }
 

@@ -28,7 +28,31 @@ namespace School_Management_System.UI.Student
 
         private void btnStdEdit_Click(object sender, EventArgs e)
         {
-            string connetionString = null;
+            String adNo, fname, lname, fullName, nic, phone, gradeId, medium, address;
+
+            adNo = txtStdEdtAddmisNo.Text;
+            fname = txtStdEdtfname.Text;
+            lname = txtStdEdtLname.Text;
+            fullName = txtStdEdtfullName.Text;
+            if (rdoStdEdtMale.Checked == true)
+            {
+                this.gender = "Male";
+            }
+            else if (rdoStdEdtFemale.Checked == true)
+            {
+                this.gender = "Female";
+            }
+            DateTime dob = DateTime.Parse(dtpStdEdtDoB.Text);
+            DateTime adDate = DateTime.Parse(dtpStdEdtAddDate.Text);
+            nic = txtStdEdtNic.Text;
+            phone = txtStdEdtphoneNo.Text;
+            gradeId = txtStdEdtGrdId.Text;
+            medium = cmbStdEdtMedium.Text;
+            address = txtStdEdtaddress.Text;
+            DAL.StudentDal.update(adNo, fname, lname, fullName, this.gender, dob, nic, phone, gradeId, medium, adDate, address,this.id);
+            MessageBox.Show("Student Id : "+this.id+" details Updated successfully");
+            this.Close();
+            /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
             string sql = null;
@@ -58,7 +82,7 @@ namespace School_Management_System.UI.Student
             catch (Exception ex)
             {
                 MessageBox.Show("Can not open connection ! ");
-            }
+            }*/
         }
 
         private void btnStdEdtCancel_Click(object sender, EventArgs e)
