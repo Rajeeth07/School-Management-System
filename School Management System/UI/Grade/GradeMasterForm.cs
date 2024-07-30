@@ -184,8 +184,9 @@ namespace School_Management_System.UI.Grade
         }
         private void gridLoad()
         {   
-            DataTable dt = DAL.GradeDal.getAll();
-            dgvGrd.DataSource = dt;
+            dt = DAL.GradeDal.getAll();
+            dv = dt.DefaultView;
+            dgvGrd.DataSource = dv;
             /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;

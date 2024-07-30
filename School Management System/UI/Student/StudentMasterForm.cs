@@ -95,8 +95,9 @@ namespace School_Management_System.UI.Student
 
         private void formLoad()
         {   
-            DataTable dt = DAL.StudentDal.getAll();
-            dgvStd.DataSource = dt;
+            dt = DAL.StudentDal.getAll();
+            dv=dt.DefaultView;
+            dgvStd.DataSource = dv;
 
             /*string connetionString = null;
             SqlConnection connection;

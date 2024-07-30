@@ -180,8 +180,9 @@ namespace School_Management_System.UI.Subject
 
         private void formLoad()
         {
-            DataTable dt = DAL.SubjectDal.getAll();
-            dgvSub.DataSource = dt;
+            dt = DAL.SubjectDal.getAll();
+            dv=dt.DefaultView;
+            dgvSub.DataSource = dv;
             /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
