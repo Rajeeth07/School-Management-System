@@ -55,15 +55,17 @@ namespace School_Management_System.UI.Grade
         private void btnGrdSave_Click(object sender, EventArgs e)
         {
             ButtonEnable(false);
-            string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
             if (is_addNew)
             {
-                
-                sql = "INSERT INTO[grades](grade_name,[grade_group],grade_order)VALUES('" + txtGrdName.Text + "','" + txtGrdGroup.Text + "','" + txtGrdOrder.Text + "')";
+                String gradeName, gradeGroup, gradeOrder;
+
+
+                gradeName = txtGrdName.Text;
+                gradeGroup = txtGrdGroup.Text;
+                gradeOrder = txtGrdOrder.Text;
+                DAL.GradeDal.insert(gradeName, gradeGroup, gradeOrder);
+                MessageBox.Show("Grade added successfully");
+                /*sql = "INSERT INTO[grades](grade_name,[grade_group],grade_order)VALUES('" + txtGrdName.Text + "','" + txtGrdGroup.Text + "','" + txtGrdOrder.Text + "')";
                 connection = new SqlConnection(connetionString);
                 try
                 {
@@ -77,11 +79,22 @@ namespace School_Management_System.UI.Grade
                 catch (Exception)
                 {
                     MessageBox.Show("Can not open connection ! ");
-                }
+                }*/
             }
             else
             {
-                sql = "UPDATE[grades] SET [grade_name]='" + txtGrdName.Text + "',[grade_group]='" + txtGrdGroup.Text + "',[grade_order]='" + txtGrdOrder.Text + "' WHERE id='" + this.id + "'";
+                String gradeName, gradeGroup, gradeOrder;
+                int id;
+
+
+                gradeName = txtGrdName.Text;
+                gradeGroup = txtGrdGroup.Text;
+                gradeOrder = txtGrdOrder.Text;
+                this.id=dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
+                id = Convert.ToInt32(this.id);             
+                DAL.GradeDal.update(gradeName, gradeGroup, gradeOrder,id);
+                MessageBox.Show("Grade Id : " + id + " details updated!");
+                /*sql = "UPDATE[grades] SET [grade_name]='" + txtGrdName.Text + "',[grade_group]='" + txtGrdGroup.Text + "',[grade_order]='" + txtGrdOrder.Text + "' WHERE id='" + this.id + "'";
                 connection = new SqlConnection(connetionString);
                 try
                 {
@@ -95,9 +108,9 @@ namespace School_Management_System.UI.Grade
                 catch (Exception)
                 {
                     MessageBox.Show("Can not open connection ! ");
-                }
+                }*/
 
-               
+
             }
         }
 
@@ -113,7 +126,18 @@ namespace School_Management_System.UI.Grade
 
         private void btnGrdDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dr=MessageBox.Show("Do you want to delete Id: "+this.id+"?", "Question",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
+            this.id = dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
+            DialogResult dr = MessageBox.Show("Do you want to delete Id: " + this.id + "?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr == DialogResult.Cancel)
+            {
+                return;
+            }
+            int id;
+            
+            id = Convert.ToInt32(this.id);
+            DAL.GradeDal.delete(id);
+            MessageBox.Show("Grade id : "+id+" details deleted successfully");
+            /*DialogResult dr=MessageBox.Show("Do you want to delete Id: "+this.id+"?", "Question",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
             if (dr == DialogResult.Cancel) { 
                 return;
             }
@@ -137,7 +161,7 @@ namespace School_Management_System.UI.Grade
              catch (Exception)
              {
                  MessageBox.Show("Can not open connection ! ");
-             }
+             }*/
         }
 
         private void btnGrdExit_Click(object sender, EventArgs e)
@@ -159,8 +183,10 @@ namespace School_Management_System.UI.Grade
             gridLoad();
         }
         private void gridLoad()
-        {
-            string connetionString = null;
+        {   
+            DataTable dt = DAL.GradeDal.getAll();
+            dgvGrd.DataSource = dt;
+            /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
             string sql = null;
@@ -184,7 +210,7 @@ namespace School_Management_System.UI.Grade
             catch (Exception)
             {
                 MessageBox.Show("Can not open connection ! ");
-            }
+            }*/
         }
 
         private void dgvGrd_SelectionChanged(object sender, EventArgs e)

@@ -17,8 +17,43 @@ namespace School_Management_System.UI.Student
         DataView dv;
         String fname,lname,addNo,fullName,gend,dob,nic,phone,gradeId,medium,addDate,address,id;
 
+
+        public StudentMasterForm()
+        {
+            InitializeComponent();
+        }
+
+       
+        private void btnStdAdd_Click(object sender, EventArgs e)
+        {
+            UI.Student.StudentCreateForm studentCreateForm = new UI.Student.StudentCreateForm();    
+            studentCreateForm.ShowDialog();
+        }
+
+        private void btnStdEdit_Click(object sender, EventArgs e)
+        {   
+
+            this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
+            this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
+            this.lname = dgvStd.SelectedRows[0].Cells["last_name"].Value.ToString();
+            this.addNo = dgvStd.SelectedRows[0].Cells["addmission_no"].Value.ToString();
+            this.fullName = dgvStd.SelectedRows[0].Cells["full_name"].Value.ToString();
+            this.gend = dgvStd.SelectedRows[0].Cells["gender"].Value.ToString();
+            this.dob = dgvStd.SelectedRows[0].Cells["date_of_birth"].Value.ToString();
+            this.nic = dgvStd.SelectedRows[0].Cells["stu_nic_no"].Value.ToString();
+            this.phone = dgvStd.SelectedRows[0].Cells["tp_No"].Value.ToString();
+            this.gradeId = dgvStd.SelectedRows[0].Cells["grade_id"].Value.ToString();
+            this.medium = dgvStd.SelectedRows[0].Cells["medium"].Value.ToString();
+            this.addDate = dgvStd.SelectedRows[0].Cells["date_of_addmission"].Value.ToString();
+            this.address = dgvStd.SelectedRows[0].Cells["resident_address"].Value.ToString();
+            this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
+            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.medium, this.addDate, this.address,this.id);  
+            studentEditForm.ShowDialog();
+        }
+
         private void btnStdDelete_Click(object sender, EventArgs e)
         {
+            
             this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
             DialogResult dr = MessageBox.Show("Do you want to delete Id: " + this.id + "?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.No)
@@ -48,39 +83,6 @@ namespace School_Management_System.UI.Student
                 MessageBox.Show("Can not open connection ! ");
             }
         }
-
-        public StudentMasterForm()
-        {
-            InitializeComponent();
-        }
-
-       
-        private void btnStdAdd_Click(object sender, EventArgs e)
-        {
-            UI.Student.StudentCreateForm studentCreateForm = new UI.Student.StudentCreateForm();    
-            studentCreateForm.ShowDialog();
-        }
-
-        private void btnStdEdit_Click(object sender, EventArgs e)
-        {
-            this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
-            this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
-            this.lname = dgvStd.SelectedRows[0].Cells["last_name"].Value.ToString();
-            this.addNo = dgvStd.SelectedRows[0].Cells["addmission_no"].Value.ToString();
-            this.fullName = dgvStd.SelectedRows[0].Cells["full_name"].Value.ToString();
-            this.gend = dgvStd.SelectedRows[0].Cells["gender"].Value.ToString();
-            this.dob = dgvStd.SelectedRows[0].Cells["date_of_birth"].Value.ToString();
-            this.nic = dgvStd.SelectedRows[0].Cells["stu_nic_no"].Value.ToString();
-            this.phone = dgvStd.SelectedRows[0].Cells["tp_No"].Value.ToString();
-            this.gradeId = dgvStd.SelectedRows[0].Cells["grade_id"].Value.ToString();
-            this.medium = dgvStd.SelectedRows[0].Cells["medium"].Value.ToString();
-            this.addDate = dgvStd.SelectedRows[0].Cells["date_of_addmission"].Value.ToString();
-            this.address = dgvStd.SelectedRows[0].Cells["resident_address"].Value.ToString();
-            this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
-            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.medium, this.addDate, this.address,this.id);  
-            studentEditForm.ShowDialog();
-        }
-
         private void StudentMasterForm_Load(object sender, EventArgs e)
         {
             formLoad();
