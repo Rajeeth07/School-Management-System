@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -48,15 +49,21 @@ namespace School_Management_System.UI.Subject
 
         private void btnSubSave_Click(object sender, EventArgs e)
         {
-            string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            if (is_addNew)
-            {
+            String subName, subIndex, subNumber, subOrder;
+            
+            this.id = dgvSub.SelectedRows[0].Cells["id"].Value.ToString();
+            int id=Convert.ToInt32(this.id);
+            subName = txtSubName.Text;
+            subIndex = txtSubindex.Text;
+            subNumber = txtSubNumber.Text;
+            subOrder = txtSubOrder.Text;
+                if (is_addNew) { 
+                
                 //insert
-               
-                connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
+                
+                DAL.SubjectDal.insert(subName, subIndex, subNumber, subOrder);
+                MessageBox.Show("Subject details added successfully!");
+                /*connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
                 sql = "INSERT INTO[subjects](subject_name,[subject_index],subject_number,[subject_order])VALUES('"+txtSubName.Text+"','"+txtSubindex.Text+"','"+txtSubNumber.Text+"','"+txtSubOrder.Text+"')";
                 connection = new SqlConnection(connetionString);
                 try
@@ -71,11 +78,13 @@ namespace School_Management_System.UI.Subject
                 catch (Exception)
                 {
                     MessageBox.Show("Can not open connection ! ");
-                }
+                }*/
             }
             else
             {
                 //update
+                DAL.SubjectDal.update(subName, subIndex, subNumber, subOrder,id);
+                MessageBox.Show("Subject id : "+id+" details updated successfully!");
                 /*connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
                 sql = "UPDATE[subjects] SET [subject_name]='" + txtSubName.Text+"',[subject_index]='"+txtSubindex.Text+"',[subject_number]='"+txtSubNumber.Text+"',[subject_order]='" + txtSubName.Text + "' WHERE id='"+this.id+"'";
                 connection = new SqlConnection(connetionString);
@@ -120,14 +129,17 @@ namespace School_Management_System.UI.Subject
         }
 
         private void btnSubDelete_Click(object sender, EventArgs e)
-        {
+        {   
+            int id=Convert.ToInt32(this.id);
             DialogResult dr = MessageBox.Show("Do you want to delete Id: "+this.id+"?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dr == DialogResult.No)
             {
                 return;
             }
             //Delete function
-            string connetionString = null;
+            DAL.SubjectDal.delete(id);
+            MessageBox.Show("Subject Id : " + id + " details deleted successfully!");
+            /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
             string sql = null;
@@ -146,7 +158,7 @@ namespace School_Management_System.UI.Subject
             catch (Exception)
             {
                 MessageBox.Show("Can not open connection ! ");
-            }
+            }*/
         }
 
         private void btnSubRefresh_Click(object sender, EventArgs e)
@@ -168,7 +180,9 @@ namespace School_Management_System.UI.Subject
 
         private void formLoad()
         {
-            string connetionString = null;
+            DataTable dt = DAL.SubjectDal.getAll();
+            dgvSub.DataSource = dt;
+            /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
             string sql = null;
@@ -192,7 +206,7 @@ namespace School_Management_System.UI.Subject
             catch (Exception)
             {
                 MessageBox.Show("Can not open connection ! ");
-            }
+            }*/
         }
 
         private void dgvSub_SelectionChanged(object sender, EventArgs e)
