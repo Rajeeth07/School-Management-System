@@ -54,8 +54,9 @@ namespace School_Management_System.UI.Student
         private void btnStdDelete_Click(object sender, EventArgs e)
         {
             //Delete function
-            this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
+            
             DialogResult dr = MessageBox.Show("Do you want to delete Id: " + this.id + "?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
             if (dr == DialogResult.No)
             {
                 return;

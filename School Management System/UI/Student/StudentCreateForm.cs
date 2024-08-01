@@ -43,6 +43,89 @@ namespace School_Management_System.UI.Student
             gradeId =txtStdCrtGrdId.Text;
             medium =cmbStdCrtMedium.Text;
             address =txtStdcrtaddress.Text;
+            if (String.IsNullOrEmpty(txtStdcrtAddmisNo.Text))
+            {
+                MessageBox.Show("Addmission Number field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdcrtAddmisNo.Focus();
+                return;
+            }else if (String.IsNullOrEmpty(txtStdcrtfname.Text))
+            {
+                MessageBox.Show("First Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdcrtfname.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdcrtLname.Text))
+            {
+                MessageBox.Show("Last Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdcrtLname.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdcrtfullName.Text))
+            {
+                MessageBox.Show("fullname field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdcrtfullName.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdcrtNic.Text))
+            {
+                MessageBox.Show("Nic field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpStdcrtDoB.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdcrtphoneNo.Text))
+            {
+                MessageBox.Show("phone number can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdcrtphoneNo.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdCrtGrdId.Text))
+            {
+                MessageBox.Show("please enter your grade id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdCrtGrdId.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(cmbStdCrtMedium.Text))
+            {
+                MessageBox.Show("please select a medium", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbStdCrtMedium.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdcrtaddress.Text))
+            {
+                MessageBox.Show("please enter your address", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdcrtaddress.Focus();
+                return;
+            }
+            if (rdoStdCrtMale.Checked == false && rdoStdCrtFemale.Checked == false)
+            {
+                MessageBox.Show("please select a gender", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labStuCrtGender.Focus();
+                    return;
+            }
+            int num = 0;
+            Boolean isNumber1=Int32.TryParse(txtStdCrtGrdId.Text,out num);
+            if (!isNumber1)
+            {
+                MessageBox.Show("grade Id shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdCrtGrdId.Focus();
+                return;
+
+            }
+            
+            Boolean isNumber2 = Int32.TryParse(txtStdcrtphoneNo.Text, out num);
+            if (!isNumber2)
+            {
+                MessageBox.Show("phone number shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdCrtGrdId.Focus();
+                return;
+
+            }
+            if (txtStdcrtphoneNo.Text.Length != 10)
+            {
+                MessageBox.Show("phone number shoud be 10 numbers!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdcrtphoneNo.Focus();
+                return;
+            }
             DAL.StudentDal.insert(adNo,fname,lname,  fullName,  this.gender,  dob,  nic,  phone,  gradeId,  medium,  adDate,  address);
             MessageBox.Show("New Student added successfully");
             this.Close();

@@ -98,7 +98,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "delete from subjects where id='"+id+"'";
+                cmd.CommandText = "delete from students where id='"+id+"'";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();
