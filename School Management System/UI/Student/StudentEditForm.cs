@@ -28,6 +28,7 @@ namespace School_Management_System.UI.Student
 
         private void btnStdEdit_Click(object sender, EventArgs e)
         {
+            
             String adNo, fname, lname, fullName, nic, phone, gradeId, medium, address;
 
             adNo = txtStdEdtAddmisNo.Text;
@@ -49,6 +50,90 @@ namespace School_Management_System.UI.Student
             gradeId = txtStdEdtGrdId.Text;
             medium = cmbStdEdtMedium.Text;
             address = txtStdEdtaddress.Text;
+            if (String.IsNullOrEmpty(txtStdEdtAddmisNo.Text))
+            {
+                MessageBox.Show("Addmission Number field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtAddmisNo.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdEdtfname.Text))
+            {
+                MessageBox.Show("First Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtfname.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdEdtLname.Text))
+            {
+                MessageBox.Show("Last Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtLname.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdEdtfullName.Text))
+            {
+                MessageBox.Show("fullname field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtfullName.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdEdtNic.Text))
+            {
+                MessageBox.Show("Nic field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dtpStdEdtDoB.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdEdtphoneNo.Text))
+            {
+                MessageBox.Show("phone number can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtphoneNo.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdEdtGrdId.Text))
+            {
+                MessageBox.Show("please enter your grade id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtGrdId.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(cmbStdEdtMedium.Text))
+            {
+                MessageBox.Show("please select a medium", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cmbStdEdtMedium.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStdEdtaddress.Text))
+            {
+                MessageBox.Show("please enter your address", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtaddress.Focus();
+                return;
+            }
+            if (rdoStdEdtMale.Checked == false && rdoStdEdtFemale.Checked == false)
+            {
+                MessageBox.Show("please select a gender", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                labStuEdtGender.Focus();
+                return;
+            }
+            int num = 0;
+            Boolean isNumber1 = Int32.TryParse(txtStdEdtGrdId.Text, out num);
+            if (!isNumber1)
+            {
+                MessageBox.Show("grade Id shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtGrdId.Focus();
+                return;
+
+            }
+
+            Boolean isNumber2 = Int32.TryParse(txtStdEdtphoneNo.Text, out num);
+            if (!isNumber2)
+            {
+                MessageBox.Show("phone number shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtGrdId.Focus();
+                return;
+
+            }
+            if (txtStdEdtphoneNo.Text.Length != 10)
+            {
+                MessageBox.Show("phone number shoud be 10 numbers!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtStdEdtphoneNo.Focus();
+                return;
+            }
             DAL.StudentDal.update(adNo, fname, lname, fullName, this.gender, dob, nic, phone, gradeId, medium, adDate, address,this.id);
             MessageBox.Show("Student Id : "+this.id+" details Updated successfully");
             this.Close();
