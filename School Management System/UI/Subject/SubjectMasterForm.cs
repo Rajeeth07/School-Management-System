@@ -57,7 +57,38 @@ namespace School_Management_System.UI.Subject
             subIndex = txtSubindex.Text;
             subNumber = txtSubNumber.Text;
             subOrder = txtSubOrder.Text;
-                if (is_addNew) { 
+            if (String.IsNullOrEmpty(txtSubName.Text))
+            {
+                MessageBox.Show("please enter the  subject Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSubName.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtSubindex.Text))
+            {
+                MessageBox.Show("please enter the  subject Index", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSubindex.Focus();
+                return;
+            }else if (String.IsNullOrEmpty(txtSubNumber.Text))
+            {
+                MessageBox.Show("please enter the  subject Number", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSubNumber.Focus();
+                return;
+            } else if (String.IsNullOrEmpty(txtSubOrder.Text))
+            {
+                MessageBox.Show("please enter the  subject order", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSubOrder.Focus();
+                return;
+            }
+            int num = 0;
+            Boolean isNumber1 = Int32.TryParse(txtSubOrder.Text, out num);
+            if (!isNumber1)
+            {
+                MessageBox.Show("Subject Order shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSubOrder.Focus();
+                return;
+
+            }
+            if (is_addNew) { 
                 
                 //insert
                 
