@@ -55,14 +55,44 @@ namespace School_Management_System.UI.Grade
         private void btnGrdSave_Click(object sender, EventArgs e)
         {
             ButtonEnable(false);
+            String gradeName, gradeGroup, gradeOrder;
+
+
+            gradeName = txtGrdName.Text;
+            gradeGroup = txtGrdGroup.Text;
+            gradeOrder = txtGrdOrder.Text;
+            this.id = dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
+            if (String.IsNullOrEmpty(txtGrdName.Text))
+            {
+                MessageBox.Show("please enter the  Grade Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdName.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtGrdGroup.Text))
+            {
+                MessageBox.Show("please enter the  Grade group", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdGroup.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtGrdOrder.Text))
+            {
+                MessageBox.Show("please enter the  grade group", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdOrder.Focus();
+                return;
+            }
+            
+            int num = 0;
+            Boolean isNumber1 = Int32.TryParse(txtGrdOrder.Text, out num);
+            if (!isNumber1)
+            {
+                MessageBox.Show("Grade Order shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdOrder.Focus();
+                return;
+
+            }
             if (is_addNew)
             {
-                String gradeName, gradeGroup, gradeOrder;
-
-
-                gradeName = txtGrdName.Text;
-                gradeGroup = txtGrdGroup.Text;
-                gradeOrder = txtGrdOrder.Text;
+                
                 DAL.GradeDal.insert(gradeName, gradeGroup, gradeOrder);
                 MessageBox.Show("Grade added successfully");
                 /*sql = "INSERT INTO[grades](grade_name,[grade_group],grade_order)VALUES('" + txtGrdName.Text + "','" + txtGrdGroup.Text + "','" + txtGrdOrder.Text + "')";
@@ -83,14 +113,8 @@ namespace School_Management_System.UI.Grade
             }
             else
             {
-                String gradeName, gradeGroup, gradeOrder;
+
                 int id;
-
-
-                gradeName = txtGrdName.Text;
-                gradeGroup = txtGrdGroup.Text;
-                gradeOrder = txtGrdOrder.Text;
-                this.id=dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
                 id = Convert.ToInt32(this.id);             
                 DAL.GradeDal.update(gradeName, gradeGroup, gradeOrder,id);
                 MessageBox.Show("Grade Id : " + id + " details updated!");
