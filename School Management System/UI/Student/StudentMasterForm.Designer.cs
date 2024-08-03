@@ -46,22 +46,21 @@
             // 
             // btnStdExit
             // 
-            this.btnStdExit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnStdExit.BackColor = System.Drawing.SystemColors.Control;
             this.btnStdExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStdExit.Image = global::School_Management_System.Properties.Resources.Back_removebg_preview;
+            this.btnStdExit.ForeColor = System.Drawing.Color.Black;
             this.btnStdExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStdExit.Location = new System.Drawing.Point(770, 19);
             this.btnStdExit.Name = "btnStdExit";
             this.btnStdExit.Size = new System.Drawing.Size(90, 48);
             this.btnStdExit.TabIndex = 0;
             this.btnStdExit.Text = "Exit";
-            this.btnStdExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdExit.UseVisualStyleBackColor = false;
             this.btnStdExit.Click += new System.EventHandler(this.btnStdExit_Click);
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -85,6 +84,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtStuSearch);
             this.groupBox1.Controls.Add(this.dgvStd);
@@ -97,7 +97,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Image = global::School_Management_System.Properties.Resources.search_icon_sl7;
             this.label2.Location = new System.Drawing.Point(548, 23);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -117,6 +117,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
             this.groupBox2.Controls.Add(this.btnStdRefresh);
             this.groupBox2.Controls.Add(this.btnStdDelete);
             this.groupBox2.Controls.Add(this.btnStdAdd);
@@ -130,65 +131,57 @@
             // 
             // btnStdRefresh
             // 
-            this.btnStdRefresh.BackColor = System.Drawing.Color.Black;
+            this.btnStdRefresh.BackColor = System.Drawing.SystemColors.Control;
             this.btnStdRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStdRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnStdRefresh.Image = global::School_Management_System.Properties.Resources._360_F_603559966_0VO4rK4OyPO4i89jEDfH1XEbI5fQDaCK_removebg_preview1;
+            this.btnStdRefresh.ForeColor = System.Drawing.Color.Black;
             this.btnStdRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStdRefresh.Location = new System.Drawing.Point(327, 19);
             this.btnStdRefresh.Name = "btnStdRefresh";
             this.btnStdRefresh.Size = new System.Drawing.Size(126, 48);
             this.btnStdRefresh.TabIndex = 0;
             this.btnStdRefresh.Text = "Refresh";
-            this.btnStdRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdRefresh.UseVisualStyleBackColor = false;
             this.btnStdRefresh.Click += new System.EventHandler(this.btnStdRefresh_Click);
             // 
             // btnStdDelete
             // 
-            this.btnStdDelete.BackColor = System.Drawing.Color.White;
+            this.btnStdDelete.BackColor = System.Drawing.SystemColors.Control;
             this.btnStdDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStdDelete.ForeColor = System.Drawing.Color.Red;
-            this.btnStdDelete.Image = global::School_Management_System.Properties.Resources._11;
+            this.btnStdDelete.ForeColor = System.Drawing.Color.Black;
             this.btnStdDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStdDelete.Location = new System.Drawing.Point(459, 19);
             this.btnStdDelete.Name = "btnStdDelete";
             this.btnStdDelete.Size = new System.Drawing.Size(112, 48);
             this.btnStdDelete.TabIndex = 0;
             this.btnStdDelete.Text = "Delete";
-            this.btnStdDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdDelete.UseVisualStyleBackColor = false;
             this.btnStdDelete.Click += new System.EventHandler(this.btnStdDelete_Click);
             // 
             // btnStdAdd
             // 
-            this.btnStdAdd.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnStdAdd.BackColor = System.Drawing.SystemColors.Control;
             this.btnStdAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStdAdd.ForeColor = System.Drawing.Color.White;
-            this.btnStdAdd.Image = global::School_Management_System.Properties.Resources.add_icocons__softiconsm_5;
+            this.btnStdAdd.ForeColor = System.Drawing.Color.Black;
             this.btnStdAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStdAdd.Location = new System.Drawing.Point(578, 19);
             this.btnStdAdd.Name = "btnStdAdd";
             this.btnStdAdd.Size = new System.Drawing.Size(90, 48);
             this.btnStdAdd.TabIndex = 0;
             this.btnStdAdd.Text = "Add";
-            this.btnStdAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdAdd.UseVisualStyleBackColor = false;
             this.btnStdAdd.Click += new System.EventHandler(this.btnStdAdd_Click);
             // 
             // btnStdEdit
             // 
-            this.btnStdEdit.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnStdEdit.BackColor = System.Drawing.SystemColors.Control;
             this.btnStdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStdEdit.ForeColor = System.Drawing.Color.White;
-            this.btnStdEdit.Image = global::School_Management_System.Properties.Resources.image1111s__1__removebg_preview;
+            this.btnStdEdit.ForeColor = System.Drawing.Color.Black;
             this.btnStdEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStdEdit.Location = new System.Drawing.Point(674, 19);
             this.btnStdEdit.Name = "btnStdEdit";
             this.btnStdEdit.Size = new System.Drawing.Size(90, 48);
             this.btnStdEdit.TabIndex = 0;
             this.btnStdEdit.Text = "Edit";
-            this.btnStdEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdEdit.UseVisualStyleBackColor = false;
             this.btnStdEdit.Click += new System.EventHandler(this.btnStdEdit_Click);
             // 

@@ -65,17 +65,15 @@
             // btnStdCreate
             // 
             this.btnStdCreate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStdCreate.BackColor = System.Drawing.Color.Goldenrod;
+            this.btnStdCreate.BackColor = System.Drawing.SystemColors.Control;
             this.btnStdCreate.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStdCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStdCreate.Image = global::School_Management_System.Properties.Resources._12345;
             this.btnStdCreate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStdCreate.Location = new System.Drawing.Point(228, 18);
             this.btnStdCreate.Name = "btnStdCreate";
             this.btnStdCreate.Size = new System.Drawing.Size(105, 45);
             this.btnStdCreate.TabIndex = 14;
             this.btnStdCreate.Text = "Save";
-            this.btnStdCreate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdCreate.UseVisualStyleBackColor = false;
             this.btnStdCreate.Click += new System.EventHandler(this.btnStdCreate_Click);
             // 
@@ -163,7 +161,7 @@
             // 
             // label12
             // 
-            this.label12.BackColor = System.Drawing.Color.SeaGreen;
+            this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(8, 495);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(152, 26);
@@ -172,7 +170,7 @@
             // 
             // label11
             // 
-            this.label11.BackColor = System.Drawing.Color.SeaGreen;
+            this.label11.BackColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(8, 452);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(152, 26);
@@ -181,7 +179,7 @@
             // 
             // label7
             // 
-            this.label7.BackColor = System.Drawing.Color.SeaGreen;
+            this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(8, 235);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(152, 26);
@@ -190,7 +188,7 @@
             // 
             // label10
             // 
-            this.label10.BackColor = System.Drawing.Color.SeaGreen;
+            this.label10.BackColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(8, 280);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(152, 26);
@@ -199,7 +197,7 @@
             // 
             // label13
             // 
-            this.label13.BackColor = System.Drawing.Color.SeaGreen;
+            this.label13.BackColor = System.Drawing.Color.White;
             this.label13.Location = new System.Drawing.Point(6, 408);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(152, 26);
@@ -208,7 +206,7 @@
             // 
             // label9
             // 
-            this.label9.BackColor = System.Drawing.Color.SeaGreen;
+            this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(8, 374);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(152, 26);
@@ -217,7 +215,7 @@
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.SeaGreen;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(8, 108);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(152, 26);
@@ -226,7 +224,7 @@
             // 
             // labStuCrtGender
             // 
-            this.labStuCrtGender.BackColor = System.Drawing.Color.SeaGreen;
+            this.labStuCrtGender.BackColor = System.Drawing.Color.White;
             this.labStuCrtGender.Location = new System.Drawing.Point(8, 192);
             this.labStuCrtGender.Name = "labStuCrtGender";
             this.labStuCrtGender.Size = new System.Drawing.Size(152, 26);
@@ -235,7 +233,7 @@
             // 
             // label8
             // 
-            this.label8.BackColor = System.Drawing.Color.SeaGreen;
+            this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(8, 323);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(152, 26);
@@ -244,7 +242,7 @@
             // 
             // label3
             // 
-            this.label3.BackColor = System.Drawing.Color.SeaGreen;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(8, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 26);
@@ -261,7 +259,7 @@
             // 
             // label5
             // 
-            this.label5.BackColor = System.Drawing.Color.SeaGreen;
+            this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(8, 151);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 26);
@@ -270,7 +268,7 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.SeaGreen;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(8, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 26);
@@ -335,7 +333,7 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label1.BackColor = System.Drawing.SystemColors.Highlight;
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
@@ -358,17 +356,15 @@
             // btnStdcrtCancel
             // 
             this.btnStdcrtCancel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnStdcrtCancel.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.btnStdcrtCancel.BackColor = System.Drawing.SystemColors.Control;
             this.btnStdcrtCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStdcrtCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnStdcrtCancel.Image = global::School_Management_System.Properties.Resources._76543;
             this.btnStdcrtCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnStdcrtCancel.Location = new System.Drawing.Point(339, 18);
             this.btnStdcrtCancel.Name = "btnStdcrtCancel";
             this.btnStdcrtCancel.Size = new System.Drawing.Size(106, 45);
             this.btnStdcrtCancel.TabIndex = 15;
             this.btnStdcrtCancel.Text = "Cancel";
-            this.btnStdcrtCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnStdcrtCancel.UseVisualStyleBackColor = false;
             this.btnStdcrtCancel.Click += new System.EventHandler(this.btnStdcrtCancel_Click);
             // 
@@ -376,7 +372,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(474, 691);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
