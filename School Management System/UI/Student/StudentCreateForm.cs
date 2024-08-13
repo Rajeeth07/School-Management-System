@@ -78,12 +78,7 @@ namespace School_Management_System.UI.Student
                 txtStdcrtphoneNo.Focus();
                 return;
             }
-            else if (String.IsNullOrEmpty(txtStdCrtGrdId.Text))
-            {
-                MessageBox.Show("please enter your grade id", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtStdCrtGrdId.Focus();
-                return;
-            }
+            
             else if (String.IsNullOrEmpty(cmbStdCrtMedium.Text))
             {
                 MessageBox.Show("please select a medium", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -102,24 +97,12 @@ namespace School_Management_System.UI.Student
                 labStuCrtGender.Focus();
                     return;
             }
-            int num = 0;
-            Boolean isNumber1=Int32.TryParse(txtStdCrtGrdId.Text,out num);
-            if (!isNumber1)
-            {
-                MessageBox.Show("grade Id shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtStdCrtGrdId.Focus();
-                return;
 
-            }
+
+
             
-            Boolean isNumber2 = Int32.TryParse(txtStdcrtphoneNo.Text, out num);
-            if (!isNumber2)
-            {
-                MessageBox.Show("phone number shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtStdCrtGrdId.Focus();
-                return;
 
-            }
+
             if (txtStdcrtphoneNo.Text.Length != 10)
             {
                 MessageBox.Show("phone number shoud be 10 numbers!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);

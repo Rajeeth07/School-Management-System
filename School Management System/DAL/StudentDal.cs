@@ -46,7 +46,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "INSERT INTO[students](addmission_no,[first_name],last_name,[full_name],gender,[date_of_birth],stu_nic_no,[tp_No],grade_id,[medium],date_of_addmission,[resident_address])VALUES('" + adNo + "','" + fname + "','" + lname + "','" + fullName + "','" + gender + "','" + dob + "','" + nic + "','" + phone + "','" + gradeId + "','" + medium + "','" + adDate + "','" +address + "')";
+                cmd.CommandText = "INSERT INTO[students](admission_no,[first_name],last_name,[full_name],gender,[date_of_birth],stu_nic_no,[tp_No],grade_id,[medium],date_of_addmission,[resident_address])VALUES('" + adNo + "','" + fname + "','" + lname + "','" + fullName + "','" + gender + "','" + dob + "','" + nic + "','" + phone + "','" + gradeId + "','" + medium + "','" + adDate + "','" +address + "')";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();
@@ -72,7 +72,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "UPDATE[students] SET[addmission_no] = '"+ adNo + "',[first_name] = '"+fname+"',[last_name] = '"+lname+"',[full_name] = '"+fullName+"',[gender] = '"+gender+"',[date_of_birth] = '"+dob+"',[stu_nic_no] = '"+nic+"',[tp_No] = '"+phone+"',[grade_id] = '"+gradeId+"',[medium] = '"+medium+"',[date_of_addmission] = '"+adDate+"',[resident_address] = '"+address+"' WHERE id = '"+id+"'";
+                cmd.CommandText = "UPDATE[students] SET[admission_no] = '"+ adNo + "',[first_name] = '"+fname+"',[last_name] = '"+lname+"',[full_name] = '"+fullName+"',[gender] = '"+gender+"',[date_of_birth] = '"+dob+"',[stu_nic_no] = '"+nic+"',[tp_No] = '"+phone+"',[grade_id] = '"+gradeId+"',[medium] = '"+medium+"',[date_of_addmission] = '"+adDate+"',[resident_address] = '"+address+"' WHERE id = '"+id+"'";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();

@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace School_Management_System.UI.Subject
@@ -49,14 +41,12 @@ namespace School_Management_System.UI.Subject
 
         private void btnSubSave_Click(object sender, EventArgs e)
         {
-            String subName, subIndex, subNumber, subOrder;
+            String subName, subNumber;
             
-            this.id = dgvSub.SelectedRows[0].Cells["id"].Value.ToString();
-            int id=Convert.ToInt32(this.id);
             subName = txtSubName.Text;
-            subIndex = txtSubindex.Text;
+            int subIndex = Convert.ToInt32(txtSubindex.Text);
             subNumber = txtSubNumber.Text;
-            subOrder = txtSubOrder.Text;
+            int subOrder = Convert.ToInt32(txtSubOrder.Text);
             if (String.IsNullOrEmpty(txtSubName.Text))
             {
                 MessageBox.Show("please enter the  subject Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -88,12 +78,20 @@ namespace School_Management_System.UI.Subject
                 return;
 
             }
-            if (is_addNew) { 
-                
+            if (is_addNew) {
+
                 //insert
-                
-                DAL.SubjectDal.insert(subName, subIndex, subNumber, subOrder);
-                MessageBox.Show("Subject details added successfully!");
+                Int32 count = DAL.SubjectDal.countAddValue(subName);
+
+                if (count != 0)
+                {
+                    MessageBox.Show("This is already exist");
+                }
+                else
+                {
+                    DAL.SubjectDal.insert(subName, subIndex, subNumber, subOrder);
+                    MessageBox.Show("Subject details added successfully!");
+                }
                 /*connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
                 sql = "INSERT INTO[subjects](subject_name,[subject_index],subject_number,[subject_order])VALUES('"+txtSubName.Text+"','"+txtSubindex.Text+"','"+txtSubNumber.Text+"','"+txtSubOrder.Text+"')";
                 connection = new SqlConnection(connetionString);
@@ -114,6 +112,12 @@ namespace School_Management_System.UI.Subject
             else
             {
                 //update
+                if (dgvSub.SelectedRows.Count > 0)
+                {
+                    this.id = dgvSub.SelectedRows[0].Cells["id"].Value.ToString();
+                }
+
+                int id = Convert.ToInt32(this.id);
                 DAL.SubjectDal.update(subName, subIndex, subNumber, subOrder,id);
                 MessageBox.Show("Subject id : "+id+" details updated successfully!");
                 /*connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";

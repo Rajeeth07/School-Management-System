@@ -48,5 +48,21 @@ namespace School_Management_System.UI
             gradeMasterForm.Show();
 
         }
+
+        private void DashboardForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult dr = MessageBox.Show("Do you want close the DashBoard?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.No) { 
+                e.Cancel = true;
+            }
+           
+        }
+
+        private void gradeSubjectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UI.GradeSubject.GradeSubjectForm grade_subject=new  UI.GradeSubject.GradeSubjectForm();
+            grade_subject.MdiParent = this;
+            grade_subject.Show();
+        }
     }
 }

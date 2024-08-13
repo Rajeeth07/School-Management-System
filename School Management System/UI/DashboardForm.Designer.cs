@@ -34,6 +34,7 @@
             this.studentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.subjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gradeSubjectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +55,8 @@
             this.masterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentToolStripMenuItem,
             this.subjectToolStripMenuItem,
-            this.gradeToolStripMenuItem});
+            this.gradeToolStripMenuItem,
+            this.gradeSubjectToolStripMenuItem});
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
             this.masterToolStripMenuItem.Size = new System.Drawing.Size(82, 29);
             this.masterToolStripMenuItem.Text = "Master";
@@ -80,6 +82,13 @@
             this.gradeToolStripMenuItem.Text = "Grade";
             this.gradeToolStripMenuItem.Click += new System.EventHandler(this.gradeToolStripMenuItem_Click);
             // 
+            // gradeSubjectToolStripMenuItem
+            // 
+            this.gradeSubjectToolStripMenuItem.Name = "gradeSubjectToolStripMenuItem";
+            this.gradeSubjectToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.gradeSubjectToolStripMenuItem.Text = "Grade Subject";
+            this.gradeSubjectToolStripMenuItem.Click += new System.EventHandler(this.gradeSubjectToolStripMenuItem_Click);
+            // 
             // DashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -93,6 +102,7 @@
             this.Name = "DashboardForm";
             this.Text = "DashboardForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DashboardForm_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -106,5 +116,6 @@
         private System.Windows.Forms.ToolStripMenuItem studentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subjectToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gradeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gradeSubjectToolStripMenuItem;
     }
 }

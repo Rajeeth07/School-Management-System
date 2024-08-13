@@ -36,7 +36,7 @@ namespace School_Management_System.UI.Student
             this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
             this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
             this.lname = dgvStd.SelectedRows[0].Cells["last_name"].Value.ToString();
-            this.addNo = dgvStd.SelectedRows[0].Cells["addmission_no"].Value.ToString();
+            this.addNo = dgvStd.SelectedRows[0].Cells["admission_no"].Value.ToString();
             this.fullName = dgvStd.SelectedRows[0].Cells["full_name"].Value.ToString();
             this.gend = dgvStd.SelectedRows[0].Cells["gender"].Value.ToString();
             this.dob = dgvStd.SelectedRows[0].Cells["date_of_birth"].Value.ToString();

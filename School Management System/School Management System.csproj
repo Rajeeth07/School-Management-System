@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\GradeDal.cs" />
+    <Compile Include="DAL\GradeSubject.cs" />
     <Compile Include="DAL\StudentDal.cs" />
     <Compile Include="DAL\SubjectDal.cs" />
     <Compile Include="Program.cs" />
@@ -57,6 +58,12 @@
     </Compile>
     <Compile Include="UI\DashboardForm.Designer.cs">
       <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GradeSubject\GradeSubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\GradeSubject\GradeSubjectForm.Designer.cs">
+      <DependentUpon>GradeSubjectForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Grade\GradeMasterForm.cs">
       <SubType>Form</SubType>
@@ -106,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="UI\DashboardForm.resx">
       <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\GradeSubject\GradeSubjectForm.resx">
+      <DependentUpon>GradeSubjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Grade\GradeMasterForm.resx">
       <DependentUpon>GradeMasterForm.cs</DependentUpon>

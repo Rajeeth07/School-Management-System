@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +12,7 @@ using System.Windows.Forms;
 
 namespace School_Management_System.DAL
 {
-    public class GradeDal
+    public class GradeSubject
     {
         static SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["ConnectionString"].ToString());
 
@@ -21,7 +23,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "select * from grades";
+                cmd.CommandText = "select [grade_subject].[id],[grade_id],[grades].[grade_group],[subject_id],[subjects].[subject_name] from grade_subject INNER JOIN grades ON [grade_subject].grade_id=[grades].id INNER JOIN subjects ON [grade_subject].subject_id=[subjects].id";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();
@@ -37,7 +39,8 @@ namespace School_Management_System.DAL
 
                 throw;
             }
-            finally { 
+            finally
+            {
                 con.Close();
             }
             return dt;
@@ -69,18 +72,18 @@ namespace School_Management_System.DAL
             }*/
             MessageBox.Show("this is grade detail with id!");
         }
-        public static void insert(String GradeName,String GradeGroup, String GradeOrder)
+        public static void insert(String grdId, String subId)
         {
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "INSERT INTO[grades](grade_name,[grade_group],grade_order)VALUES('" + GradeName + "','" + GradeGroup + "','" + GradeOrder + "')";
-                if (con.State !=ConnectionState.Open)
+                cmd.CommandText = "INSERT INTO[grade_subject]([grade_id],[subject_id])VALUES('" + grdId + "','" + subId + "')";
+                if (con.State != ConnectionState.Open)
                 {
                     con.Open();
                 }
                 SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-            
+
                 cmd.Dispose();
 
 
@@ -94,7 +97,7 @@ namespace School_Management_System.DAL
             {
                 con.Close();
             }
-            
+
         }
         public static void update(String GradeName, String GradeGroup, String GradeOrder, int id)
         {
@@ -121,7 +124,7 @@ namespace School_Management_System.DAL
             {
                 con.Close();
             }
-            
+
         }
         public static void delete(int id)
         {
@@ -148,24 +151,26 @@ namespace School_Management_System.DAL
             {
                 con.Close();
             }
-            
+
         }
 
-        public static Int32 countAddValue(String grdGrp,String gradeName)
+        
+
+        public static Int32 countAddValue(String grdId, String subId)
         {
             int counts = 0;
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "SELECT COUNT(*) FROM [grades] where [grades].grade_group='" + grdGrp + "' and [grades].grade_name='"+ gradeName + "'";
-                if (con.State != System.Data.ConnectionState.Open)
+                cmd.CommandText = "SELECT COUNT(*) FROM [grade_subject] where [grade_subject].grade_id='"+grdId+ "' and [grade_subject].subject_id='"+ subId + "'";
+               if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();
                 }
 
                 Int32 count = (Int32)cmd.ExecuteScalar();
                 cmd.Dispose();
-                counts = count;
+                counts=count;
 
             }
             catch (Exception)
@@ -180,4 +185,8 @@ namespace School_Management_System.DAL
             return counts;
         }
     }
+
+
+    
 }
+

@@ -61,7 +61,7 @@ namespace School_Management_System.UI.Grade
             gradeName = txtGrdName.Text;
             gradeGroup = txtGrdGroup.Text;
             gradeOrder = txtGrdOrder.Text;
-            this.id = dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
+            
             if (String.IsNullOrEmpty(txtGrdName.Text))
             {
                 MessageBox.Show("please enter the  Grade Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -92,9 +92,17 @@ namespace School_Management_System.UI.Grade
             }
             if (is_addNew)
             {
-                
-                DAL.GradeDal.insert(gradeName, gradeGroup, gradeOrder);
-                MessageBox.Show("Grade added successfully");
+                Int32 count = DAL.GradeDal.countAddValue(gradeGroup, gradeName);
+
+                if (count != 0)
+                {
+                    MessageBox.Show("This is already exist");
+                }
+                else {
+                    DAL.GradeDal.insert(gradeName, gradeGroup, gradeOrder);
+                    MessageBox.Show("Grade added successfully");
+                }
+                   
                 /*sql = "INSERT INTO[grades](grade_name,[grade_group],grade_order)VALUES('" + txtGrdName.Text + "','" + txtGrdGroup.Text + "','" + txtGrdOrder.Text + "')";
                 connection = new SqlConnection(connetionString);
                 try
@@ -113,7 +121,11 @@ namespace School_Management_System.UI.Grade
             }
             else
             {
-
+                if (dgvGrd.SelectedRows.Count > 0)
+                {
+                    this.id = dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
+                }
+                
                 int id;
                 id = Convert.ToInt32(this.id);             
                 DAL.GradeDal.update(gradeName, gradeGroup, gradeOrder,id);
@@ -264,5 +276,7 @@ namespace School_Management_System.UI.Grade
             }
      
         }
+
+        
     }
 }

@@ -44,9 +44,9 @@
             this.btnGrdCancel = new System.Windows.Forms.Button();
             this.btnGrdDelete = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtGrdGroup = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtGrdGroup = new System.Windows.Forms.TextBox();
             this.txtGrdOrder = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -72,23 +72,21 @@
             this.txtGrdName.Location = new System.Drawing.Point(126, 71);
             this.txtGrdName.Multiline = true;
             this.txtGrdName.Name = "txtGrdName";
-            this.txtGrdName.Size = new System.Drawing.Size(247, 36);
+            this.txtGrdName.Size = new System.Drawing.Size(247, 42);
             this.txtGrdName.TabIndex = 1;
             // 
             // btnGrdExit
             // 
             this.btnGrdExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrdExit.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnGrdExit.BackColor = System.Drawing.SystemColors.Control;
             this.btnGrdExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrdExit.ForeColor = System.Drawing.Color.Black;
-            this.btnGrdExit.Image = global::School_Management_System.Properties.Resources.Back_removebg_preview;
             this.btnGrdExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrdExit.Location = new System.Drawing.Point(938, 18);
             this.btnGrdExit.Name = "btnGrdExit";
             this.btnGrdExit.Size = new System.Drawing.Size(92, 49);
             this.btnGrdExit.TabIndex = 10;
             this.btnGrdExit.Text = "Exit";
-            this.btnGrdExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrdExit.UseVisualStyleBackColor = false;
             this.btnGrdExit.Click += new System.EventHandler(this.btnGrdExit_Click);
             // 
@@ -98,10 +96,10 @@
             this.groupBox1.Controls.Add(this.txtGrdSearch);
             this.groupBox1.Controls.Add(this.dgvGrd);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 35);
+            this.groupBox1.Location = new System.Drawing.Point(0, 47);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(0);
-            this.groupBox1.Size = new System.Drawing.Size(622, 396);
+            this.groupBox1.Size = new System.Drawing.Size(622, 384);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -137,7 +135,7 @@
             this.dgvGrd.Name = "dgvGrd";
             this.dgvGrd.RowHeadersWidth = 62;
             this.dgvGrd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvGrd.Size = new System.Drawing.Size(580, 287);
+            this.dgvGrd.Size = new System.Drawing.Size(580, 275);
             this.dgvGrd.TabIndex = 0;
             this.dgvGrd.SelectionChanged += new System.EventHandler(this.dgvGrd_SelectionChanged);
             // 
@@ -160,119 +158,115 @@
             // btnGrdRefresh
             // 
             this.btnGrdRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrdRefresh.BackColor = System.Drawing.Color.Black;
+            this.btnGrdRefresh.BackColor = System.Drawing.SystemColors.Control;
             this.btnGrdRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrdRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnGrdRefresh.Image = global::School_Management_System.Properties.Resources._360_F_603559966_0VO4rK4OyPO4i89jEDfH1XEbI5fQDaCK_removebg_preview1;
+            this.btnGrdRefresh.ForeColor = System.Drawing.Color.Black;
             this.btnGrdRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrdRefresh.Location = new System.Drawing.Point(278, 18);
             this.btnGrdRefresh.Name = "btnGrdRefresh";
             this.btnGrdRefresh.Size = new System.Drawing.Size(123, 49);
             this.btnGrdRefresh.TabIndex = 4;
             this.btnGrdRefresh.Text = "Refresh";
-            this.btnGrdRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrdRefresh.UseVisualStyleBackColor = false;
             this.btnGrdRefresh.Click += new System.EventHandler(this.btnGrdRefresh_Click);
             // 
             // btnGrdAdd
             // 
             this.btnGrdAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrdAdd.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnGrdAdd.BackColor = System.Drawing.SystemColors.Control;
             this.btnGrdAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrdAdd.ForeColor = System.Drawing.Color.White;
-            this.btnGrdAdd.Image = global::School_Management_System.Properties.Resources.add_icocons__softiconsm_5;
+            this.btnGrdAdd.ForeColor = System.Drawing.Color.Black;
             this.btnGrdAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrdAdd.Location = new System.Drawing.Point(524, 18);
             this.btnGrdAdd.Name = "btnGrdAdd";
             this.btnGrdAdd.Size = new System.Drawing.Size(92, 49);
             this.btnGrdAdd.TabIndex = 6;
             this.btnGrdAdd.Text = "Add";
-            this.btnGrdAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrdAdd.UseVisualStyleBackColor = false;
             this.btnGrdAdd.Click += new System.EventHandler(this.btnGrdAdd_Click);
             // 
             // btnGrdEdit
             // 
             this.btnGrdEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrdEdit.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnGrdEdit.BackColor = System.Drawing.SystemColors.Control;
             this.btnGrdEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrdEdit.ForeColor = System.Drawing.Color.White;
-            this.btnGrdEdit.Image = global::School_Management_System.Properties.Resources._1111111111;
+            this.btnGrdEdit.ForeColor = System.Drawing.Color.Black;
             this.btnGrdEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrdEdit.Location = new System.Drawing.Point(621, 18);
             this.btnGrdEdit.Name = "btnGrdEdit";
             this.btnGrdEdit.Size = new System.Drawing.Size(88, 49);
             this.btnGrdEdit.TabIndex = 7;
             this.btnGrdEdit.Text = "Edit";
-            this.btnGrdEdit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrdEdit.UseVisualStyleBackColor = false;
             this.btnGrdEdit.Click += new System.EventHandler(this.btnGrdEdit_Click);
             // 
             // btnGrdSave
             // 
             this.btnGrdSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrdSave.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnGrdSave.BackColor = System.Drawing.SystemColors.Control;
             this.btnGrdSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrdSave.ForeColor = System.Drawing.Color.White;
-            this.btnGrdSave.Image = global::School_Management_System.Properties.Resources._12345;
+            this.btnGrdSave.ForeColor = System.Drawing.Color.Black;
             this.btnGrdSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrdSave.Location = new System.Drawing.Point(716, 18);
             this.btnGrdSave.Name = "btnGrdSave";
             this.btnGrdSave.Size = new System.Drawing.Size(100, 49);
             this.btnGrdSave.TabIndex = 8;
             this.btnGrdSave.Text = "Save";
-            this.btnGrdSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrdSave.UseVisualStyleBackColor = false;
             this.btnGrdSave.Click += new System.EventHandler(this.btnGrdSave_Click);
             // 
             // btnGrdCancel
             // 
             this.btnGrdCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrdCancel.BackColor = System.Drawing.Color.SaddleBrown;
+            this.btnGrdCancel.BackColor = System.Drawing.SystemColors.Control;
             this.btnGrdCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrdCancel.ForeColor = System.Drawing.Color.White;
-            this.btnGrdCancel.Image = global::School_Management_System.Properties.Resources._76543;
+            this.btnGrdCancel.ForeColor = System.Drawing.Color.Black;
             this.btnGrdCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrdCancel.Location = new System.Drawing.Point(822, 18);
             this.btnGrdCancel.Name = "btnGrdCancel";
             this.btnGrdCancel.Size = new System.Drawing.Size(110, 49);
             this.btnGrdCancel.TabIndex = 9;
             this.btnGrdCancel.Text = "Cancel";
-            this.btnGrdCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrdCancel.UseVisualStyleBackColor = false;
             this.btnGrdCancel.Click += new System.EventHandler(this.btnGrdCancel_Click);
             // 
             // btnGrdDelete
             // 
             this.btnGrdDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnGrdDelete.BackColor = System.Drawing.Color.White;
+            this.btnGrdDelete.BackColor = System.Drawing.SystemColors.Control;
             this.btnGrdDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrdDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnGrdDelete.Image = global::School_Management_System.Properties.Resources._11;
+            this.btnGrdDelete.ForeColor = System.Drawing.Color.Black;
             this.btnGrdDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGrdDelete.Location = new System.Drawing.Point(406, 18);
             this.btnGrdDelete.Name = "btnGrdDelete";
             this.btnGrdDelete.Size = new System.Drawing.Size(111, 49);
             this.btnGrdDelete.TabIndex = 5;
             this.btnGrdDelete.Text = "Delete";
-            this.btnGrdDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGrdDelete.UseVisualStyleBackColor = false;
             this.btnGrdDelete.Click += new System.EventHandler(this.btnGrdDelete_Click);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtGrdGroup);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtGrdName);
-            this.groupBox2.Controls.Add(this.txtGrdGroup);
             this.groupBox2.Controls.Add(this.txtGrdOrder);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(622, 35);
+            this.groupBox2.Location = new System.Drawing.Point(622, 47);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(418, 396);
+            this.groupBox2.Size = new System.Drawing.Size(418, 384);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
+            // 
+            // txtGrdGroup
+            // 
+            this.txtGrdGroup.Location = new System.Drawing.Point(126, 122);
+            this.txtGrdGroup.Multiline = true;
+            this.txtGrdGroup.Name = "txtGrdGroup";
+            this.txtGrdGroup.Size = new System.Drawing.Size(247, 42);
+            this.txtGrdGroup.TabIndex = 12;
             // 
             // label4
             // 
@@ -296,22 +290,13 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "Group";
             // 
-            // txtGrdGroup
-            // 
-            this.txtGrdGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrdGroup.Location = new System.Drawing.Point(126, 122);
-            this.txtGrdGroup.Multiline = true;
-            this.txtGrdGroup.Name = "txtGrdGroup";
-            this.txtGrdGroup.Size = new System.Drawing.Size(247, 36);
-            this.txtGrdGroup.TabIndex = 2;
-            // 
             // txtGrdOrder
             // 
             this.txtGrdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrdOrder.Location = new System.Drawing.Point(126, 172);
             this.txtGrdOrder.Multiline = true;
             this.txtGrdOrder.Name = "txtGrdOrder";
-            this.txtGrdOrder.Size = new System.Drawing.Size(247, 36);
+            this.txtGrdOrder.Size = new System.Drawing.Size(247, 42);
             this.txtGrdOrder.TabIndex = 3;
             // 
             // label2
@@ -321,7 +306,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1040, 35);
+            this.label2.Size = new System.Drawing.Size(1040, 47);
             this.label2.TabIndex = 0;
             this.label2.Text = "Grade Master";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -361,7 +346,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtGrdGroup;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtGrdOrder;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -373,5 +357,6 @@
         private System.Windows.Forms.Button btnGrdDelete;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtGrdSearch;
+        private System.Windows.Forms.TextBox txtGrdGroup;
     }
 }

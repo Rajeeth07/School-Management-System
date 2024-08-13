@@ -40,7 +40,7 @@ namespace School_Management_System.DAL
         {
 
         }
-        public static void insert(String subName, String subIndex, String subNumber, String subOrder)
+        public static void insert(String subName,int subIndex, String subNumber,int subOrder)
         {
             
             try
@@ -67,7 +67,7 @@ namespace School_Management_System.DAL
                 con.Close();
             }
         }
-        public static void update(String subName, String subIndex, String subNumber, String subOrder,int id)
+        public static void update(String subName,int subIndex, String subNumber,int subOrder,int id)
         {
             try
             {
@@ -119,5 +119,34 @@ namespace School_Management_System.DAL
                 con.Close();
             }
         }
+        public static Int32 countAddValue(String subName)
+        {
+            int counts = 0;
+            try
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(*) FROM [subjects] where [subjects].subject_name='" + subName + "'";
+                if (con.State != System.Data.ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                cmd.Dispose();
+                counts = count;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return counts;
+        }
+
     }
 }

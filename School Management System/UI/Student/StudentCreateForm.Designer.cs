@@ -50,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtStdcrtNic = new System.Windows.Forms.TextBox();
             this.txtStdCrtGrdId = new System.Windows.Forms.TextBox();
-            this.txtStdcrtphoneNo = new System.Windows.Forms.TextBox();
             this.txtStdcrtLname = new System.Windows.Forms.TextBox();
             this.txtStdcrtfullName = new System.Windows.Forms.TextBox();
             this.txtStdcrtfname = new System.Windows.Forms.TextBox();
@@ -58,6 +57,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnStdcrtCancel = new System.Windows.Forms.Button();
+            this.txtStdcrtphoneNo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtStdcrtphoneNo);
             this.groupBox1.Controls.Add(this.cmbStdCrtMedium);
             this.groupBox1.Controls.Add(this.dtpStdCrtAddDate);
             this.groupBox1.Controls.Add(this.dtpStdcrtDoB);
@@ -99,7 +100,6 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtStdcrtNic);
             this.groupBox1.Controls.Add(this.txtStdCrtGrdId);
-            this.groupBox1.Controls.Add(this.txtStdcrtphoneNo);
             this.groupBox1.Controls.Add(this.txtStdcrtLname);
             this.groupBox1.Controls.Add(this.txtStdcrtfullName);
             this.groupBox1.Controls.Add(this.txtStdcrtfname);
@@ -285,19 +285,11 @@
             // 
             // txtStdCrtGrdId
             // 
-            this.txtStdCrtGrdId.Location = new System.Drawing.Point(176, 365);
+            this.txtStdCrtGrdId.Location = new System.Drawing.Point(172, 365);
             this.txtStdCrtGrdId.Multiline = true;
             this.txtStdCrtGrdId.Name = "txtStdCrtGrdId";
             this.txtStdCrtGrdId.Size = new System.Drawing.Size(272, 35);
             this.txtStdCrtGrdId.TabIndex = 10;
-            // 
-            // txtStdcrtphoneNo
-            // 
-            this.txtStdcrtphoneNo.Location = new System.Drawing.Point(172, 320);
-            this.txtStdcrtphoneNo.Multiline = true;
-            this.txtStdcrtphoneNo.Name = "txtStdcrtphoneNo";
-            this.txtStdcrtphoneNo.Size = new System.Drawing.Size(272, 35);
-            this.txtStdcrtphoneNo.TabIndex = 9;
             // 
             // txtStdcrtLname
             // 
@@ -368,6 +360,14 @@
             this.btnStdcrtCancel.UseVisualStyleBackColor = false;
             this.btnStdcrtCancel.Click += new System.EventHandler(this.btnStdcrtCancel_Click);
             // 
+            // txtStdcrtphoneNo
+            // 
+            this.txtStdcrtphoneNo.Location = new System.Drawing.Point(172, 323);
+            this.txtStdcrtphoneNo.Multiline = true;
+            this.txtStdcrtphoneNo.Name = "txtStdcrtphoneNo";
+            this.txtStdcrtphoneNo.Size = new System.Drawing.Size(273, 36);
+            this.txtStdcrtphoneNo.TabIndex = 14;
+            // 
             // StudentCreateForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -407,7 +407,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtStdcrtNic;
-        private System.Windows.Forms.TextBox txtStdcrtphoneNo;
         private System.Windows.Forms.TextBox txtStdcrtfullName;
         private System.Windows.Forms.RadioButton rdoStdCrtFemale;
         private System.Windows.Forms.Label label12;
@@ -418,5 +417,6 @@
         private System.Windows.Forms.DateTimePicker dtpStdCrtAddDate;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtStdCrtGrdId;
+        private System.Windows.Forms.TextBox txtStdcrtphoneNo;
     }
 }

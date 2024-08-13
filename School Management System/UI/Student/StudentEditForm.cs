@@ -110,7 +110,7 @@ namespace School_Management_System.UI.Student
                 labStuEdtGender.Focus();
                 return;
             }
-            int num = 0;
+            int num;
             Boolean isNumber1 = Int32.TryParse(txtStdEdtGrdId.Text, out num);
             if (!isNumber1)
             {
