@@ -119,13 +119,13 @@ namespace School_Management_System.DAL
                 con.Close();
             }
         }
-        public static Int32 countAddValue(String subName)
+        public static Int32 countAddValue(String subName,int subIndex,String subNumber,int subOrder)
         {
             int counts = 0;
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "SELECT COUNT(*) FROM [subjects] where [subjects].subject_name='" + subName + "'";
+                cmd.CommandText = "SELECT COUNT(*) FROM [subjects] where [subject_name]='" + subName + "' or [subject_index]='"+ subIndex + "' or [subject_number]='"+ subNumber + "' or [subject_order]='"+ subOrder + "'";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();

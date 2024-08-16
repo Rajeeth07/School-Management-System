@@ -134,9 +134,11 @@ namespace School_Management_System.UI.Student
                 txtStdEdtphoneNo.Focus();
                 return;
             }
-            DAL.StudentDal.update(adNo, fname, lname, fullName, this.gender, dob, nic, phone, gradeId, medium, adDate, address,this.id);
-            MessageBox.Show("Student Id : "+this.id+" details Updated successfully");
-            this.Close();
+            
+                DAL.StudentDal.update(adNo, fname, lname, fullName, this.gender, dob, nic, phone, gradeId, medium, adDate, address, this.id);
+                MessageBox.Show("Student Id : " + this.id + " details Updated successfully");
+                this.Close();
+            
             /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
@@ -169,12 +171,10 @@ namespace School_Management_System.UI.Student
                 MessageBox.Show("Can not open connection ! ");
             }*/
         }
-
         private void btnStdEdtCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void StudentEditForm_Load(object sender, EventArgs e)
         {
             txtStdEdtAddmisNo.Text = this.addNo;

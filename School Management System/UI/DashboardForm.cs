@@ -26,21 +26,18 @@ namespace School_Management_System.UI
             UI.Grade.GradeMasterForm gradeMasterForm=new UI.Grade.GradeMasterForm();    
             gradeMasterForm.Show();
         }
-
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UI.Student.StudentMasterForm studentMasterForm = new UI.Student.StudentMasterForm();
             studentMasterForm.MdiParent=this;
             studentMasterForm.Show();
         }
-
         private void subjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UI.Subject.SubjectMasterForm subjectMasterForm = new UI.Subject.SubjectMasterForm();
             subjectMasterForm.MdiParent = this;
             subjectMasterForm.Show();
         }
-
         private void gradeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UI.Grade.GradeMasterForm gradeMasterForm = new UI.Grade.GradeMasterForm();
@@ -48,7 +45,6 @@ namespace School_Management_System.UI
             gradeMasterForm.Show();
 
         }
-
         private void DashboardForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr = MessageBox.Show("Do you want close the DashBoard?", "Information", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -57,7 +53,6 @@ namespace School_Management_System.UI
             }
            
         }
-
         private void gradeSubjectToolStripMenuItem_Click(object sender, EventArgs e)
         {
             UI.GradeSubject.GradeSubjectForm grade_subject=new  UI.GradeSubject.GradeSubjectForm();

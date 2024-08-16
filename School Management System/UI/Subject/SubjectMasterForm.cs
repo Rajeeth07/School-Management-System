@@ -26,19 +26,16 @@ namespace School_Management_System.UI.Subject
             btnSubSave.Enabled = is_true;
             btnSubCancel.Enabled = is_true;
         }
-
         private void btnSubAdd_Click(object sender, EventArgs e)
         {
             ButtonEnable(true);
             
         }
-
         private void btnSubEdit_Click(object sender, EventArgs e)
         {
             ButtonEnable(true);
             is_addNew=false;
         }
-
         private void btnSubSave_Click(object sender, EventArgs e)
         {
             String subName, subNumber;
@@ -81,7 +78,7 @@ namespace School_Management_System.UI.Subject
             if (is_addNew) {
 
                 //insert
-                Int32 count = DAL.SubjectDal.countAddValue(subName);
+                Int32 count = DAL.SubjectDal.countAddValue(subName, subIndex, subNumber, subOrder);
 
                 if (count != 0)
                 {
@@ -116,10 +113,13 @@ namespace School_Management_System.UI.Subject
                 {
                     this.id = dgvSub.SelectedRows[0].Cells["id"].Value.ToString();
                 }
+                Int32 count = DAL.SubjectDal.countAddValue(subName, subIndex, subNumber, subOrder);
 
-                int id = Convert.ToInt32(this.id);
-                DAL.SubjectDal.update(subName, subIndex, subNumber, subOrder,id);
-                MessageBox.Show("Subject id : "+id+" details updated successfully!");
+                
+                    int id = Convert.ToInt32(this.id);
+                    DAL.SubjectDal.update(subName, subIndex, subNumber, subOrder, id);
+                    MessageBox.Show("Subject id : " + id + " details updated successfully!");
+                
                 /*connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
                 sql = "UPDATE[subjects] SET [subject_name]='" + txtSubName.Text+"',[subject_index]='"+txtSubindex.Text+"',[subject_number]='"+txtSubNumber.Text+"',[subject_order]='" + txtSubName.Text + "' WHERE id='"+this.id+"'";
                 connection = new SqlConnection(connetionString);
@@ -139,7 +139,6 @@ namespace School_Management_System.UI.Subject
             }
             ButtonEnable(false);
         }
-
         private void btnSubCancel_Click(object sender, EventArgs e)
         {   
             DialogResult dr=MessageBox.Show("Do you want to Cancel","Question",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
@@ -149,7 +148,6 @@ namespace School_Management_System.UI.Subject
             }
             ButtonEnable(false);
         }
-
         private void SubjectMasterForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr=MessageBox.Show("Do you want to close?","Question",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
@@ -157,12 +155,10 @@ namespace School_Management_System.UI.Subject
                 e.Cancel = true;
             }
         }
-
         private void btnSubExit_Click(object sender, EventArgs e)
         {
                this.Close();
         }
-
         private void btnSubDelete_Click(object sender, EventArgs e)
         {   
             int id=Convert.ToInt32(this.id);
@@ -195,7 +191,6 @@ namespace School_Management_System.UI.Subject
                 MessageBox.Show("Can not open connection ! ");
             }*/
         }
-
         private void btnSubRefresh_Click(object sender, EventArgs e)
         {
             //Refresh function
@@ -207,17 +202,16 @@ namespace School_Management_System.UI.Subject
             txtSubSearch.Text=null;
 
         }
-
         private void SubjectMasterForm_Load(object sender, EventArgs e)
         {
             formLoad();
         }
-
         private void formLoad()
         {
             dt = DAL.SubjectDal.getAll();
             dv=dt.DefaultView;
             dgvSub.DataSource = dv;
+            txtSubName.Focus();
             /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
@@ -244,7 +238,6 @@ namespace School_Management_System.UI.Subject
                 MessageBox.Show("Can not open connection ! ");
             }*/
         }
-
         private void dgvSub_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvSub.SelectedRows.Count > 0) {
@@ -256,7 +249,6 @@ namespace School_Management_System.UI.Subject
 
             }
         }
-
         private void txtSubSearch_TextChanged(object sender, EventArgs e)
         {
             dv = new DataView(dt,"subject_name like '%"+txtSubSearch.Text+"%' or subject_index like '%"+txtSubindex.Text+"%' or subject_number like '%"+txtSubSearch.Text+"%'", "subject_name asc", DataViewRowState.CurrentRows);

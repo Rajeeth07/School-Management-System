@@ -99,12 +99,12 @@ namespace School_Management_System.DAL
             }
 
         }
-        public static void update(String GradeName, String GradeGroup, String GradeOrder, int id)
+        public static void update(String grdId, String subId, int id)
         {
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "UPDATE[grades] SET [grade_name]='" + GradeName + "',[grade_group]='" + GradeGroup + "',[grade_order]='" + GradeOrder + "' WHERE id='" + id + "'";
+                cmd.CommandText = "UPDATE[grade_subject] SET [grade_id]='" + grdId + "',[subject_id]='" + subId + "' WHERE id='" + id + "'";
                 if (con.State != ConnectionState.Open)
                 {
                     con.Open();
@@ -131,7 +131,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "DELETE FROM grades WHERE id='" + id + "'";
+                cmd.CommandText = "DELETE FROM grade_subject WHERE id='" + id + "'";
                 if (con.State != ConnectionState.Open)
                 {
                     con.Open();
@@ -153,10 +153,7 @@ namespace School_Management_System.DAL
             }
 
         }
-
-        
-
-        public static Int32 countAddValue(String grdId, String subId)
+        public static Int32 countGradeSubjectRow(String grdId, String subId)
         {
             int counts = 0;
             try

@@ -150,7 +150,6 @@ namespace School_Management_System.DAL
             }
             
         }
-
         public static Int32 countAddValue(String grdGrp,String gradeName)
         {
             int counts = 0;

@@ -109,9 +109,19 @@ namespace School_Management_System.UI.Student
                 txtStdcrtphoneNo.Focus();
                 return;
             }
-            DAL.StudentDal.insert(adNo,fname,lname,  fullName,  this.gender,  dob,  nic,  phone,  gradeId,  medium,  adDate,  address);
-            MessageBox.Show("New Student added successfully");
-            this.Close();
+            int count=DAL.StudentDal.countStudentRow(adNo, nic, phone);
+            if (count!=0)
+            {
+                MessageBox.Show("This student details already exist!");
+                return;
+            }
+            else
+            {
+                DAL.StudentDal.insert(adNo, fname, lname, fullName, this.gender, dob, nic, phone, gradeId, medium, adDate, address);
+                MessageBox.Show("New Student added successfully");
+                this.Close();
+            }
+            
             
             /*
             if (rdoStdCrtMale.Checked == true)
@@ -141,7 +151,6 @@ namespace School_Management_System.UI.Student
                 MessageBox.Show("Can not open connection ! ");
             }*/
         }
-
         private void btnStdcrtCancel_Click(object sender, EventArgs e)
         {
             this.Close();

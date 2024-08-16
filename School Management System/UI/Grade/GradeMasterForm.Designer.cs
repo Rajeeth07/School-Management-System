@@ -68,7 +68,7 @@
             // 
             // txtGrdName
             // 
-            this.txtGrdName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrdName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrdName.Location = new System.Drawing.Point(126, 71);
             this.txtGrdName.Multiline = true;
             this.txtGrdName.Name = "txtGrdName";
@@ -262,11 +262,12 @@
             // 
             // txtGrdGroup
             // 
+            this.txtGrdGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrdGroup.Location = new System.Drawing.Point(126, 122);
             this.txtGrdGroup.Multiline = true;
             this.txtGrdGroup.Name = "txtGrdGroup";
             this.txtGrdGroup.Size = new System.Drawing.Size(247, 42);
-            this.txtGrdGroup.TabIndex = 12;
+            this.txtGrdGroup.TabIndex = 2;
             // 
             // label4
             // 
@@ -292,7 +293,7 @@
             // 
             // txtGrdOrder
             // 
-            this.txtGrdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGrdOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGrdOrder.Location = new System.Drawing.Point(126, 172);
             this.txtGrdOrder.Multiline = true;
             this.txtGrdOrder.Name = "txtGrdOrder";

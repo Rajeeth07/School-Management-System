@@ -30,6 +30,7 @@
         {
             this.btnStdCreate = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtStdcrtphoneNo = new System.Windows.Forms.TextBox();
             this.cmbStdCrtMedium = new System.Windows.Forms.ComboBox();
             this.dtpStdCrtAddDate = new System.Windows.Forms.DateTimePicker();
             this.dtpStdcrtDoB = new System.Windows.Forms.DateTimePicker();
@@ -57,7 +58,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnStdcrtCancel = new System.Windows.Forms.Button();
-            this.txtStdcrtphoneNo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,14 @@
             this.groupBox1.Size = new System.Drawing.Size(460, 565);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // txtStdcrtphoneNo
+            // 
+            this.txtStdcrtphoneNo.Location = new System.Drawing.Point(172, 323);
+            this.txtStdcrtphoneNo.Multiline = true;
+            this.txtStdcrtphoneNo.Name = "txtStdcrtphoneNo";
+            this.txtStdcrtphoneNo.Size = new System.Drawing.Size(273, 36);
+            this.txtStdcrtphoneNo.TabIndex = 9;
             // 
             // cmbStdCrtMedium
             // 
@@ -359,14 +367,6 @@
             this.btnStdcrtCancel.Text = "Cancel";
             this.btnStdcrtCancel.UseVisualStyleBackColor = false;
             this.btnStdcrtCancel.Click += new System.EventHandler(this.btnStdcrtCancel_Click);
-            // 
-            // txtStdcrtphoneNo
-            // 
-            this.txtStdcrtphoneNo.Location = new System.Drawing.Point(172, 323);
-            this.txtStdcrtphoneNo.Multiline = true;
-            this.txtStdcrtphoneNo.Name = "txtStdcrtphoneNo";
-            this.txtStdcrtphoneNo.Size = new System.Drawing.Size(273, 36);
-            this.txtStdcrtphoneNo.TabIndex = 14;
             // 
             // StudentCreateForm
             // 

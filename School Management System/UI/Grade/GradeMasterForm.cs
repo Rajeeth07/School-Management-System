@@ -149,7 +149,6 @@ namespace School_Management_System.UI.Grade
 
             }
         }
-
         private void btnGrdRefresh_Click(object sender, EventArgs e)
         {
             
@@ -159,7 +158,6 @@ namespace School_Management_System.UI.Grade
             txtGrdOrder.Text = null;
             txtGrdSearch.Text = null;
         }
-
         private void btnGrdDelete_Click(object sender, EventArgs e)
         {
             this.id = dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
@@ -199,12 +197,10 @@ namespace School_Management_System.UI.Grade
                  MessageBox.Show("Can not open connection ! ");
              }*/
         }
-
         private void btnGrdExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void GradeMasterForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr = MessageBox.Show("Do you want to close?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -213,7 +209,6 @@ namespace School_Management_System.UI.Grade
                 e.Cancel = true;
             }
         }
-
         private void GradeMasterForm_Load(object sender, EventArgs e)
         {
             gridLoad();
@@ -223,6 +218,7 @@ namespace School_Management_System.UI.Grade
             dt = DAL.GradeDal.getAll();
             dv = dt.DefaultView;
             dgvGrd.DataSource = dv;
+            txtGrdName.Focus();
             /*string connetionString = null;
             SqlConnection connection;
             SqlCommand command;
@@ -249,7 +245,6 @@ namespace School_Management_System.UI.Grade
                 MessageBox.Show("Can not open connection ! ");
             }*/
         }
-
         private void dgvGrd_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvGrd.SelectedRows.Count > 0)
@@ -260,7 +255,6 @@ namespace School_Management_System.UI.Grade
                 txtGrdOrder.Text = dgvGrd.SelectedRows[0].Cells["grade_order"].Value.ToString();
             }
         }
-
         private void txtGrdSearch_TextChanged(object sender, EventArgs e)
         {
             
