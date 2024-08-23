@@ -68,9 +68,7 @@ namespace School_Management_System.UI.Grade
             String gradeName, gradeGroup, gradeOrder;
 
 
-            gradeName = txtGrdName.Text;
-            gradeGroup = txtGrdGroup.Text;
-            gradeOrder = txtGrdOrder.Text;
+            
             
             if (String.IsNullOrEmpty(txtGrdName.Text))
             {
@@ -100,27 +98,31 @@ namespace School_Management_System.UI.Grade
                 return;
 
             }
+            if (String.IsNullOrEmpty(txtGrdName.Text))
+            {
+                MessageBox.Show("Grade Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdName.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtGrdGroup.Text))
+            {
+                MessageBox.Show("Grade group field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdGroup.Focus();
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtGrdOrder.Text))
+            {
+                MessageBox.Show("Grade order field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdOrder.Focus();
+                return;
+            }
+            gradeName = txtGrdName.Text;
+            gradeGroup = txtGrdGroup.Text;
+            gradeOrder = txtGrdOrder.Text;
             if (is_addNew)
             {
-                if (String.IsNullOrEmpty(txtGrdName.Text))
-                {
-                    MessageBox.Show("Grade Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtGrdName.Focus();
-                    return;
-                }
-                else if (String.IsNullOrEmpty(txtGrdGroup.Text))
-                {
-                    MessageBox.Show("Grade group field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtGrdGroup.Focus();
-                    return;
-                }
-                else if (String.IsNullOrEmpty(txtGrdOrder.Text))
-                {
-                    MessageBox.Show("Grade order field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    txtGrdOrder.Focus();
-                    return;
-                }
-
+                
+                
                 Int32 count = DAL.GradeDal.countAddValue(gradeName,gradeOrder);
                 if (count != 0)
                 {

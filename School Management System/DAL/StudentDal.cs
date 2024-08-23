@@ -154,7 +154,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "SELECT COUNT(*) FROM [students] where [admission_no]='" + adNo + "' or [stu_nic_no]='" + nic + "' or [tp_No]='" + tp + "' and [id]!='"+id+"'";
+                cmd.CommandText = "SELECT COUNT(*) FROM [students] where ([admission_no]='" + adNo + "' or [stu_nic_no]='" + nic + "' or [tp_No]='" + tp + "') and [id]!='"+id+"'";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();

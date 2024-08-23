@@ -40,10 +40,7 @@ namespace School_Management_System.UI.Subject
         {
             String subName, subNumber;
             
-            subName = txtSubName.Text;
-            int subIndex = Convert.ToInt32(txtSubindex.Text);
-            subNumber = txtSubNumber.Text;
-            int subOrder = Convert.ToInt32(txtSubOrder.Text);
+            
             if (String.IsNullOrEmpty(txtSubName.Text))
             {
                 MessageBox.Show("please enter the  subject Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -75,6 +72,10 @@ namespace School_Management_System.UI.Subject
                 return;
 
             }
+            subName = txtSubName.Text;
+            int subIndex = Convert.ToInt32(txtSubindex.Text);
+            subNumber = txtSubNumber.Text;
+            int subOrder = Convert.ToInt32(txtSubOrder.Text);
             if (is_addNew) {
 
                 //insert

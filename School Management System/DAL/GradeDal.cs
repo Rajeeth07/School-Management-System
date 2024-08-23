@@ -184,7 +184,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "SELECT COUNT(*) FROM [grades] where ([grades].grade_name='" + gradeName + "' or [grades].grade_name='"+gradeOrder+"') and [grades].id!='"+id+"'";
+                cmd.CommandText = "SELECT COUNT(*) FROM [grades] where ([grades].grade_name='" + gradeName + "' or [grades].grade_order='"+gradeOrder+"') and [grades].id!='"+id+"'";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();

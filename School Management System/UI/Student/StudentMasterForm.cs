@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace School_Management_System.UI.Student
 {
@@ -15,7 +16,8 @@ namespace School_Management_System.UI.Student
     {   
         DataTable dt=new DataTable();
         DataView dv;
-        String fname,lname,addNo,fullName,gend,dob,nic,phone,gradeId,medium,addDate,address,id;
+        String fname, lname, addNo, fullName, gend, dob, nic, phone, gradeId, medium, addDate, address,id;
+        String name;
 
 
         public StudentMasterForm()
@@ -51,7 +53,10 @@ namespace School_Management_System.UI.Student
         {
             //Delete function
             
-            DialogResult dr = MessageBox.Show("Do you want to delete Id: " + this.id + "?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (dgvStd.SelectedRows.Count>0) { 
+                this.name = dgvStd.SelectedRows[0].Cells["admission_no"].Value.ToString();
+            }
+            DialogResult dr = MessageBox.Show("Do you want delete Admission No : " + this.name + "?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
             if (dr == DialogResult.No)
             {
@@ -61,29 +66,7 @@ namespace School_Management_System.UI.Student
             DAL.StudentDal.delete(id);
             MessageBox.Show("Student Id : "+id+" details deleted successfully");
 
-            /*
-            
-            string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-            
-            sql = "delete from students where id='" + this.id + "'";
-            connection = new SqlConnection(connetionString);
-            try
-            {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                command.ExecuteNonQuery();
-                command.Dispose();
-                connection.Close();
-                MessageBox.Show("Student Id " + this.id + " details deleted successfully!");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }*/
+
         }
         private void StudentMasterForm_Load(object sender, EventArgs e)
         {
@@ -94,33 +77,6 @@ namespace School_Management_System.UI.Student
             dt = DAL.StudentDal.getAll();
             dv=dt.DefaultView;
             dgvStd.DataSource = dv;
-            
-
-            /*string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            SqlDataReader dataReader;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-            sql = "select * from students";
-            connection = new SqlConnection(connetionString);
-            try
-            {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                dataReader = command.ExecuteReader();
-                dt = new DataTable();
-                dt.Load(dataReader);
-                dv = dt.DefaultView;
-                dgvStd.DataSource = dv;
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }*/
         }
         private void btnStdExit_Click(object sender, EventArgs e)
         {
