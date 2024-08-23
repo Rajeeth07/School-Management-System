@@ -21,69 +21,68 @@ namespace School_Management_System.UI.Student
         {
             InitializeComponent();
         }
-        private void btnStdCreate_Click(object sender, EventArgs e)
+        #region user define
+        private bool ValidateStudentCreate()
         {
-            
-
             if (String.IsNullOrEmpty(txtStdcrtAddmisNo.Text))
             {
                 MessageBox.Show("Enter your Addmission Number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtAddmisNo.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(txtStdcrtfname.Text))
             {
                 MessageBox.Show("Enter your First Name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtfname.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(txtStdcrtLname.Text))
             {
                 MessageBox.Show("Enter your Last Name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtLname.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(txtStdcrtfullName.Text))
             {
                 MessageBox.Show("Enter your Full Name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtfullName.Focus();
-                return;
+                return false;
             }
             else if (rdoStdCrtMale.Checked == false && rdoStdCrtFemale.Checked == false)
             {
                 MessageBox.Show("Please select your gender!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 rdoStdCrtMale.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(txtStdcrtNic.Text))
             {
                 MessageBox.Show("Enter your Nic number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtNic.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(txtStdcrtphoneNo.Text))
             {
                 MessageBox.Show("Enter your Phone Number!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtphoneNo.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(txtStdCrtGrdId.Text))
             {
                 MessageBox.Show("Enter your Grade Id!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdCrtGrdId.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(cmbStdCrtMedium.Text))
             {
                 MessageBox.Show("Select your medium!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cmbStdCrtMedium.Focus();
-                return;
+                return false;
             }
             else if (String.IsNullOrEmpty(txtStdcrtaddress.Text))
             {
                 MessageBox.Show("Enter your address!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtaddress.Focus();
-                return;
+                return false;
             }
             Int32 num = 0;
             Boolean isNumber = Int32.TryParse(txtStdCrtGrdId.Text, out num);
@@ -91,7 +90,7 @@ namespace School_Management_System.UI.Student
             {
                 MessageBox.Show("Enter your gradeId as number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdCrtGrdId.Focus();
-                return;
+                return false;
             }
             Int32 num1 = 0;
             Boolean isNumber1 = Int32.TryParse(txtStdcrtphoneNo.Text, out num1);
@@ -99,51 +98,47 @@ namespace School_Management_System.UI.Student
             {
                 MessageBox.Show("Enter your Phone number as number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtphoneNo.Focus();
-                return;
+                return false;
             }
             if (txtStdcrtphoneNo.Text.Length != 10)
             {
                 MessageBox.Show("phone number should be 10 value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtphoneNo.Focus();
-                return;
+                return false;
             }
-            String adNo, fname, lname, fullName, nic, phone, gradeId, medium, address;
+            else {  
+                return true;
+            }
+        }
+        #endregion
+        private void btnStdCreate_Click(object sender, EventArgs e)
+        {
+                if (rdoStdCrtMale.Checked == true)
+                {
+                    this.gender = "Male";
+                }
+                else if (rdoStdCrtFemale.Checked == true)
+                {
+                    this.gender = "Female";
+                }
 
-            adNo = txtStdcrtAddmisNo.Text;
-            fname = txtStdcrtfname.Text;
-            lname = txtStdcrtLname.Text;
-            fullName = txtStdcrtfullName.Text;
-            if (rdoStdCrtMale.Checked == true)
-            {
-                this.gender = "Male";
+                DateTime dob = DateTime.Parse(dtpStdcrtDoB.Text);
+                DateTime adDate = DateTime.Parse(dtpStdCrtAddDate.Text);
+            if (ValidateStudentCreate()) 
+            { 
+                int count = DAL.StudentDal.countStudentRow(txtStdcrtAddmisNo.Text.Trim(), txtStdcrtNic.Text.Trim(), txtStdcrtphoneNo.Text.Trim());
+                if (count != 0)
+                {
+                    MessageBox.Show("This student details already exist!");
+                    return;
+                }
+                else
+                {
+                    DAL.StudentDal.insert(txtStdcrtAddmisNo.Text.Trim(), txtStdcrtfname.Text.Trim(), txtStdcrtLname.Text.Trim(), txtStdcrtfullName.Text.Trim(), this.gender, dob, txtStdcrtNic.Text.Trim(), txtStdcrtphoneNo.Text.Trim(), txtStdCrtGrdId.Text.Trim(), cmbStdCrtMedium.Text.Trim(), adDate, txtStdcrtaddress.Text.Trim());
+                    MessageBox.Show("New Student added successfully");
+                    this.Close();
+                }
             }
-            else if (rdoStdCrtFemale.Checked == true)
-            {
-                this.gender = "Female";
-            }
-
-            DateTime dob = DateTime.Parse(dtpStdcrtDoB.Text);
-            DateTime adDate = DateTime.Parse(dtpStdCrtAddDate.Text);
-
-            nic = txtStdcrtNic.Text;
-            phone = txtStdcrtphoneNo.Text;
-            gradeId = txtStdCrtGrdId.Text;
-            medium = cmbStdCrtMedium.Text;
-            address = txtStdcrtaddress.Text;
-            
-            int count=DAL.StudentDal.countStudentRow(adNo, nic, phone);
-            if (count!=0)
-            {
-                MessageBox.Show("This student details already exist!");
-                return;
-            }
-            else
-            {
-                DAL.StudentDal.insert(adNo, fname, lname, fullName, this.gender, dob, nic, phone, gradeId, medium, adDate, address);
-                MessageBox.Show("New Student added successfully");
-                this.Close();
-            }
-            
         }
         private void btnStdcrtCancel_Click(object sender, EventArgs e)
         {

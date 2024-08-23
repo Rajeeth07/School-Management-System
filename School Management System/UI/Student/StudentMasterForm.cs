@@ -30,8 +30,14 @@ namespace School_Management_System.UI.Student
             studentCreateForm.ShowDialog();
         }
         private void btnStdEdit_Click(object sender, EventArgs e)
-        {   
+        {
+            fillStudentDataBox();
+            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.medium, this.addDate, this.address, this.id);
+            studentEditForm.ShowDialog();
+        }
 
+        private void fillStudentDataBox()
+        {
             this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
             this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
             this.lname = dgvStd.SelectedRows[0].Cells["last_name"].Value.ToString();
@@ -46,9 +52,8 @@ namespace School_Management_System.UI.Student
             this.addDate = dgvStd.SelectedRows[0].Cells["date_of_addmission"].Value.ToString();
             this.address = dgvStd.SelectedRows[0].Cells["resident_address"].Value.ToString();
             this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
-            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.medium, this.addDate, this.address,this.id);  
-            studentEditForm.ShowDialog();
         }
+
         private void btnStdDelete_Click(object sender, EventArgs e)
         {
             //Delete function
