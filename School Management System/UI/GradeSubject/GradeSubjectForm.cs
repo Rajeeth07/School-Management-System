@@ -94,6 +94,11 @@ namespace School_Management_System.UI.GradeSubject
                 MessageBox.Show("Id :"+id+" details has been deleted Successfully!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+        private void btngrdsubAdd_Click(object sender, EventArgs e)
+        {
+            ButtonEnable(true);
+            is_addNew = true;
+        }
         private void btngrdsubEdit_Click(object sender, EventArgs e)
         {
             ButtonEnable(true);
@@ -175,5 +180,18 @@ namespace School_Management_System.UI.GradeSubject
             selectedRowValue();
 
         }
+
+        private void btngrdsubRefresh_Click(object sender, EventArgs e)
+        {
+            formLoad();
+            cmbGrdSubgrd.SelectedIndex = -1;
+            cmbGrdSubSub.SelectedIndex = -1;
+        }
+
+        private void GradeSubjectForm_Load(object sender, EventArgs e)
+        {
+            formLoad();
+        }
+
     }
 }

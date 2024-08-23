@@ -134,7 +134,7 @@
             this.btngrdsubRefresh.TabIndex = 3;
             this.btngrdsubRefresh.Text = "Refresh";
             this.btngrdsubRefresh.UseVisualStyleBackColor = false;
-            this.btngrdsubRefresh.Click += new System.EventHandler(this.btnGrdRefresh_Click);
+            this.btngrdsubRefresh.Click += new System.EventHandler(this.btngrdsubRefresh_Click);
             // 
             // btngrdsubAdd
             // 
