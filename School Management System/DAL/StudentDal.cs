@@ -147,5 +147,34 @@ namespace School_Management_System.DAL
             }
             return counts;
         }
+
+        public static int countStudentUpdate(String adNo, String nic, String tp, int id)
+        {
+            int counts = 0;
+            try
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(*) FROM [students] where [admission_no]='" + adNo + "' or [stu_nic_no]='" + nic + "' or [tp_No]='" + tp + "' and [id]!='"+id+"'";
+                if (con.State != System.Data.ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                cmd.Dispose();
+                counts = count;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return counts;
+        }
     }
 }

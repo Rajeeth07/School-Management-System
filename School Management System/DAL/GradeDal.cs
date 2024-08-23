@@ -150,13 +150,41 @@ namespace School_Management_System.DAL
             }
             
         }
-        public static Int32 countAddValue(String grdGrp,String gradeName)
+        public static Int32 countAddValue(String gradeName, String gradeOrder)
         {
             int counts = 0;
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "SELECT COUNT(*) FROM [grades] where [grades].grade_group='" + grdGrp + "' and [grades].grade_name='"+ gradeName + "'";
+                cmd.CommandText = "SELECT COUNT(*) FROM [grades] where [grades].grade_name='"+ gradeName + "' or [grades].grade_order='"+gradeOrder+"'";
+                if (con.State != System.Data.ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                cmd.Dispose();
+                counts = count;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return counts;
+        }
+        public static Int32 countGradeUpdate(String gradeName,String gradeOrder,int id)
+        {
+            int counts = 0;
+            try
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(*) FROM [grades] where ([grades].grade_name='" + gradeName + "' or [grades].grade_name='"+gradeOrder+"') and [grades].id!='"+id+"'";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();

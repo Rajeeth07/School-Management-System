@@ -23,7 +23,7 @@ namespace School_Management_System.DAL
             try
             {
                 SqlCommand cmd = con.CreateCommand();
-                cmd.CommandText = "select [grade_subject].[id],[grade_id],[grades].[grade_group],[subject_id],[subjects].[subject_name] from grade_subject INNER JOIN grades ON [grade_subject].grade_id=[grades].id INNER JOIN subjects ON [grade_subject].subject_id=[subjects].id";
+                cmd.CommandText = "select [grade_subject].[id],[grade_id],[grades].[grade_name],[subject_id],[subjects].[subject_name] from grade_subject INNER JOIN grades ON [grade_subject].grade_id=[grades].id INNER JOIN subjects ON [grade_subject].subject_id=[subjects].id";
                 if (con.State != System.Data.ConnectionState.Open)
                 {
                     con.Open();
@@ -168,6 +168,35 @@ namespace School_Management_System.DAL
                 Int32 count = (Int32)cmd.ExecuteScalar();
                 cmd.Dispose();
                 counts=count;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return counts;
+        }
+
+        public static Int32 countGradeSubjectUpdate(String grdId, String subId, int id)
+        {
+            int counts = 0;
+            try
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(*) FROM [grade_subject] where [grade_subject].grade_id='" + grdId + "' and [grade_subject].subject_id='" + subId + "' and [id]!='"+id+"'";
+                if (con.State != System.Data.ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                cmd.Dispose();
+                counts = count;
 
             }
             catch (Exception)

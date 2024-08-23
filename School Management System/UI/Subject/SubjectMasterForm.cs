@@ -89,22 +89,7 @@ namespace School_Management_System.UI.Subject
                     DAL.SubjectDal.insert(subName, subIndex, subNumber, subOrder);
                     MessageBox.Show("Subject details added successfully!");
                 }
-                /*connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-                sql = "INSERT INTO[subjects](subject_name,[subject_index],subject_number,[subject_order])VALUES('"+txtSubName.Text+"','"+txtSubindex.Text+"','"+txtSubNumber.Text+"','"+txtSubOrder.Text+"')";
-                connection = new SqlConnection(connetionString);
-                try
-                {
-                    connection.Open();
-                    command = new SqlCommand(sql, connection);
-                    command.ExecuteNonQuery();
-                    command.Dispose();
-                    connection.Close();
-                    MessageBox.Show("Subject added successfully!");
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Can not open connection ! ");
-                }*/
+                
             }
             else
             {
@@ -113,29 +98,23 @@ namespace School_Management_System.UI.Subject
                 {
                     this.id = dgvSub.SelectedRows[0].Cells["id"].Value.ToString();
                 }
-                Int32 count = DAL.SubjectDal.countAddValue(subName, subIndex, subNumber, subOrder);
-
-                
-                    int id = Convert.ToInt32(this.id);
+                int id = Convert.ToInt32(this.id);
+                int count=DAL.SubjectDal.countUpdateValue(subName, subIndex, subNumber, subOrder, id);
+                if (count != 0)
+                {
+                    MessageBox.Show("This is already exist");
+                }
+                else
+                {
                     DAL.SubjectDal.update(subName, subIndex, subNumber, subOrder, id);
                     MessageBox.Show("Subject id : " + id + " details updated successfully!");
-                
-                /*connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-                sql = "UPDATE[subjects] SET [subject_name]='" + txtSubName.Text+"',[subject_index]='"+txtSubindex.Text+"',[subject_number]='"+txtSubNumber.Text+"',[subject_order]='" + txtSubName.Text + "' WHERE id='"+this.id+"'";
-                connection = new SqlConnection(connetionString);
-                try
-                {
-                    connection.Open();
-                    command = new SqlCommand(sql, connection);
-                    command.ExecuteNonQuery();
-                    command.Dispose();
-                    connection.Close();
-                    MessageBox.Show("Subject Updated successfully!");
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Can not open connection ! ");
-                }*/
+                    
+                
+
+
+                
+         
             }
             ButtonEnable(false);
         }
@@ -212,31 +191,6 @@ namespace School_Management_System.UI.Subject
             dv=dt.DefaultView;
             dgvSub.DataSource = dv;
             txtSubName.Focus();
-            /*string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            SqlDataReader dataReader;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-            sql = "select * from subjects";
-            connection = new SqlConnection(connetionString);
-            try
-            {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                dataReader = command.ExecuteReader();
-                dt= new DataTable();
-                dt.Load(dataReader);
-                dv = dt.DefaultView;
-                dgvSub.DataSource = dv;
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }*/
         }
         private void dgvSub_SelectionChanged(object sender, EventArgs e)
         {

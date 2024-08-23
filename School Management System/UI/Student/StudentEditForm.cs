@@ -119,7 +119,7 @@ namespace School_Management_System.UI.Student
                 return;
 
             }
-
+     
             Boolean isNumber2 = Int32.TryParse(txtStdEdtphoneNo.Text, out num);
             if (!isNumber2)
             {
@@ -134,42 +134,21 @@ namespace School_Management_System.UI.Student
                 txtStdEdtphoneNo.Focus();
                 return;
             }
-            
+            int id = Convert.ToInt32(this.id);
+           int count= DAL.StudentDal.countStudentUpdate(adNo,nic, phone, id);
+            if (count != 0)
+            {
+                MessageBox.Show("This student details already exist!");
+                return;
+            }
+            else {
                 DAL.StudentDal.update(adNo, fname, lname, fullName, this.gender, dob, nic, phone, gradeId, medium, adDate, address, this.id);
                 MessageBox.Show("Student Id : " + this.id + " details Updated successfully");
                 this.Close();
+            }
+                
             
-            /*string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-            if (rdoStdEdtMale.Checked == true)
-            {
-                this.gender = "Male";
-            }
-            else if (rdoStdEdtFemale.Checked == true)
-            {
-                this.gender = "Female";
-            }
-            DateTime dob = DateTime.Parse(dtpStdEdtDoB.Text);
-            DateTime adDate = DateTime.Parse(dtpStdEdtAddDate.Text);
-            sql = "UPDATE [students] SET [addmission_no]='"+txtStdEdtAddmisNo.Text+"',[first_name]='"+txtStdEdtfname.Text+"',[last_name]='"+txtStdEdtLname.Text+"',[full_name]='"+txtStdEdtfullName.Text+"',[gender]='"+this.gender+"',[date_of_birth]='"+dob+"',[stu_nic_no]='"+txtStdEdtNic.Text+"',[tp_No]='"+txtStdEdtphoneNo.Text+"',[grade_id]='"+txtStdEdtGrdId.Text+"',[medium]='"+cmbStdEdtMedium.Text+"',[date_of_addmission]='"+adDate+"',[resident_address]='"+txtStdEdtaddress.Text+"' WHERE id='"+this.id+"'";
-            connection = new SqlConnection(connetionString);
-            try
-            {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                command.ExecuteNonQuery();
-                command.Dispose();
-                connection.Close();
-                MessageBox.Show("Student : "+this.id+" Updated Successfully");
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }*/
+            
         }
         private void btnStdEdtCancel_Click(object sender, EventArgs e)
         {

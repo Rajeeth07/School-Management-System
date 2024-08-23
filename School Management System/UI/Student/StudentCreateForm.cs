@@ -36,8 +36,10 @@ namespace School_Management_System.UI.Student
             {
                this.gender = "Female";
             }
+  
             DateTime dob = DateTime.Parse(dtpStdcrtDoB.Text);
             DateTime adDate = DateTime.Parse(dtpStdCrtAddDate.Text);
+ 
             nic =txtStdcrtNic.Text;
             phone =txtStdcrtphoneNo.Text;
             gradeId =txtStdCrtGrdId.Text;
@@ -77,8 +79,7 @@ namespace School_Management_System.UI.Student
                 MessageBox.Show("phone number can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtStdcrtphoneNo.Focus();
                 return;
-            }
-            
+            }            
             else if (String.IsNullOrEmpty(cmbStdCrtMedium.Text))
             {
                 MessageBox.Show("please select a medium", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -97,11 +98,6 @@ namespace School_Management_System.UI.Student
                 labStuCrtGender.Focus();
                     return;
             }
-
-
-
-            
-
 
             if (txtStdcrtphoneNo.Text.Length != 10)
             {
@@ -122,40 +118,12 @@ namespace School_Management_System.UI.Student
                 this.Close();
             }
             
-            
-            /*
-            if (rdoStdCrtMale.Checked == true)
-            {
-                this.gender = "Male";
-            }
-            else if (rdoStdCrtFemale.Checked == true)
-            {
-                this.gender = "Female";
-            }
-            DateTime dob = DateTime.Parse(dtpStdcrtDoB.Text);
-            DateTime adDate = DateTime.Parse(dtpStdCrtAddDate.Text);
-            sql = "INSERT INTO[students](addmission_no,[first_name],last_name,[full_name],gender,[date_of_birth],stu_nic_no,[tp_No],grade_id,[medium],date_of_addmission,[resident_address])VALUES('" + txtStdcrtAddmisNo.Text + "','" + txtStdcrtfname.Text + "','" + txtStdcrtLname.Text + "','" + txtStdcrtfullName.Text + "','" + this.gender + "','" + dob + "','" + txtStdcrtNic.Text + "','" + txtStdcrtphoneNo.Text + "','" + txtStdCrtGrdId.Text + "','" + cmbStdCrtMedium.Text + "','" + adDate + "','" + txtStdcrtaddress.Text + "')";
-            connection = new SqlConnection(connetionString);
-            try
-            {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                command.ExecuteNonQuery();
-                command.Dispose();
-                connection.Close();
-                MessageBox.Show("Student: " + txtStdCrtGrdId.Text + " added Successfully!");
-                this.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }*/
         }
         private void btnStdcrtCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-
+        
     }
 }

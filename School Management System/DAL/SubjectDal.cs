@@ -148,5 +148,34 @@ namespace School_Management_System.DAL
             return counts;
         }
 
+        public static Int32 countUpdateValue(String subName, int subIndex, String subNumber, int subOrder,int id)
+        {
+            int counts = 0;
+            try
+            {
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "SELECT COUNT(*) FROM [subjects] where ([subject_name]='" + subName + "' or [subject_index]='" + subIndex + "' or [subject_number]='" + subNumber + "' or [subject_order]='" + subOrder + "') and [id]!='"+id+"'";
+                if (con.State != System.Data.ConnectionState.Open)
+                {
+                    con.Open();
+                }
+
+                Int32 count = (Int32)cmd.ExecuteScalar();
+                cmd.Dispose();
+                counts = count;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                con.Close();
+            }
+            return counts;
+        }
+
     }
 }

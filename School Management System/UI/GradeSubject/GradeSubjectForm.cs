@@ -21,6 +21,10 @@ namespace School_Management_System.UI.GradeSubject
         {
             InitializeComponent();
         }
+        private void GradeSubjectForm_Load(object sender, EventArgs e)
+        {
+            formLoad();
+        }
         private void ButtonEnable(bool is_true)
         {
             is_addNew = is_true;
@@ -48,7 +52,7 @@ namespace School_Management_System.UI.GradeSubject
 
             DataTable dtGrade = DAL.GradeDal.getAll();
             cmbGrdSubgrd.DataSource = dtGrade;
-            cmbGrdSubgrd.DisplayMember = "grade_group";
+            cmbGrdSubgrd.DisplayMember = "grade_name";
             cmbGrdSubgrd.ValueMember = "id";
 
             DataTable dtSubject = DAL.SubjectDal.getAll();
@@ -56,10 +60,6 @@ namespace School_Management_System.UI.GradeSubject
             cmbGrdSubSub.DisplayMember = "subject_name";
             cmbGrdSubSub.ValueMember = "id";
             cmbGrdSubgrd.Focus();
-        }
-        private void GradeSubjectForm_Load(object sender, EventArgs e)
-        {
-            formLoad();
         }
         private void btngrdsubAdd_Click(object sender, EventArgs e)
         {
@@ -88,34 +88,70 @@ namespace School_Management_System.UI.GradeSubject
         }
         private void btngrdsubSave_Click(object sender, EventArgs e)
         {
-            String GrdId = cmbGrdSubgrd.SelectedValue.ToString();
-            String SubId = cmbGrdSubSub.SelectedValue.ToString();
+            
 
-            Int32 count = DAL.GradeSubject.countGradeSubjectRow(GrdId, SubId);
-
-            if (count != 0)
-            {
-                MessageBox.Show("This is already exist");
-                return;
-            }
+            
             if (is_addNew)
             {
 
                 //insert
-                
-                
+                if (String.IsNullOrEmpty(cmbGrdSubgrd.Text))
+                {
+                    MessageBox.Show("Grade Name should not be empty!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbGrdSubgrd.Focus();
+                    return;
+                }else if (String.IsNullOrEmpty(cmbGrdSubSub.Text))
+                {
+                    MessageBox.Show("Subject Name should not be empty!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbGrdSubSub.Focus();
+                    return;
+                }
+                String GrdId = cmbGrdSubgrd.SelectedValue.ToString();
+                String SubId = cmbGrdSubSub.SelectedValue.ToString();
+                Int32 count = DAL.GradeSubject.countGradeSubjectRow(GrdId, SubId);
+
+                if (count != 0)
+                {
+                    MessageBox.Show("This is already exist");
+
+                }
+                else {
                     DAL.GradeSubject.insert(GrdId, SubId);
                     MessageBox.Show("Grade Subject details added successfully!");
+                }
+                
                 
                 
             }
             else
             {
                 //update
-                this.id = dgvSubGrd.SelectedRows[0].Cells["id"].Value.ToString();
+                if (String.IsNullOrEmpty(cmbGrdSubgrd.Text))
+                {
+                    MessageBox.Show("Grade Name should not be empty!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbGrdSubgrd.Focus();
+                    return;
+                }
+                else if (String.IsNullOrEmpty(cmbGrdSubSub.Text))
+                {
+                    MessageBox.Show("Subject Name should not be empty!", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    cmbGrdSubSub.Focus();
+                    return;
+                }
+                String GrdId = cmbGrdSubgrd.SelectedValue.ToString();
+                String SubId = cmbGrdSubSub.SelectedValue.ToString();
                 int id = Convert.ToInt32(this.id);
-                DAL.GradeSubject.update(GrdId, SubId,id);
-                MessageBox.Show("Grade Subject details updated successfully!");
+                int count = DAL.GradeSubject.countGradeSubjectUpdate(GrdId, SubId, id);
+                if (count != 0)
+                {
+                    MessageBox.Show("This is already exist");
+
+                }
+                else
+                {
+                    DAL.GradeSubject.update(GrdId, SubId, id);
+                    MessageBox.Show("Grade Subject details updated successfully!");
+                }
             }
             ButtonEnable(false);
         }
@@ -136,14 +172,6 @@ namespace School_Management_System.UI.GradeSubject
         {
 
         }
-        private void dgvSubGrd_SelectionChanged(object sender, EventArgs e)
-        {   if(dgvSubGrd.SelectedRows.Count > 0)
-            {
-                cmbGrdSubgrd.Text = dgvSubGrd.SelectedRows[0].Cells["grade_group"].Value.ToString();
-                cmbGrdSubSub.Text = dgvSubGrd.SelectedRows[0].Cells["subject_name"].Value.ToString();
-            }
-            
-        }
         private void GradeSubjectForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult dr= MessageBox.Show("Do you want close this?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -151,5 +179,21 @@ namespace School_Management_System.UI.GradeSubject
                 e.Cancel = true;
             }
         }
+        private void dgvSubGrd_SelectionChanged(object sender, EventArgs e)
+        {
+            selectedRowValue();
+
+        }
+
+        private void selectedRowValue()
+        {
+            if (dgvSubGrd.SelectedRows.Count > 0)
+            {
+                this.id = dgvSubGrd.SelectedRows[0].Cells["id"].Value.ToString();
+                cmbGrdSubgrd.Text = dgvSubGrd.SelectedRows[0].Cells["grade_name"].Value.ToString();
+                cmbGrdSubSub.Text = dgvSubGrd.SelectedRows[0].Cells["subject_name"].Value.ToString();
+            }
+        }
+
     }
 }
