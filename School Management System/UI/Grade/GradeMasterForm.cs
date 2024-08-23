@@ -21,6 +21,15 @@ namespace School_Management_System.UI.Grade
         {
             InitializeComponent();
         }
+
+        #region User Define functions
+        private void gridLoad()
+        {   
+            dt = DAL.GradeDal.getAll();
+            dv = dt.DefaultView;
+            dgvGrd.DataSource = dv;
+            
+        }
         private void selectedRowValues()
         {
             if (dgvGrd.SelectedRows.Count > 0)
@@ -43,6 +52,66 @@ namespace School_Management_System.UI.Grade
             btnGrdSave.Enabled = is_true;
             btnGrdCancel.Enabled = is_true;
         }
+        private void doEmptyForm()
+        {
+            txtGrdName.Text = null;
+            txtGrdGroup.Text = null;
+            txtGrdOrder.Text = null;
+            txtGrdSearch.Text = null;
+        }
+        private bool ValidateGrade()
+        {
+            if (String.IsNullOrEmpty(txtGrdName.Text))
+            {
+                MessageBox.Show("please enter the  Grade Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdName.Focus();
+                return false;
+            }
+            else if (String.IsNullOrEmpty(txtGrdGroup.Text))
+            {
+                MessageBox.Show("please enter the  Grade group", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdGroup.Focus();
+                return false;
+            }
+            else if (String.IsNullOrEmpty(txtGrdOrder.Text))
+            {
+                MessageBox.Show("please enter the  grade group", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdOrder.Focus();
+                return false;
+            }
+            int num = 0;
+            Boolean isNumber1 = Int32.TryParse(txtGrdOrder.Text, out num);
+            if (!isNumber1)
+            {
+                MessageBox.Show("Grade Order shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdOrder.Focus();
+                return false;
+
+            }
+            if (String.IsNullOrEmpty(txtGrdName.Text))
+            {
+                MessageBox.Show("Grade Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdName.Focus();
+                return false;
+            }
+            else if (String.IsNullOrEmpty(txtGrdGroup.Text))
+            {
+                MessageBox.Show("Grade group field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdGroup.Focus();
+                return false;
+            }
+            else if (String.IsNullOrEmpty(txtGrdOrder.Text))
+            {
+                MessageBox.Show("Grade order field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtGrdOrder.Focus();
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        #endregion
         private void btnGrdAdd_Click(object sender, EventArgs e)
         {
             ButtonEnable(true);
@@ -65,105 +134,50 @@ namespace School_Management_System.UI.Grade
         private void btnGrdSave_Click(object sender, EventArgs e)
         {
             ButtonEnable(false);
-            String gradeName, gradeGroup, gradeOrder;
-
-
-            
-            
-            if (String.IsNullOrEmpty(txtGrdName.Text))
-            {
-                MessageBox.Show("please enter the  Grade Name", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGrdName.Focus();
-                return;
-            }
-            else if (String.IsNullOrEmpty(txtGrdGroup.Text))
-            {
-                MessageBox.Show("please enter the  Grade group", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGrdGroup.Focus();
-                return;
-            }
-            else if (String.IsNullOrEmpty(txtGrdOrder.Text))
-            {
-                MessageBox.Show("please enter the  grade group", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGrdOrder.Focus();
-                return;
-            }
-            
-            int num = 0;
-            Boolean isNumber1 = Int32.TryParse(txtGrdOrder.Text, out num);
-            if (!isNumber1)
-            {
-                MessageBox.Show("Grade Order shoud be a number value!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGrdOrder.Focus();
-                return;
-
-            }
-            if (String.IsNullOrEmpty(txtGrdName.Text))
-            {
-                MessageBox.Show("Grade Name field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGrdName.Focus();
-                return;
-            }
-            else if (String.IsNullOrEmpty(txtGrdGroup.Text))
-            {
-                MessageBox.Show("Grade group field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGrdGroup.Focus();
-                return;
-            }
-            else if (String.IsNullOrEmpty(txtGrdOrder.Text))
-            {
-                MessageBox.Show("Grade order field can't be empty!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtGrdOrder.Focus();
-                return;
-            }
-            gradeName = txtGrdName.Text;
-            gradeGroup = txtGrdGroup.Text;
-            gradeOrder = txtGrdOrder.Text;
             if (is_addNew)
             {
-                
-                
-                Int32 count = DAL.GradeDal.countAddValue(gradeName,gradeOrder);
-                if (count != 0)
+
+                if (ValidateGrade())
                 {
-                    MessageBox.Show("This is already exist");
+                    Int32 count = DAL.GradeDal.countAddValue(txtGrdName.Text.Trim(), txtGrdOrder.Text.Trim());
+                    if (count != 0)
+                    {
+                        MessageBox.Show("This is already exist");
+                    }
+                    else
+                    {
+                        DAL.GradeDal.insert(txtGrdName.Text.Trim(), txtGrdGroup.Text.Trim(), txtGrdOrder.Text.Trim());
+                        MessageBox.Show("Grade added successfully");
+                    }
                 }
-                else {
-                    DAL.GradeDal.insert(gradeName, gradeGroup,gradeOrder);
-                    MessageBox.Show("Grade added successfully");
-                }
-                   
+
             }
             else
             {
-                
-                int id = Convert.ToInt32(this.id);
-                int count = DAL.GradeDal.countGradeUpdate(gradeName,gradeOrder, id);
-                if (count != 0)
+                if (ValidateGrade())
                 {
-                    MessageBox.Show("this is already exist");
+                    int id = Convert.ToInt32(this.id);
+                    int count = DAL.GradeDal.countGradeUpdate(txtGrdName.Text.Trim(), txtGrdOrder.Text.Trim(), id);
+                    if (count != 0)
+                    {
+                        MessageBox.Show("this is already exist");
+                    }
+                    else
+                    {
+                        DAL.GradeDal.update(txtGrdName.Text.Trim(), txtGrdGroup.Text.Trim(), txtGrdOrder.Text.Trim(), id);
+                        MessageBox.Show("Grade Id : " + id + " details updated!");
+                    }
                 }
-                else
-                {
-                    DAL.GradeDal.update(gradeName, gradeGroup, gradeOrder, id);
-                    MessageBox.Show("Grade Id : " + id + " details updated!");
-                }
-                
-                
+
             }
         }
         private void btnGrdRefresh_Click(object sender, EventArgs e)
         {
-            
             gridLoad();
-            txtGrdName.Text = null;
-            txtGrdGroup.Text = null;
-            txtGrdOrder.Text = null;
-            txtGrdSearch.Text = null;
+            doEmptyForm();
         }
         private void btnGrdDelete_Click(object sender, EventArgs e)
         {
-            this.id = dgvGrd.SelectedRows[0].Cells["id"].Value.ToString();
             DialogResult dr = MessageBox.Show("Do you want to delete Id: " + this.id + "?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dr == DialogResult.Cancel)
             {
@@ -174,31 +188,7 @@ namespace School_Management_System.UI.Grade
             id = Convert.ToInt32(this.id);
             DAL.GradeDal.delete(id);
             MessageBox.Show("Grade id : "+id+" details deleted successfully");
-            /*DialogResult dr=MessageBox.Show("Do you want to delete Id: "+this.id+"?", "Question",MessageBoxButtons.OKCancel,MessageBoxIcon.Question);
-            if (dr == DialogResult.Cancel) { 
-                return;
-            }
-            //delete function
-            string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-            sql = "delete from grades where id='"+this.id+"'";
-            connection = new SqlConnection(connetionString);
-             try
-             {
-                 connection.Open();
-                 command = new SqlCommand(sql, connection);
-                 command.ExecuteNonQuery();
-                 command.Dispose();
-                 connection.Close();
-                 MessageBox.Show("Grade Id "+this.id+" details deleted successfully");
-             }
-             catch (Exception)
-             {
-                 MessageBox.Show("Can not open connection ! ");
-             }*/
+            
         }
         private void btnGrdExit_Click(object sender, EventArgs e)
         {
@@ -216,44 +206,10 @@ namespace School_Management_System.UI.Grade
         {
             gridLoad();
         }
-        private void gridLoad()
-        {   
-            dt = DAL.GradeDal.getAll();
-            dv = dt.DefaultView;
-            dgvGrd.DataSource = dv;
-            txtGrdName.Focus();
-            /*string connetionString = null;
-            SqlConnection connection;
-            SqlCommand command;
-            string sql = null;
-            SqlDataReader dataReader;
-            connetionString = "Data Source=RAJEETH-ASUS\\SQLEXPRESS;Initial Catalog=Student_Management_System;Trusted_Connection=true;";
-            sql = "select * from grades";
-            connection = new SqlConnection(connetionString);
-            try
-            {
-                connection.Open();
-                command = new SqlCommand(sql, connection);
-                dataReader = command.ExecuteReader();
-                dt = new DataTable();
-                dt.Load(dataReader);
-                dv = dt.DefaultView;
-                dgvGrd.DataSource = dv;
-                dataReader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Can not open connection ! ");
-            }*/
-        }
         private void dgvGrd_SelectionChanged(object sender, EventArgs e)
         {
             selectedRowValues();
         }
-
-
         private void txtGrdSearch_TextChanged(object sender, EventArgs e)
         {
             

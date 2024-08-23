@@ -130,6 +130,7 @@ namespace School_Management_System.UI.Student
             gradeId = txtStdCrtGrdId.Text;
             medium = cmbStdCrtMedium.Text;
             address = txtStdcrtaddress.Text;
+            
             int count=DAL.StudentDal.countStudentRow(adNo, nic, phone);
             if (count!=0)
             {
@@ -148,7 +149,5 @@ namespace School_Management_System.UI.Student
         {
             this.Close();
         }
-
-        
     }
 }

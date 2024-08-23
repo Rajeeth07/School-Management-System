@@ -124,8 +124,8 @@
             this.cmbStdCrtMedium.FormattingEnabled = true;
             this.cmbStdCrtMedium.Items.AddRange(new object[] {
             "Tamil",
-            "Sinhala",
-            "English"});
+            "English",
+            "Sinhala"});
             this.cmbStdCrtMedium.Location = new System.Drawing.Point(172, 408);
             this.cmbStdCrtMedium.Name = "cmbStdCrtMedium";
             this.cmbStdCrtMedium.Size = new System.Drawing.Size(272, 33);
