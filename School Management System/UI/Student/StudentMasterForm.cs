@@ -23,20 +23,15 @@ namespace School_Management_System.UI.Student
         public StudentMasterForm()
         {
             InitializeComponent();
-        }    
-        private void btnStdAdd_Click(object sender, EventArgs e)
-        {
-            UI.Student.StudentCreateForm studentCreateForm = new UI.Student.StudentCreateForm();    
-            studentCreateForm.ShowDialog();
         }
-        private void btnStdEdit_Click(object sender, EventArgs e)
-        {
-            fillStudentDataBox();
-            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.medium, this.addDate, this.address, this.id);
-            studentEditForm.ShowDialog();
+        #region User Define Functions
+        private void formLoad()
+        {   
+            dt = DAL.StudentDal.getAll();
+            dv=dt.DefaultView;
+            dgvStd.DataSource = dv;
         }
-
-        private void fillStudentDataBox()
+        private void selectedRowValues()
         {
             this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
             this.fname = dgvStd.SelectedRows[0].Cells["first_name"].Value.ToString();
@@ -53,16 +48,21 @@ namespace School_Management_System.UI.Student
             this.address = dgvStd.SelectedRows[0].Cells["resident_address"].Value.ToString();
             this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
         }
-
+        #endregion
+        private void btnStdAdd_Click(object sender, EventArgs e)
+        {
+            UI.Student.StudentCreateForm studentCreateForm = new UI.Student.StudentCreateForm();    
+            studentCreateForm.ShowDialog();
+        }
+        private void btnStdEdit_Click(object sender, EventArgs e)
+        {
+            UI.Student.StudentEditForm studentEditForm = new UI.Student.StudentEditForm(this.fname, this.lname, this.addNo, this.fullName, this.gend, this.dob, this.nic, this.phone, this.gradeId, this.medium, this.addDate, this.address, this.id);
+            studentEditForm.ShowDialog();
+        }
         private void btnStdDelete_Click(object sender, EventArgs e)
         {
             //Delete function
-            
-            if (dgvStd.SelectedRows.Count>0) { 
-                this.name = dgvStd.SelectedRows[0].Cells["admission_no"].Value.ToString();
-            }
-            DialogResult dr = MessageBox.Show("Do you want delete Admission No : " + this.name + "?", "Caution", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            this.id = dgvStd.SelectedRows[0].Cells["id"].Value.ToString();
+            DialogResult dr = MessageBox.Show("Do you want delete Admission No : " + this.addNo + "?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.No)
             {
                 return;
@@ -76,12 +76,6 @@ namespace School_Management_System.UI.Student
         private void StudentMasterForm_Load(object sender, EventArgs e)
         {
             formLoad();
-        }
-        private void formLoad()
-        {   
-            dt = DAL.StudentDal.getAll();
-            dv=dt.DefaultView;
-            dgvStd.DataSource = dv;
         }
         private void btnStdExit_Click(object sender, EventArgs e)
         {
